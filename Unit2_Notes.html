@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2 Notes: Cognition | AP Psychology Revision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#1a2744; --blue:#2E75B6; --light:#DEEAF1; --bg:#f0f4fb; --orange:#C55A11;
+  --ink:#1a2744; --muted:#4a6080; --line:#d0ddef; --card:#ffffff;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;}
+a{color:var(--blue);}
+
+/* HEADER */
+header{background:var(--navy);color:#fff;padding:28px 20px 26px;text-align:center;}
+header .eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#7fa8d4;margin-bottom:8px;}
+header h1{font-family:'Playfair Display',serif;font-size:30px;line-height:1.25;}
+header .subtitle{margin:8px auto 0;font-size:15px;color:#c3d6ec;max-width:620px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s;}
+.btn-primary{background:var(--blue);color:#fff;}
+.btn-primary:hover{background:#1f5f99;}
+.btn-ghost{background:transparent;color:#fff;border-color:#7fa8d4;}
+.btn-ghost:hover{background:#ffffff1a;}
+.btn-dark{background:var(--navy);color:#fff;}
+.btn-dark:hover{background:var(--blue);}
+.btn small{font-weight:500;opacity:.8;}
+
+/* TOP BAR */
+.topbar{background:#fff;border-bottom:2px solid #dde6f4;position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(26,39,68,.08);}
+.topbar-inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.back-link{font-weight:700;font-size:14px;text-decoration:none;color:var(--navy);padding:6px 10px;border-radius:6px;border:2px solid var(--line);}
+.back-link:hover{border-color:var(--blue);color:var(--blue);}
+.topic-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto;}
+.topic-tabs a,.topic-tabs span{font-size:13px;font-weight:600;padding:6px 11px;border-radius:6px;text-decoration:none;}
+.topic-tabs a{background:var(--navy);color:#fff;}
+.topic-tabs span{background:#eef2f8;color:#9aabc4;cursor:not-allowed;}
+
+/* LAYOUT */
+.layout{max-width:1100px;margin:26px auto;padding:0 16px 70px;display:grid;grid-template-columns:220px 1fr;gap:28px;}
+.toc{position:sticky;top:76px;align-self:start;background:#fff;border-radius:12px;padding:16px 16px 12px;box-shadow:0 2px 14px rgba(26,39,68,.06);}
+.toc h2{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7a90b5;margin-bottom:8px;}
+.toc ol{list-style:none;}
+.toc li{margin-bottom:2px;}
+.toc a{display:block;font-size:14px;text-decoration:none;color:var(--muted);padding:5px 8px;border-radius:6px;border-left:3px solid transparent;}
+.toc a:hover,.toc a.active{background:var(--light);color:var(--navy);border-left-color:var(--blue);}
+main{min-width:0;}
+section.card{background:var(--card);border-radius:12px;padding:28px 30px;box-shadow:0 2px 16px rgba(26,39,68,.07);margin-bottom:22px;scroll-margin-top:80px;}
+.card h2{font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin-bottom:6px;}
+.card h3{font-size:17px;margin:20px 0 8px;color:var(--navy);}
+.card p{margin-bottom:12px;}
+.card ul,.card ol{margin:0 0 12px 22px;}
+.card li{margin-bottom:6px;}
+.lede{font-size:17px;color:#2a3b5c;}
+.sec-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7fa8d4;margin-bottom:4px;}
+
+/* CALLOUTS */
+.callout{border-radius:10px;padding:14px 18px;margin:16px 0;font-size:15px;}
+.callout strong.tag{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
+.callout p:last-child,.callout ul:last-child{margin-bottom:0;}
+.c-exam{background:#fdf1e9;border-left:5px solid var(--orange);}
+.c-exam strong.tag{color:var(--orange);}
+.c-hook{background:var(--light);border-left:5px solid var(--blue);}
+.c-hook strong.tag{color:var(--blue);}
+.c-scope{background:#f4f6fb;border-left:5px solid #9aabc4;}
+.c-scope strong.tag{color:#6a7f9f;}
+
+/* TABLES */
+.table-wrap{overflow-x:auto;margin:12px 0 16px;border-radius:10px;border:1px solid var(--line);}
+table{width:100%;border-collapse:collapse;font-size:14.5px;}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;white-space:nowrap;}
+td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;}
+tr:nth-child(even) td{background:#f8fafd;}
+td:first-child{font-weight:700;white-space:nowrap;}
+.hook{color:var(--blue);font-weight:600;}
+.selftest-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0 4px;}
+.toggle-btn{padding:8px 14px;border-radius:8px;border:2px solid var(--navy);background:#fff;color:var(--navy);font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;cursor:pointer;}
+.toggle-btn:hover,.toggle-btn[aria-pressed="true"]{background:var(--navy);color:#fff;}
+.selftest-note{font-size:13px;color:var(--muted);}
+.testing td.can-hide{filter:blur(6px);cursor:pointer;user-select:none;transition:filter .2s;}
+.testing td.can-hide.revealed{filter:none;}
+
+/* REFLEX ARC */
+.arc{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0;}
+.arc-step{background:#f8fafd;border:2px solid var(--line);border-radius:10px;padding:14px;position:relative;}
+.arc-step .num{display:inline-block;background:var(--blue);color:#fff;font-weight:700;font-size:12px;border-radius:20px;padding:2px 10px;margin-bottom:6px;}
+.arc-step h4{font-size:15px;margin-bottom:4px;}
+.arc-step p{font-size:14px;margin:0;}
+
+/* STEPPER */
+.stepper{border:2px solid var(--line);border-radius:12px;overflow:hidden;margin:16px 0;}
+.stepper-visual{background:#f8fafd;padding:12px 10px 4px;border-bottom:2px solid var(--line);}
+.stepper-visual svg{width:100%;height:auto;display:block;}
+.stepper-body{padding:16px 20px 18px;}
+.step-card{display:none;}
+.step-card.active{display:block;}
+.step-card .step-count{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#7fa8d4;}
+.step-card h4{font-size:18px;margin:2px 0 6px;color:var(--navy);}
+.step-card p{margin:0;}
+.stepper-nav{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.stepper-nav button{padding:9px 18px;border-radius:8px;border:none;font-family:'Outfit',sans-serif;font-weight:700;font-size:14px;cursor:pointer;background:var(--navy);color:#fff;}
+.stepper-nav button:disabled{opacity:.35;cursor:default;}
+.stepper-nav button.prev{background:#fff;color:var(--navy);border:2px solid var(--navy);}
+.dots{display:flex;gap:6px;margin-left:auto;}
+.dots button{width:12px;height:12px;border-radius:50%;padding:0;border:2px solid var(--blue);background:#fff;cursor:pointer;}
+.dots button.on{background:var(--blue);}
+.seg{fill:none;stroke:#b7c7de;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s,stroke-width .25s;}
+.seg.hot{stroke:var(--orange);stroke-width:6;}
+.band{fill:var(--orange);opacity:0;transition:opacity .25s;}
+.band.hot{opacity:.13;}
+.ax{stroke:#9aabc4;stroke-width:1;}
+.ax-dash{stroke:#9aabc4;stroke-width:1.5;stroke-dasharray:6 5;}
+.thr{stroke:var(--blue);stroke-width:2;stroke-dasharray:7 5;}
+.svg-label{font-family:'Outfit',sans-serif;font-size:13px;fill:#4a6080;}
+.svg-label.b{fill:var(--blue);font-weight:700;}
+.svg-label.o{fill:var(--orange);font-weight:700;}
+.syn-part{transition:opacity .3s;}
+.syn-hide{opacity:0;}
+
+/* CARDS GRID */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0;}
+.mini{background:#f8fafd;border:2px solid var(--line);border-radius:10px;padding:16px;}
+.mini h4{font-size:16px;color:var(--navy);margin-bottom:6px;}
+.mini p{font-size:14.5px;margin-bottom:8px;}
+.mini .analogy{font-size:13.5px;color:var(--blue);font-weight:600;margin:0;}
+
+/* MIX-UPS */
+.pair{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.pair div{padding:12px 16px;font-size:14.5px;}
+.pair div:first-child{border-right:2px solid var(--line);}
+.pair h4{font-size:15px;color:var(--navy);margin-bottom:4px;}
+.pair-note{grid-column:1 / -1;background:var(--light);border-top:2px solid var(--line);font-size:14px !important;}
+
+/* CHECK YOURSELF */
+details.q{border:2px solid var(--line);border-radius:10px;margin:10px 0;background:#f8fafd;}
+details.q summary{cursor:pointer;padding:13px 16px;font-weight:600;list-style:none;position:relative;padding-right:120px;}
+details.q summary::-webkit-details-marker{display:none;}
+details.q summary::after{content:"Show answer";position:absolute;right:14px;top:12px;font-size:12px;font-weight:700;color:var(--blue);border:2px solid var(--blue);border-radius:20px;padding:2px 10px;background:#fff;}
+details.q[open] summary::after{content:"Hide";}
+details.q .ans{padding:0 16px 14px;font-size:15px;}
+details.q .ans strong{color:#1e7b34;}
+.checklist{list-style:none;margin:10px 0 0 !important;}
+.checklist li{margin-bottom:8px;}
+.checklist label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;}
+.checklist input{margin-top:5px;width:17px;height:17px;accent-color:var(--blue);flex-shrink:0;}
+.check-meta{font-size:13px;color:var(--muted);margin-top:8px;}
+
+/* VIDEO */
+.video-wrap{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#0d1526;margin:12px 0 8px;}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.video-facade{position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;}
+.video-facade::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,21,38,.15),rgba(13,21,38,.65));}
+.play{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:15px;}
+.play .circle{width:68px;height:68px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35);}
+.play .circle::after{content:"";margin-left:6px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff;}
+.video-note{font-size:13.5px;color:var(--muted);}
+
+.end-cta{text-align:center;padding:10px 0 4px;}
+.end-cta p{color:var(--muted);margin-bottom:12px;}
+footer{max-width:1100px;margin:0 auto;padding:0 16px 40px;font-size:12.5px;color:#7a90b5;text-align:center;line-height:1.6;}
+
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr;}
+  .toc{position:static;}
+  .toc ol{display:flex;flex-wrap:wrap;gap:4px;}
+  .toc a{border-left:none;border:1px solid var(--line);}
+  .topic-tabs{margin-left:0;}
+}
+@media(max-width:640px){
+  header h1{font-size:24px;}
+  section.card{padding:20px 18px;}
+  .arc,.grid3{grid-template-columns:1fr;}
+  .pair{grid-template-columns:1fr;}
+  .pair div:first-child{border-right:none;border-bottom:2px solid var(--line);}
+  td:first-child{white-space:normal;}
+  .topbar{position:static;}
+  .topic-tabs{flex-wrap:nowrap;overflow-x:auto;width:100%;}
+  .topic-tabs a,.topic-tabs span{flex-shrink:0;}
+  .svg-label{font-size:20px;}
+  table.stack thead{display:none;}
+  table.stack,table.stack tbody,table.stack tr,table.stack td{display:block;width:100%;}
+  table.stack tr{border-top:2px solid var(--line);padding:8px 0;}
+  table.stack tr:first-child{border-top:none;}
+  table.stack td{border-top:none;padding:5px 16px;}
+  table.stack td::before{content:attr(data-label);display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6a7f9f;font-weight:700;margin-bottom:2px;}
+  table.stack td[data-label=""]::before{display:none;}
+  table.stack td:first-child{font-size:16px;}
+  table.stack.testing td.can-hide:not(.revealed){filter:none;color:transparent;text-shadow:0 0 9px rgba(30,40,70,.6);}
+  table.stack.testing td.can-hide:not(.revealed) *{color:transparent !important;text-shadow:0 0 9px rgba(30,40,70,.6);}
+  table.stack.testing td.can-hide::before{color:#6a7f9f;text-shadow:none;}
+}
+@media print{
+  .topbar,.toc,.hero-actions,.stepper-visual,.stepper-nav,.video-card,.selftest-bar,.end-cta,.checklist-card{display:none !important;}
+  body{background:#fff;}
+  header{background:#fff;color:#000;padding:0 0 10px;}
+  header h1,header .subtitle{color:#000;}
+  .layout{display:block;margin:0;padding:0;}
+  section.card{box-shadow:none;padding:10px 0;border-bottom:1px solid #ccc;border-radius:0;break-inside:avoid-page;}
+  .step-card{display:block !important;margin-bottom:10px;}
+  details.q{break-inside:avoid;}
+  details.q .ans{display:block;}
+  th{background:#eee;color:#000;}
+}
+
+
+/* ===== Unit page additions ===== */
+.topic{display:none;}
+.topic.shown{display:block;}
+.topic-tabs a{background:#eef2f8;color:var(--navy);}
+.topic-tabs a:hover{background:var(--light);}
+.topic-tabs a.on{background:var(--navy);color:#fff;}
+.topic-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:6px 0 10px;}
+.topic-nav a{flex:1 1 220px;background:#fff;border:2px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--navy);font-weight:700;}
+.topic-nav a small{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7a90b5;font-weight:700;}
+.topic-nav a:hover{border-color:var(--blue);}
+.topic-nav a.next{text-align:right;}
+.topic-nav .spacer{flex:1 1 220px;}
+
+/* Explorer (click a part, read about it) */
+.explorer{border:2px solid var(--line);border-radius:12px;overflow:hidden;margin:16px 0;}
+.ex-visual{background:#f8fafd;padding:12px 10px 6px;border-bottom:2px solid var(--line);}
+.ex-visual svg{width:100%;height:auto;display:block;}
+.ex-chips{display:flex;flex-wrap:wrap;gap:6px;padding:12px 16px 0;}
+.ex-chips button{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;padding:6px 12px;border-radius:20px;border:2px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;}
+.ex-chips button:hover{border-color:var(--blue);}
+.ex-chips button.on{background:var(--navy);border-color:var(--navy);color:#fff;}
+.ex-panels{padding:12px 20px 18px;}
+.ex-panel{display:none;}
+.ex-panel.on{display:block;}
+.ex-panel h4{font-size:18px;color:var(--navy);margin-bottom:4px;}
+.ex-panel p{margin-bottom:8px;}
+.ex-panel p:last-child{margin-bottom:0;}
+.ex-hint{font-size:13px;color:var(--muted);padding:10px 20px 0;}
+.ex-node{cursor:pointer;}
+.ex-node rect,.ex-node path,.ex-node ellipse,.ex-node circle{transition:fill .2s,stroke .2s,stroke-width .2s;}
+.ex-node:hover rect,.ex-node:hover path,.ex-node:hover ellipse{stroke:var(--blue);stroke-width:3;}
+.ex-node.on rect,.ex-node.on path,.ex-node.on ellipse,.ex-node.on circle{stroke:var(--orange);stroke-width:4;}
+.tree-line{stroke:#9aabc4;stroke-width:2;fill:none;}
+.tree-node rect{fill:#fff;stroke:#b7c7de;stroke-width:2;}
+.tree-node.on rect{fill:#fdf1e9;}
+.tree-node text{font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;fill:var(--navy);pointer-events:none;}
+.lobe{stroke:#fff;stroke-width:3;}
+.lobe-label{font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;fill:#1a2744;pointer-events:none;}
+.mark-label{font-family:'Outfit',sans-serif;font-size:12.5px;font-weight:700;pointer-events:none;}
+.hyp-level{font-family:'Outfit',sans-serif;font-size:13px;fill:#4a6080;}
+.hyp-band{fill:var(--orange);opacity:0;transition:opacity .2s;}
+.hyp-band.on{opacity:.14;}
+.hyp-line{fill:none;stroke:var(--navy);stroke-width:3;stroke-linejoin:round;}
+.hyp-rem{stroke:var(--orange);stroke-width:5;fill:none;stroke-linecap:round;}
+
+.hl{opacity:0;transition:opacity .2s;}
+.hl.on{opacity:1;}
+
+.grid2{grid-template-columns:1fr 1fr;}
+
+/* Widgets */
+.widget{border:2px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0;background:#f8fafd;}
+.widget h4{font-size:17px;color:var(--navy);margin-bottom:6px;}
+.widget label{font-weight:600;font-size:14px;}
+.widget input[type=range]{width:100%;accent-color:var(--blue);margin:8px 0;}
+.widget select{font-family:'Outfit',sans-serif;font-size:14px;padding:6px 10px;border-radius:8px;border:2px solid var(--line);background:#fff;color:var(--navy);}
+.readout{background:#fff;border:2px solid var(--line);border-radius:10px;padding:12px 16px;margin-top:10px;font-size:15px;}
+.readout .big{font-size:22px;font-weight:700;color:var(--orange);}
+.ai-stage{position:relative;height:220px;border-radius:10px;overflow:hidden;background:#fff;border:2px solid var(--line);margin:12px 0;display:flex;align-items:center;justify-content:center;}
+.ai-art{display:flex;align-items:center;gap:22px;}
+.ai-art .c1{width:90px;height:90px;border-radius:50%;background:#1f9e3a;}
+.ai-art .c2{width:90px;height:90px;background:#f4d21f;}
+.ai-art .c3{width:44px;height:120px;background:#111;}
+.ai-dot{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#C55A11;z-index:2;}
+.ai-blank{position:absolute;inset:0;background:#fff;display:none;}
+.ai-stage.white .ai-blank{display:block;}
+.ai-count{font-weight:700;color:var(--navy);}
+.wave-row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--line);}
+.wave-row:first-child{border-top:none;}
+.wave-row svg{width:100%;height:40px;}
+.wave-row strong{font-size:14.5px;}
+.wave-row span{display:block;font-size:12.5px;color:var(--muted);}
+@media(max-width:640px){
+  .grid2{grid-template-columns:1fr;}
+  .topic-tabs{display:grid !important;grid-template-columns:repeat(3,1fr);gap:6px;width:100%;overflow:visible !important;}
+  .topic-tabs a{display:flex;align-items:center;justify-content:center;text-align:center;padding:9px 4px !important;font-size:13px !important;line-height:1.25;}
+  .wave-row{grid-template-columns:110px 1fr;}
+  .tree-node text{font-size:17px;}
+  .ai-art .c1,.ai-art .c2{width:70px;height:70px;}
+}
+@media print{
+  .topic{display:none !important;}
+  .topic.shown{display:block !important;}
+  .topic-nav,.explorer .ex-chips,.widget{display:none !important;}
+  .ex-panel{display:block !important;margin-bottom:10px;}
+}
+</style>
+</head>
+<body data-quiz="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html" data-unit="Unit 2 Notes">
+
+<header>
+  <div class="eyebrow">AP Psychology &nbsp;|&nbsp; Unit 2: Cognition</div>
+  <h1 id="heroTitle">Unit 2 Notes</h1>
+  <p class="subtitle" id="heroSub"></p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" id="heroVideo" href="#">Watch the video <small id="heroVtime"></small></a>
+    <a class="btn btn-ghost" id="heroPractice" href="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html">Practice <span id="heroNum"></span> questions</a>
+    <a class="btn btn-ghost" href="https://docs.google.com/document/d/1_TAqTY5gPHjjr_UPE9ERvevpP0ET34urkdCZKaqhCPc/edit?tab=t.0" target="_blank" rel="noopener">Printable guide <small>(DAA login)</small></a>
+  </div>
+</header>
+
+<nav class="topbar" aria-label="Unit navigation">
+  <div class="topbar-inner">
+    <a class="back-link" href="index.html">&larr; All units</a>
+    <div class="topic-tabs" id="topicTabs" aria-label="Unit 2 topics">
+      <a href="#t2-1" data-tab="t2-1">2.1 Perception</a>
+      <a href="#t2-2" data-tab="t2-2">2.2 Thinking</a>
+      <a href="#t2-3" data-tab="t2-3">2.3 Memory</a>
+      <a href="#t2-4" data-tab="t2-4">2.4 Encoding</a>
+      <a href="#t2-5" data-tab="t2-5">2.5 Storing</a>
+      <a href="#t2-6" data-tab="t2-6">2.6 Retrieving</a>
+      <a href="#t2-7" data-tab="t2-7">2.7 Forgetting</a>
+      <a href="#t2-8" data-tab="t2-8">2.8 Intelligence</a>
+    </div>
+  </div>
+</nav>
+
+<div class="layout">
+  <aside class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol id="tocList"></ol>
+  </aside>
+  <main>
+<div class="topic" id="t2-1" data-num="2.1" data-title="Perception" data-short="Perception" data-sub="How your brain organizes and interprets what your senses pick up, and why it sometimes gets it wrong." data-vtime="0:42 to 14:30">
+    <section class="card" id="t21-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Look at a cloud long enough and you may see a face in it. The cloud has not changed: your brain has. Sensation (Topic 1.6) collects the raw information. Perception is what your brain does with it: organizing it, filling gaps and deciding what it means, using both what is out there and what you already expect.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Explain bottom-up and top-down processing, and how schemas, perceptual sets, context, experience and culture shape perception.</li>
+        <li>Identify the four Gestalt principles in the CED: closure, figure and ground, proximity and similarity.</li>
+        <li>Explain selective attention, the cocktail party effect, and blindness caused by inattention, including change blindness.</li>
+        <li>Identify binocular and monocular depth cues, perceptual constancy and apparent movement.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Expect a short scenario (someone reading messy handwriting, a driver judging distance, a person who misses something obvious) and a question asking which perceptual process or cue explains it. Be precise: the exam distinguishes, for example, relative size from linear perspective.</p>
+      </div>
+      <div class="callout c-scope">
+        <strong class="tag">Not on the exam</strong>
+        <p>Any monocular depth cue beyond the five on this page.</p>
+      </div>
+    </section>
+    <section class="card" id="t21-processing" data-toc="Bottom-up and top-down">
+      <div class="sec-label">Part 1</div>
+      <h2>Bottom-up and top-down processing</h2>
+      <p><strong>Bottom-up processing</strong> starts with the raw sensory information and builds up to a perception, piece by piece. <strong>Top-down processing</strong> starts with what you already know and expect, and uses that to interpret the information. Most of the time you use both at once.</p>
+      <div class="widget">
+        <h4>Try it: is it a letter or a number?</h4>
+        <p>Read across, then read down. The middle symbol is exactly the same in both directions.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,60px);gap:6px;justify-content:center;font-size:34px;font-weight:700;color:var(--navy);text-align:center;margin:14px auto;">
+          <span></span><span>A</span><span></span>
+          <span>12</span><span style="color:var(--orange);">13</span><span>14</span>
+          <span></span><span>C</span><span></span>
+        </div>
+        <p style="margin:0;font-size:14px;color:var(--muted);">Read across, it looks like the number 13. Read down, between A and C, it looks like the letter B. The marks on the screen did not change; your expectation did. That is top-down processing.</p>
+      </div>
+      <h3>What filters your perception</h3>
+      <div class="table-wrap">
+        <table class="stack">
+          <thead><tr><th>Factor</th><th>Type</th><th>What it means</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Factor">Schemas</td><td data-label="Type">Internal</td><td data-label="What it means">Mental frameworks that organize what you know about something.</td><td data-label="Example">Your schema for &quot;classroom&quot; lets you instantly recognize a room you have never been in as one.</td></tr>
+            <tr><td data-label="Factor">Perceptual set</td><td data-label="Type">Internal</td><td data-label="What it means">A readiness to perceive something in a particular way, based on expectations.</td><td data-label="Example">Told that a song hides a secret message, listeners suddenly &quot;hear&quot; words that were never there.</td></tr>
+            <tr><td data-label="Factor">Context</td><td data-label="Type">External</td><td data-label="What it means">The surroundings change how the same stimulus is interpreted.</td><td data-label="Example">A shape is read as a letter among letters and a number among numbers.</td></tr>
+            <tr><td data-label="Factor">Experience</td><td data-label="Type">External</td><td data-label="What it means">What you have encountered before tunes what you notice.</td><td data-label="Example">A chef walking through a spice market spots details a visitor misses.</td></tr>
+            <tr><td data-label="Factor">Culture</td><td data-label="Type">External</td><td data-label="What it means">Cultural experiences and expectations shape interpretation.</td><td data-label="Example">People raised among straight-edged buildings tend to be more fooled by some line-length illusions.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card" id="t21-gestalt" data-toc="Gestalt principles">
+      <div class="sec-label">Part 2</div>
+      <h2>Gestalt principles: organizing what you see</h2>
+      <p>Gestalt psychologists argued that we perceive whole patterns, not separate pieces: the whole is different from the sum of its parts. The CED names four principles that explain how we organize what we see.</p>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Closure</h4><svg viewBox="0 0 220 100" style="width:100%;height:90px;"><circle cx="110" cy="50" r="34" fill="none" stroke="#1a2744" stroke-width="7" stroke-dasharray="38 15"/></svg><p>We fill in gaps to see a complete, whole object. You see a circle, not eight curved lines.</p></div>
+        <div class="mini"><h4>Figure and ground</h4><svg viewBox="0 0 220 100" style="width:100%;height:90px;"><rect x="60" y="8" width="100" height="84" fill="#1a2744"/><circle cx="110" cy="50" r="26" fill="#fff"/></svg><p>We separate an object (the figure) from its background (the ground). Is this a white circle on a dark square, or a dark frame with a hole?</p></div>
+        <div class="mini"><h4>Proximity</h4><svg viewBox="0 0 220 100" style="width:100%;height:90px;" fill="#2E75B6"><g><circle cx="30" cy="35" r="8"/><circle cx="50" cy="35" r="8"/><circle cx="30" cy="65" r="8"/><circle cx="50" cy="65" r="8"/></g><g><circle cx="100" cy="35" r="8"/><circle cx="120" cy="35" r="8"/><circle cx="100" cy="65" r="8"/><circle cx="120" cy="65" r="8"/></g><g><circle cx="170" cy="35" r="8"/><circle cx="190" cy="35" r="8"/><circle cx="170" cy="65" r="8"/><circle cx="190" cy="65" r="8"/></g></svg><p>We group things that are close together. You see three groups of four dots, not twelve separate dots.</p></div>
+        <div class="mini"><h4>Similarity</h4><svg viewBox="0 0 220 100" style="width:100%;height:90px;"><g fill="#C55A11"><circle cx="50" cy="20" r="8"/><circle cx="90" cy="20" r="8"/><circle cx="130" cy="20" r="8"/><circle cx="170" cy="20" r="8"/><circle cx="50" cy="80" r="8"/><circle cx="90" cy="80" r="8"/><circle cx="130" cy="80" r="8"/><circle cx="170" cy="80" r="8"/></g><g fill="#2E75B6"><circle cx="50" cy="50" r="8"/><circle cx="90" cy="50" r="8"/><circle cx="130" cy="50" r="8"/><circle cx="170" cy="50" r="8"/></g></svg><p>We group things that look alike. The evenly spaced dots read as rows, because each row shares a color.</p></div>
+      </div>
+      <div class="callout c-hook">
+        <strong class="tag">Memory hook</strong>
+        <p><strong>Closure</strong> closes gaps. <strong>Figure and ground</strong>: what stands out and what sits behind. <strong>Proximity</strong> = nearby belongs together. <strong>Similarity</strong> = same-looking belongs together.</p>
+      </div>
+    </section>
+    <section class="card" id="t21-attention" data-toc="Attention">
+      <div class="sec-label">Part 3</div>
+      <h2>Attention</h2>
+      <p><strong>Attention</strong> is where sensation and perception meet. Far more information reaches your senses than you could ever process, so attention selects what gets through, shaped by both internal factors (your goals, your interests) and external ones (a sudden noise, a bright color).</p>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Selective attention and the cocktail party effect</h4><p>Focusing on one thing while filtering out the rest. In a loud school cafeteria you can follow one friend's conversation, yet you still notice instantly when someone across the room says your name. That is the <strong>cocktail party effect</strong>.</p><p class="analogy">Filtered out, but not completely ignored.</p></div>
+        <div class="mini"><h4>Blindness from inattention</h4><p>When attention is elsewhere, we can miss things that are right in front of us. In a well-known study, many viewers counting basketball passes completely missed a person in a gorilla suit walking through the game. <strong>Change blindness</strong> is a specific form: failing to notice that something in the scene has changed.</p><p class="analogy">Looking is not the same as seeing.</p></div>
+      </div>
+      <div class="callout c-exam">
+        <strong class="tag">Spot the difference</strong>
+        <p>Missing something new that appears while you are focused elsewhere is blindness from inattention. Failing to notice that something already there has <strong>changed</strong> (a different person, a moved object, a missing detail between two film shots) is <strong>change blindness</strong>.</p>
+      </div>
+    </section>
+    <section class="card" id="t21-depth" data-toc="Depth perception">
+      <div class="sec-label">Part 4</div>
+      <h2>Depth perception</h2>
+      <p>Your retina is a flat surface, yet you see a three-dimensional world. Your brain rebuilds depth from cues.</p>
+      <h3>Binocular cues: need both eyes</h3>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Retinal disparity</h4><p>Each eye sees a slightly different image, and the brain compares them. The bigger the difference, the closer the object.</p><p class="analogy">Hold up a finger and close each eye in turn: it jumps.</p></div>
+        <div class="mini"><h4>Convergence</h4><p>Your eyes turn inward to focus on something close. The more they turn in, the closer the brain judges the object to be.</p><p class="analogy">Bring a finger toward your nose and feel your eyes cross.</p></div>
+      </div>
+      <h3>Monocular cues: work with one eye (and in photos)</h3>
+      <p>Monocular cues give an impression of depth even on flat, two-dimensional surfaces like a photo or a painting.</p>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t21Depth" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t21Depth" class="stack">
+          <thead><tr><th>Cue</th><th>How it signals distance</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Cue">Relative clarity</td><td class="can-hide" data-label="How it signals distance">Hazy or blurry objects seem farther away than sharp, clear ones.</td><td data-label="Example">On a humid or dusty day, distant towers look fainter and farther than they really are.</td></tr>
+            <tr><td data-label="Cue">Relative size</td><td class="can-hide" data-label="How it signals distance">Of two objects you assume are similar in size, the one that looks smaller seems farther away.</td><td data-label="Example">Two identical palm trees: the smaller-looking one seems farther down the road.</td></tr>
+            <tr><td data-label="Cue">Texture gradient</td><td class="can-hide" data-label="How it signals distance">Textures look coarse and detailed up close and become finer and denser with distance.</td><td data-label="Example">Ripples in the sand are clear at your feet and blur into smooth sand toward the horizon.</td></tr>
+            <tr><td data-label="Cue">Linear perspective</td><td class="can-hide" data-label="How it signals distance">Parallel lines seem to come together in the distance; the closer they get, the farther away it seems.</td><td data-label="Example">The lanes of a long, straight highway appear to meet at the horizon.</td></tr>
+            <tr><td data-label="Cue">Interposition</td><td class="can-hide" data-label="How it signals distance">An object that blocks part of another is seen as closer.</td><td data-label="Example">A car partly hiding a building is seen as in front of it.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card" id="t21-constancy" data-toc="Constancy and movement">
+      <div class="sec-label">Part 5</div>
+      <h2>Constancy and apparent movement</h2>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Perceptual constancy</h4><p>We keep perceiving an object as the same even when its image on the retina changes. A friend walking away gets smaller on your retina, but you do not think she is shrinking (size constancy). A door swinging open changes shape on your retina, but you still see a rectangle (shape constancy). A white shirt looks white in shade and in sunlight (brightness and color constancy).</p><p class="analogy">Stable world, changing images.</p></div>
+        <div class="mini"><h4>Apparent movement</h4><p>We can perceive movement where none exists. A film or a phone animation is a rapid series of still images, and a strip of lights switching on and off in sequence looks like a single light moving along.</p><p class="analogy">Still images, moving perception.</p></div>
+      </div>
+    </section>
+    <section class="card" id="t21-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 6</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Bottom-up processing</h4>Starts from the raw sensory details.</div>
+        <div><h4>Top-down processing</h4>Starts from knowledge and expectations.</div>
+        <div class="pair-note">If the scenario mentions expectations, prior knowledge or context, it is top-down.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Schema</h4>A general mental framework for a category.</div>
+        <div><h4>Perceptual set</h4>A temporary readiness to see something specific.</div>
+        <div class="pair-note">A perceptual set is often created by what someone was just told or expects to see.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Binocular cues</h4>Need both eyes: retinal disparity and convergence.</div>
+        <div><h4>Monocular cues</h4>Work with one eye and in flat images.</div>
+        <div class="pair-note">If the cue works in a photograph, it must be monocular.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Relative size</h4>Compares the size of two similar objects.</div>
+        <div><h4>Linear perspective</h4>Uses parallel lines that seem to converge.</div>
+        <div class="pair-note">Two similar objects? Relative size. Lines meeting in the distance? Linear perspective.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Inattention blindness</h4>Missing something new that appears.</div>
+        <div><h4>Change blindness</h4>Missing that something has changed.</div>
+        <div class="pair-note">Both happen because attention was elsewhere.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t21-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>AP Psychology Unit 2 Review</em> covers Topic 2.1 from <strong>0:42 to 14:30</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="d6ED_JTH3PQ" data-start="42" data-end="870" aria-label="Play Mr. Sinn's Topic 2.1 video section" style="background-image:url('https://i.ytimg.com/vi/d6ED_JTH3PQ/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 2.1 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=d6ED_JTH3PQ&amp;t=42s" target="_blank" rel="noopener">Open it on YouTube (starts at 0:42)</a>.</p>
+    </section>
+    <section class="card" id="t21-check" data-toc="Check yourself">
+      <div class="sec-label">Part 7</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. Hessa can read her doctor's terrible handwriting on a prescription because she knows which medicine she was expecting. Which kind of processing is this?</summary>
+        <div class="ans"><strong>Top-down processing.</strong> Her expectation fills in what the scribbles alone could not tell her.</div></details>
+      <details class="q"><summary>2. A teacher tells the class that a song contains a hidden phrase when played backward. Played backward, several students now clearly "hear" it. What explains this?</summary>
+        <div class="ans"><strong>A perceptual set.</strong> Being told what to expect made them ready to perceive the phrase, whether or not it is there.</div></details>
+      <details class="q"><summary>3. In a packed, noisy food court, Rashid suddenly hears his name spoken at a table behind him. What is this called?</summary>
+        <div class="ans"><strong>The cocktail party effect,</strong> a form of selective attention: personally important information breaks through the filter.</div></details>
+      <details class="q"><summary>4. Driving on a long, straight highway, Mariam notices the lanes seem to meet at the horizon. Which depth cue is this, and is it binocular or monocular?</summary>
+        <div class="ans"><strong>Linear perspective, a monocular cue.</strong> Parallel lines appearing to converge signal distance, and it works even with one eye or in a photo.</div></details>
+      <details class="q"><summary>5. A friend walks away down a long corridor. Her image on your retina shrinks, but you never think she is getting smaller. Why?</summary>
+        <div class="ans"><strong>Perceptual constancy</strong> (size constancy): your brain keeps her perceived size stable even though the retinal image changes.</div></details>
+      <details class="q"><summary>6. During a conversation with a stranger who is asking for directions, two workers carry a board between you, and the stranger is swapped for a different person. Half the people tested do not notice. What is this?</summary>
+        <div class="ans"><strong>Change blindness:</strong> with attention focused on the conversation, the change in the scene goes unnoticed.</div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t21_checklist">
+          <li><label><input type="checkbox" data-key="c1"> explain bottom-up and top-down processing with an example of each?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> give an internal and an external factor that filter perception?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> recognize closure, figure and ground, proximity and similarity in an image?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> explain the cocktail party effect, inattention blindness and change blindness?</label></li>
+          <li><label><input type="checkbox" data-key="c5"> name the two binocular and five monocular depth cues and give an example of each?</label></li>
+          <li><label><input type="checkbox" data-key="c6"> explain perceptual constancy and apparent movement?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html?topic=2.1&amp;mode=practice">Practice 2.1 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t2-2" data-num="2.2" data-title="Thinking, Problem-Solving, Judgments, and Decision-Making" data-short="Thinking" data-sub="The shortcuts and traps in how we think, solve problems and make decisions." data-vtime="14:30 to 24:47">
+    <section class="card" id="t22-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Every day you make hundreds of decisions, most of them in less than a second. Which queue is shorter? Is this news story true? Should you keep watching a series you are not enjoying because you are already five episodes in? This topic is about the shortcuts and traps in how we think, solve problems and decide.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Explain concepts, prototypes and schemas, including assimilation and accommodation.</li>
+        <li>Compare algorithms and heuristics, and explain the representativeness and availability heuristics.</li>
+        <li>Explain how mental set, priming, framing, the gambler's fallacy and the sunk-cost fallacy affect decisions.</li>
+        <li>Explain executive functions, creativity, divergent and convergent thinking, and functional fixedness.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Most questions describe a person's reasoning and ask which heuristic, bias or fallacy it shows. The classic mix-up is availability versus representativeness: availability is about how easily examples come to mind; representativeness is about how well something matches a prototype or stereotype.</p>
+      </div>
+    </section>
+    <section class="card" id="t22-concepts" data-toc="Concepts and schemas">
+      <div class="sec-label">Part 1</div>
+      <h2>Concepts, prototypes and schemas</h2>
+      <p><strong>Concepts</strong> are the mental categories that form the building blocks of thought: "bird", "furniture", "teacher". For each concept we hold a <strong>prototype</strong>, the best or most typical example. Prototypes can vary with experience: for many people in the UAE, a falcon may come to mind for "bird" faster than it would for someone elsewhere.</p>
+      <p><strong>Schemas</strong> are broader frameworks for thinking about how something works. We keep them up to date in two ways:</p>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Assimilation</h4><p>Taking in new information and fitting it into an existing schema <strong>without changing</strong> the schema.</p><p class="analogy">A toddler who knows horses sees a camel and calls it a horse.</p></div>
+        <div class="mini"><h4>Accommodation</h4><p><strong>Changing</strong> the schema to fit new information that does not match.</p><p class="analogy">The toddler learns that camels are a separate kind of animal, and creates a new category.</p></div>
+      </div>
+    </section>
+    <section class="card" id="t22-solving" data-toc="Algorithms and heuristics">
+      <div class="sec-label">Part 2</div>
+      <h2>Solving problems: algorithms and heuristics</h2>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Algorithm</h4><p>A step-by-step method that tries every possible solution until the right one is found. It guarantees an answer, but can be very slow.</p><p class="analogy">Trying every combination of a three-digit lock, from 000 to 999.</p></div>
+        <div class="mini"><h4>Heuristic</h4><p>A mental shortcut or rule of thumb. Fast and usually good enough, but it can lead to errors in judgment.</p><p class="analogy">Guessing the lock code is the owner's birthday.</p></div>
+      </div>
+      <h3>Two heuristics that can mislead you</h3>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Representativeness heuristic</h4><p>Judging how likely something is by how well it matches your prototype or stereotype, while ignoring how common it actually is.</p><p class="analogy">Assuming a quiet student who loves poetry must study literature, not engineering, even though far more students study engineering.</p></div>
+        <div class="mini"><h4>Availability heuristic</h4><p>Judging how likely something is by how easily examples come to mind, especially recent or vivid ones.</p><p class="analogy">After seeing plane crash footage all week, feeling flying is more dangerous than driving, though driving is far riskier.</p></div>
+      </div>
+    </section>
+    <section class="card" id="t22-decisions" data-toc="Decision traps">
+      <div class="sec-label">Part 3</div>
+      <h2>What pushes decisions off course</h2>
+      <p>Decisions are pulled off course by past experience, by what we have just been exposed to, by how choices are worded and by faulty beliefs about chance and cost. Test yourself: cover the concept column and name the trap from the scenario.</p>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t22Table" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t22Table" class="stack">
+          <thead><tr><th>Scenario</th><th>Concept</th><th>What is going on</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Scenario">A student keeps using a long method from last year's math class, even though this problem has a two-step shortcut.</td><td class="can-hide" data-label="Concept">Mental set</td><td class="can-hide" data-label="What is going on">Sticking with an approach that worked before, even when a better one exists.</td></tr>
+            <tr><td data-label="Scenario">After a lesson about food, students who are asked to complete "SO_P" are more likely to write SOUP than SOAP.</td><td class="can-hide" data-label="Concept">Priming</td><td class="can-hide" data-label="What is going on">Earlier exposure activates related ideas and nudges later responses, often without awareness.</td></tr>
+            <tr><td data-label="Scenario">Shoppers prefer yogurt labeled "90 percent fat-free" over one labeled "10 percent fat".</td><td class="can-hide" data-label="Concept">Framing</td><td class="can-hide" data-label="What is going on">The way choices are worded changes decisions, even when the facts are identical.</td></tr>
+            <tr><td data-label="Scenario">A coin has landed heads five times in a row, so a player bets heavily on tails, sure that it is "due".</td><td class="can-hide" data-label="Concept">Gambler's fallacy</td><td class="can-hide" data-label="What is going on">Believing past random events change the odds of future ones.</td></tr>
+            <tr><td data-label="Scenario">Mohammed hates a film but stays to the end because he already paid for the ticket.</td><td class="can-hide" data-label="Concept">Sunk-cost fallacy</td><td class="can-hide" data-label="What is going on">Continuing because of what has already been invested, rather than what lies ahead.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card" id="t22-creativity" data-toc="Executive functions and creativity">
+      <div class="sec-label">Part 4</div>
+      <h2>Executive functions and creativity</h2>
+      <p><strong>Executive functions</strong> are the cognitive processes that let you generate, organize, plan and carry out goal-directed behavior and think critically: making a revision timetable, sticking to it, and adjusting when something comes up. (They depend heavily on the prefrontal cortex, Topic 1.4.)</p>
+      <p><strong>Creativity</strong> is the ability to produce novel and useful ideas.</p>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Divergent thinking</h4><p>Generating many different possible answers. Creativity depends on it.</p><p class="analogy">List as many uses for a paperclip as you can in one minute.</p></div>
+        <div class="mini"><h4>Convergent thinking</h4><p>Narrowing down to the single best answer.</p><p class="analogy">A multiple-choice question with one correct option.</p></div>
+      </div>
+      <div class="callout c-exam">
+        <strong class="tag">What blocks creative thinking</strong>
+        <p><strong>Functional fixedness</strong> is the tendency to see objects only in terms of their usual function. Needing a screwdriver and not realizing a coin could turn the screw is functional fixedness. It is the opposite of divergent thinking.</p>
+      </div>
+    </section>
+    <section class="card" id="t22-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 5</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Availability heuristic</h4>How easily examples come to mind.</div>
+        <div><h4>Representativeness heuristic</h4>How well something matches a prototype.</div>
+        <div class="pair-note">Ask: is the person recalling vivid examples, or comparing to a stereotype?</div>
+      </div>
+      <div class="pair">
+        <div><h4>Assimilation</h4>New information fits the old schema; the schema stays the same.</div>
+        <div><h4>Accommodation</h4>The schema changes to fit new information.</div>
+        <div class="pair-note">Accommodation is the one where the person changes their mind.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Mental set</h4>Repeating a strategy that worked before.</div>
+        <div><h4>Functional fixedness</h4>Seeing an object only in its usual role.</div>
+        <div class="pair-note">Mental set is about methods; functional fixedness is about objects.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Gambler's fallacy</h4>Thinks past chance events change future odds.</div>
+        <div><h4>Sunk-cost fallacy</h4>Keeps going because of what has already been spent.</div>
+        <div class="pair-note">One is about chance; the other is about investment.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Priming</h4>Earlier exposure nudges later responses.</div>
+        <div><h4>Framing</h4>The wording of the choice changes the decision.</div>
+        <div class="pair-note">Priming happens before; framing is in how the question itself is presented.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t22-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>AP Psychology Unit 2 Review</em> covers Topic 2.2 from <strong>14:30 to 24:47</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="d6ED_JTH3PQ" data-start="870" data-end="1487" aria-label="Play Mr. Sinn's Topic 2.2 video section" style="background-image:url('https://i.ytimg.com/vi/d6ED_JTH3PQ/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 2.2 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=d6ED_JTH3PQ&amp;t=870s" target="_blank" rel="noopener">Open it on YouTube (starts at 14:30)</a>.</p>
+    </section>
+    <section class="card" id="t22-check" data-toc="Check yourself">
+      <div class="sec-label">Part 6</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. After several news stories about shark attacks, Saeed refuses to swim at the beach, though he drives every day without worry. Which heuristic is at work?</summary>
+        <div class="ans"><strong>The availability heuristic.</strong> Vivid, recent examples come to mind easily, so he overestimates how likely a shark attack is.</div></details>
+      <details class="q"><summary>2. Told that a new classmate is shy, wears glasses and loves chess, most students guess he is in the robotics club rather than the much larger football team. Which heuristic?</summary>
+        <div class="ans"><strong>The representativeness heuristic.</strong> They judged by how well he fits a stereotype, ignoring how many more students play football.</div></details>
+      <details class="q"><summary>3. A child who has only seen cats calls a small dog a "cat". Later she learns dogs are different animals. Name both processes.</summary>
+        <div class="ans"><strong>Assimilation, then accommodation.</strong> First she fits the dog into her existing schema; then she changes the schema to include a new category.</div></details>
+      <details class="q"><summary>4. A team keeps pouring money into a failing app because they have "already spent two years on it". What is this?</summary>
+        <div class="ans"><strong>The sunk-cost fallacy.</strong> Past investment is driving the decision instead of future prospects.</div></details>
+      <details class="q"><summary>5. Asked to list unusual uses for a brick, Noor comes up with twenty. What kind of thinking is she using?</summary>
+        <div class="ans"><strong>Divergent thinking,</strong> generating many possible ideas, which is central to creativity.</div></details>
+      <details class="q"><summary>6. Stuck without a bottle opener, a group of friends never think of using the edge of a table. What is blocking them?</summary>
+        <div class="ans"><strong>Functional fixedness:</strong> they see the table only as a table, not as a possible tool.</div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t22_checklist">
+          <li><label><input type="checkbox" data-key="c1"> explain concepts, prototypes and schemas, and tell assimilation from accommodation?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> compare an algorithm and a heuristic, with an example of each?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> tell the availability and representativeness heuristics apart in a scenario?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> explain mental set, priming, framing, the gambler's fallacy and the sunk-cost fallacy?</label></li>
+          <li><label><input type="checkbox" data-key="c5"> explain executive functions, divergent and convergent thinking, and functional fixedness?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html?topic=2.2&amp;mode=practice">Practice 2.2 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t2-3" data-num="2.3" data-title="Introduction to Memory" data-short="Memory" data-sub="The types of memory, and the models psychologists use to explain how memory works." data-vtime="24:47 to 32:53">
+    <section class="card" id="t23-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">You remember your first day at this school, that Abu Dhabi is the UAE's capital, how to ride a bike, and (hopefully) that your homework is due on Thursday. Those are four very different kinds of memory. This topic sorts them out and introduces the three models psychologists use to explain how memory works.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Tell apart explicit (episodic and semantic), implicit (procedural) and prospective memory.</li>
+        <li>Explain long-term potentiation as a biological basis of memory.</li>
+        <li>Describe the multi-store model, including sensory memory, automatic and effortful processing.</li>
+        <li>Describe the working memory model and its three components.</li>
+        <li>Explain the levels of processing model: structural, phonemic and semantic.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Expect to classify a memory from a description ("remembering your cousin's wedding" is episodic) and to identify which model or component a scenario describes. Students often treat the multi-store model and the working memory model as the same thing: they are not.</p>
+      </div>
+    </section>
+    <section class="card" id="t23-types" data-toc="Types of memory">
+      <div class="sec-label">Part 1</div>
+      <h2>Types of memory</h2>
+      <div class="explorer" data-start="explicit">
+        <div class="ex-visual">
+          <svg viewBox="0 0 680 220" role="img" aria-label="Tree diagram of the types of memory">
+            <path class="tree-line" d="M340,52 V72 H170 V92 M340,72 H440 V92 M340,72 H600 V92"/>
+            <path class="tree-line" d="M170,132 V152 H90 V172 M170,152 H250 V172"/>
+            <path class="tree-line" d="M440,132 V172"/>
+            <g class="ex-node tree-node" data-key="memory"><rect x="260" y="12" width="160" height="40" rx="8"/><text x="340" y="38" text-anchor="middle">Memory</text></g>
+            <g class="ex-node tree-node" data-key="explicit"><rect x="100" y="92" width="140" height="40" rx="8"/><text x="170" y="118" text-anchor="middle">Explicit</text></g>
+            <g class="ex-node tree-node" data-key="implicit"><rect x="370" y="92" width="140" height="40" rx="8"/><text x="440" y="118" text-anchor="middle">Implicit</text></g>
+            <g class="ex-node tree-node" data-key="prospective"><rect x="530" y="92" width="140" height="40" rx="8"/><text x="600" y="118" text-anchor="middle">Prospective</text></g>
+            <g class="ex-node tree-node" data-key="episodic"><rect x="20" y="172" width="140" height="40" rx="8"/><text x="90" y="198" text-anchor="middle">Episodic</text></g>
+            <g class="ex-node tree-node" data-key="semantic"><rect x="180" y="172" width="140" height="40" rx="8"/><text x="250" y="198" text-anchor="middle">Semantic</text></g>
+            <g class="ex-node tree-node" data-key="procedural"><rect x="370" y="172" width="140" height="40" rx="8"/><text x="440" y="198" text-anchor="middle">Procedural</text></g>
+          </svg>
+        </div>
+        <p class="ex-hint">Tap a box to see what that kind of memory is.</p>
+        <div class="ex-chips">
+          <button type="button" data-key="explicit">Explicit</button>
+          <button type="button" data-key="episodic">Episodic</button>
+          <button type="button" data-key="semantic">Semantic</button>
+          <button type="button" data-key="implicit">Implicit</button>
+          <button type="button" data-key="procedural">Procedural</button>
+          <button type="button" data-key="prospective">Prospective</button>
+        </div>
+        <div class="ex-panels">
+          <div class="ex-panel" data-key="memory"><h4>Memory</h4><p>Memories for knowledge, events and experiences differ in how they are processed, stored and retrieved. The main split is between memories you can easily describe (explicit) and those you cannot (implicit).</p></div>
+          <div class="ex-panel" data-key="explicit"><h4>Explicit memory</h4><p>Memory you can consciously recall and <strong>easily describe or explain</strong> to someone else. Sometimes called declarative memory. It comes in two types: episodic and semantic.</p></div>
+          <div class="ex-panel" data-key="episodic"><h4>Episodic memory</h4><p>Memory for personal <strong>experiences and events</strong>, tied to a time and place: your first day at this school, what happened at your cousin's wedding.</p><p><strong>Hook:</strong> <span class="hook">Episodic = episodes of your life.</span></p></div>
+          <div class="ex-panel" data-key="semantic"><h4>Semantic memory</h4><p>Memory for <strong>facts and general knowledge</strong>, not tied to when you learned them: Abu Dhabi is the capital of the UAE; the hippocampus forms new memories.</p><p><strong>Hook:</strong> <span class="hook">Semantic = sense and meaning, facts.</span></p></div>
+          <div class="ex-panel" data-key="implicit"><h4>Implicit memory</h4><p>Memory that shows up in what you do, but is <strong>hard to describe or explain</strong> in words. You know it without knowing how you know it.</p></div>
+          <div class="ex-panel" data-key="procedural"><h4>Procedural memory</h4><p>A type of implicit memory for <strong>skills and procedures</strong>: riding a bike, typing on your phone, tying a headscarf or shoelaces. Try explaining exactly how you keep your balance on a bike: it is surprisingly hard.</p><p><strong>Hook:</strong> <span class="hook">Procedural = how to do it.</span></p></div>
+          <div class="ex-panel" data-key="prospective"><h4>Prospective memory</h4><p>Memory for <strong>future actions</strong>: remembering to submit your homework on Thursday, or to call your grandmother after school. It is remembering to remember.</p></div>
+        </div>
+      </div>
+      <h3>The biology: long-term potentiation</h3>
+      <p><strong>Long-term potentiation</strong> is the strengthening of synaptic connections between neurons when they are activated together frequently. Each time you practice retrieving a fact, the connection behind it becomes a little easier to activate. It is the biological process thought to underlie memory, and it links back to neural firing in Topic 1.3.</p>
+      <div class="callout c-hook">
+        <strong class="tag">Memory hook</strong>
+        <p>Neurons that fire together, wire together.</p>
+      </div>
+    </section>
+    <section class="card" id="t23-models" data-toc="Three models">
+      <div class="sec-label">Part 2</div>
+      <h2>Three models of memory</h2>
+      <h3>1. The multi-store model</h3>
+      <p>Information must pass through three interacting systems to be remembered. Most of what hits your senses never makes it past the first one.</p>
+      <div class="ex-visual wide" style="border:2px solid var(--line);border-radius:12px;">
+        <svg viewBox="0 0 680 190" role="img" aria-label="Diagram of the multi-store model of memory">
+          <defs><marker id="arrN" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a2744"/></marker></defs>
+          <rect x="15" y="30" width="170" height="74" rx="10" fill="#DEEAF1" stroke="#2E75B6" stroke-width="2"/>
+          <rect x="255" y="30" width="170" height="74" rx="10" fill="#DEEAF1" stroke="#2E75B6" stroke-width="2"/>
+          <rect x="495" y="30" width="170" height="74" rx="10" fill="#fdf1e9" stroke="#C55A11" stroke-width="2"/>
+          <text class="lobe-label" x="100" y="62" text-anchor="middle">Sensory memory</text><text class="hyp-level" x="100" y="84" text-anchor="middle">iconic and echoic</text>
+          <text class="lobe-label" x="340" y="62" text-anchor="middle">Short-term memory</text><text class="hyp-level" x="340" y="84" text-anchor="middle">brief, limited</text>
+          <text class="lobe-label" x="580" y="62" text-anchor="middle">Long-term memory</text><text class="hyp-level" x="580" y="84" text-anchor="middle">lasting, vast</text>
+          <path d="M187,67 H250" stroke="#1a2744" stroke-width="2.5" marker-end="url(#arrN)"/>
+          <path d="M427,58 H490" stroke="#1a2744" stroke-width="2.5" marker-end="url(#arrN)"/>
+          <path d="M490,82 H430" stroke="#1a2744" stroke-width="2.5" marker-end="url(#arrN)"/>
+          <text class="hyp-level" x="218" y="22" text-anchor="middle">attention</text>
+          <text class="hyp-level" x="460" y="22" text-anchor="middle">encoding</text>
+          <text class="hyp-level" x="460" y="124" text-anchor="middle">retrieval</text>
+          <text class="hyp-level" x="100" y="134" text-anchor="middle">Not attended to:</text><text class="hyp-level" x="100" y="152" text-anchor="middle">lost in moments</text>
+          <text class="hyp-level" x="340" y="134" text-anchor="middle">Not rehearsed or encoded:</text><text class="hyp-level" x="340" y="152" text-anchor="middle">forgotten</text>
+        </svg>
+      </div>
+      <ul>
+        <li><strong>Sensory memory</strong> holds a brief, detailed copy of what your senses take in: <strong>iconic</strong> memory for sights (a fraction of a second) and <strong>echoic</strong> memory for sounds (a few seconds; why you can "replay" what someone just said when you weren't listening).</li>
+        <li>What you pay <strong>attention</strong> to moves into <strong>short-term memory</strong>, which holds a small amount for a short time.</li>
+        <li>Information that is encoded moves into <strong>long-term memory</strong>, which is long-lasting and has huge capacity. Retrieval brings it back when you need it.</li>
+      </ul>
+      <p>The model highlights two kinds of processing. <strong>Automatic processing</strong> happens without effort or awareness (you remember roughly where you sat at lunch without trying). <strong>Effortful processing</strong> needs attention and work (memorizing the stages of sleep).</p>
+      <h3>2. The working memory model</h3>
+      <p>This model zooms in on what you are actively doing with information right now. Your <strong>working memory</strong> is an active workspace with three parts that work together to process information into long-term memory.</p>
+      <div class="ex-visual wide" style="border:2px solid var(--line);border-radius:12px;">
+        <svg viewBox="0 0 680 200" role="img" aria-label="Diagram of the working memory model">
+          <path class="tree-line" d="M340,76 V100 H170 V124 M340,100 H510 V124"/>
+          <rect x="230" y="16" width="220" height="60" rx="10" fill="#fdf1e9" stroke="#C55A11" stroke-width="2"/>
+          <text class="lobe-label" x="340" y="44" text-anchor="middle">Central executive</text><text class="hyp-level" x="340" y="64" text-anchor="middle">directs attention, coordinates</text>
+          <rect x="60" y="124" width="220" height="60" rx="10" fill="#DEEAF1" stroke="#2E75B6" stroke-width="2"/>
+          <text class="lobe-label" x="170" y="152" text-anchor="middle">Phonological loop</text><text class="hyp-level" x="170" y="172" text-anchor="middle">sounds and words</text>
+          <rect x="400" y="124" width="220" height="60" rx="10" fill="#DEEAF1" stroke="#2E75B6" stroke-width="2"/>
+          <text class="lobe-label" x="510" y="152" text-anchor="middle">Visuospatial sketchpad</text><text class="hyp-level" x="510" y="172" text-anchor="middle">images and space</text>
+        </svg>
+      </div>
+      <ul>
+        <li>The <strong>central executive</strong> directs attention and coordinates the other parts, like a manager.</li>
+        <li>The <strong>phonological loop</strong> holds sounds and words: repeating a phone number in your head.</li>
+        <li>The <strong>visuospatial sketchpad</strong> holds images and spatial layouts: picturing the route from your classroom to the library.</li>
+      </ul>
+      <h3>3. The levels of processing model</h3>
+      <p>How deeply you process information determines how well you remember it, from shallowest to deepest:</p>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t23Levels" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t23Levels" class="stack">
+          <thead><tr><th>Level</th><th>You focus on...</th><th>Example question you ask yourself</th><th>Memory strength</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Level">Structural</td><td class="can-hide" data-label="You focus on...">What the word looks like</td><td data-label="Example question you ask yourself">Is it written in capital letters?</td><td class="can-hide" data-label="Memory strength">Shallow: weakest</td></tr>
+            <tr><td data-label="Level">Phonemic</td><td class="can-hide" data-label="You focus on...">What the word sounds like</td><td data-label="Example question you ask yourself">Does it rhyme with "sky"?</td><td class="can-hide" data-label="Memory strength">Middle</td></tr>
+            <tr><td data-label="Level">Semantic</td><td class="can-hide" data-label="You focus on...">What the word means</td><td data-label="Example question you ask yourself">Is it a type of feeling, and when did I last feel it?</td><td class="can-hide" data-label="Memory strength">Deep: strongest</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card" id="t23-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 3</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Episodic memory</h4>Personal events with a time and place.</div>
+        <div><h4>Semantic memory</h4>Facts and knowledge.</div>
+        <div class="pair-note">"Remembering your graduation" is episodic; "knowing what graduation means" is semantic.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Explicit memory</h4>Easy to describe in words.</div>
+        <div><h4>Implicit memory</h4>Shows in what you do; hard to put into words.</div>
+        <div class="pair-note">Procedural memory is implicit.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Short-term memory (multi-store)</h4>A temporary store that holds information briefly.</div>
+        <div><h4>Working memory</h4>An active workspace that manipulates information.</div>
+        <div class="pair-note">If the scenario involves doing something with information (mental math, picturing a route), think working memory.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Automatic processing</h4>Encoding without effort or awareness.</div>
+        <div><h4>Effortful processing</h4>Encoding that needs attention and work.</div>
+        <div class="pair-note">Both come from the multi-store model.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Phonemic processing</h4>Focus on sound.</div>
+        <div><h4>Semantic processing</h4>Focus on meaning.</div>
+        <div class="pair-note">Semantic is the deepest level and gives the best recall.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t23-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>AP Psychology Unit 2 Review</em> covers Topic 2.3 from <strong>24:47 to 32:53</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="d6ED_JTH3PQ" data-start="1487" data-end="1973" aria-label="Play Mr. Sinn's Topic 2.3 video section" style="background-image:url('https://i.ytimg.com/vi/d6ED_JTH3PQ/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 2.3 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=d6ED_JTH3PQ&amp;t=1487s" target="_blank" rel="noopener">Open it on YouTube (starts at 24:47)</a>.</p>
+    </section>
+    <section class="card" id="t23-check" data-toc="Check yourself">
+      <div class="sec-label">Part 4</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. Hamdan can describe in detail what happened on his first day of Grade 9. What type of memory is this?</summary>
+        <div class="ans"><strong>Episodic memory,</strong> a type of explicit memory for personal experiences tied to a time and place.</div></details>
+      <details class="q"><summary>2. Layla can type quickly without looking at the keys but cannot explain where each letter is. What type of memory is this?</summary>
+        <div class="ans"><strong>Procedural memory,</strong> a type of implicit memory for skills.</div></details>
+      <details class="q"><summary>3. Khalifa set a reminder because he keeps forgetting to bring his PE kit on Tuesdays. Which kind of memory is letting him down?</summary>
+        <div class="ans"><strong>Prospective memory:</strong> remembering to carry out a future action.</div></details>
+      <details class="q"><summary>4. While a teacher speaks, Aisha is not listening, but when asked "what did I just say?" she can repeat the last sentence. Which part of memory allowed this?</summary>
+        <div class="ans"><strong>Echoic memory,</strong> the auditory part of sensory memory, which briefly holds sounds for a few seconds.</div></details>
+      <details class="q"><summary>5. Trying to work out 47 times 6 in your head, you hold the numbers by repeating them silently. Which component of the working memory model is that?</summary>
+        <div class="ans"><strong>The phonological loop.</strong> The central executive is coordinating the calculation; the loop holds the spoken numbers.</div></details>
+      <details class="q"><summary>6. To learn new vocabulary, one group asks "does this word rhyme with a word I know?" and another asks "how would I use this word in my own life?". Which group will remember more, and why?</summary>
+        <div class="ans"><strong>The second group.</strong> They are processing semantically, the deepest level, while the first group is processing phonemically.</div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t23_checklist">
+          <li><label><input type="checkbox" data-key="c1"> classify a memory as episodic, semantic, procedural or prospective?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> explain long-term potentiation in one sentence?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> draw the multi-store model and explain iconic and echoic memory, and automatic and effortful processing?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> name and explain the three components of the working memory model?</label></li>
+          <li><label><input type="checkbox" data-key="c5"> rank structural, phonemic and semantic processing and explain why?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html?topic=2.3&amp;mode=practice">Practice 2.3 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t2-4" data-num="2.4" data-title="Encoding Memories" data-short="Encoding" data-sub="How information gets into memory, and the study strategies that help it stick." data-vtime="32:53 to 38:33">
+    <section class="card" id="t24-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Encoding is getting information into memory in the first place. If it never goes in properly, no amount of last-minute panic will get it out. The good news: how you encode is largely up to you. This topic is the psychology behind the study strategies that actually work.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Explain mnemonic devices, including the method of loci.</li>
+        <li>Explain how chunking, categories and hierarchies improve encoding.</li>
+        <li>Explain the spacing effect: massed versus distributed practice.</li>
+        <li>Explain the serial position effect, including the primacy and recency effects.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Expect a scenario describing how someone studies or what they remember from a list, and a question asking which encoding strategy or effect is at work. This topic also lends itself to data questions, such as reading a serial position graph.</p>
+      </div>
+    </section>
+    <section class="card" id="t24-strategies" data-toc="Mnemonics and organizing">
+      <div class="sec-label">Part 1</div>
+      <h2>Mnemonics and organizing information</h2>
+      <p>How information is encoded determines how well it is stored and how easily it can be retrieved later. The CED names several ways to encode more effectively.</p>
+      <h3>Mnemonic devices</h3>
+      <p><strong>Mnemonic devices</strong> are memory aids that help encode information into working and long-term memory: acronyms, rhymes, vivid images. The <strong>method of loci</strong> is a powerful one: you imagine walking through a familiar place, such as your home, and "place" each item you need to remember in a different spot. To recall them, you take the same walk in your mind.</p>
+      <h3>Organizing information</h3>
+      <div class="grid3">
+        <div class="mini"><h4>Chunking</h4><p>Grouping individual items into meaningful units, so short-term memory holds a few chunks instead of many items.</p><p class="analogy">See the phone number below.</p></div>
+        <div class="mini"><h4>Categories</h4><p>Sorting items into groups by type.</p><p class="analogy">A shopping list grouped into fruit, dairy and bread.</p></div>
+        <div class="mini"><h4>Hierarchies</h4><p>Organizing information from broad categories down to specific details.</p><p class="analogy">The nervous system map in Topic 1.2: nervous system, then CNS and PNS, then their branches.</p></div>
+      </div>
+      <div class="widget">
+        <h4>Try it: chunking a phone number</h4>
+        <p>Glance at each version for two seconds, look away, and try to repeat it.</p>
+        <div class="readout" style="text-align:center;font-size:24px;font-weight:700;letter-spacing:3px;margin-bottom:8px;">971501234567</div>
+        <div class="readout" style="text-align:center;font-size:24px;font-weight:700;letter-spacing:2px;">+971 &nbsp;50 &nbsp;123 &nbsp;4567</div>
+        <p style="margin:10px 0 0;font-size:14px;color:var(--muted);">Same twelve digits. The second version is four meaningful chunks (country code, network, then two groups), which is far easier to hold in short-term memory.</p>
+      </div>
+    </section>
+    <section class="card" id="t24-spacing" data-toc="The spacing effect">
+      <div class="sec-label">Part 2</div>
+      <h2>The spacing effect</h2>
+      <p>The <strong>spacing effect</strong> is the finding that you remember far more when study is <strong>spread out over time</strong> than when it is crammed into one session, even if the total time is the same.</p>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Massed practice (cramming)</h4><p>Studying all at once, such as six hours the night before a test. It can feel productive, and it may get you through tomorrow, but much of it fades quickly.</p><p class="analogy">Six hours, one night.</p></div>
+        <div class="mini"><h4>Distributed practice</h4><p>Spreading study across several shorter sessions with gaps in between. Each session strengthens the memory and consolidation has time to work.</p><p class="analogy">One hour, six times, across two weeks.</p></div>
+      </div>
+      <div class="callout c-exam">
+        <strong class="tag">Use this, don't just learn it</strong>
+        <p>Distributed practice is one of the best-supported study strategies in all of psychology. For the AP exam in May, a little Unit 2 review every week will beat a frantic week of cramming in April.</p>
+      </div>
+    </section>
+    <section class="card" id="t24-serial" data-toc="Serial position effect">
+      <div class="sec-label">Part 3</div>
+      <h2>The serial position effect</h2>
+      <p>The order in which information is presented affects how well it is encoded. Read someone a list of fifteen words and ask them to recall as many as they can: they will remember the first few and the last few best, and lose the middle. This is the <strong>serial position effect</strong>.</p>
+      <div class="ex-visual wide" style="border:2px solid var(--line);border-radius:12px;">
+        <svg viewBox="0 0 640 250" role="img" aria-label="Graph of the serial position effect">
+          <line class="ax" x1="70" y1="20" x2="70" y2="200"/><line class="ax" x1="70" y1="200" x2="610" y2="200"/>
+          <text class="hyp-level" x="62" y="44" text-anchor="end">High</text><text class="hyp-level" x="62" y="196" text-anchor="end">Low</text>
+          <text class="hyp-level" x="22" y="120" transform="rotate(-90 22 120)" text-anchor="middle">Chance of recall</text>
+          <path d="M90,50 C140,110 180,160 250,168 C320,174 400,174 470,160 C520,148 560,90 590,40" fill="none" stroke="#1a2744" stroke-width="3.5"/>
+          <rect x="80" y="30" width="95" height="170" fill="#C55A11" opacity=".12"/>
+          <rect x="510" y="30" width="95" height="170" fill="#2E75B6" opacity=".12"/>
+          <text class="lobe-label" x="127" y="222" text-anchor="middle" style="fill:#C55A11;">Primacy</text>
+          <text class="lobe-label" x="557" y="222" text-anchor="middle" style="fill:#2E75B6;">Recency</text>
+          <text class="hyp-level" x="340" y="222" text-anchor="middle">Middle items: lowest recall</text>
+          <text class="hyp-level" x="340" y="244" text-anchor="middle">Position of the item in the list &rarr;</text>
+        </svg>
+      </div>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Primacy effect</h4><p>Items at the <strong>beginning</strong> are remembered well, because there was time to rehearse them and move them into long-term memory.</p><p class="analogy">The first names you hear at a party.</p></div>
+        <div class="mini"><h4>Recency effect</h4><p>Items at the <strong>end</strong> are remembered well, because they are still in short-term memory.</p><p class="analogy">The last few things your teacher said before the bell.</p></div>
+      </div>
+      <p>One extra detail worth knowing: if recall is delayed instead of immediate, the recency effect tends to fade (those items have left short-term memory), while the primacy effect remains.</p>
+    </section>
+    <section class="card" id="t24-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 4</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Primacy effect</h4>Better recall for the <strong>first</strong> items.</div>
+        <div><h4>Recency effect</h4>Better recall for the <strong>last</strong> items.</div>
+        <div class="pair-note">Primary school comes first; recent events happened last.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Massed practice</h4>All at once; feels efficient, fades fast.</div>
+        <div><h4>Distributed practice</h4>Spread out over time; lasts longer.</div>
+        <div class="pair-note">The spacing effect is the reason distributed practice wins.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Chunking</h4>Grouping items into meaningful units.</div>
+        <div><h4>Method of loci</h4>Placing items along an imagined familiar route.</div>
+        <div class="pair-note">Chunking organizes; the method of loci uses imagery and location.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t24-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>AP Psychology Unit 2 Review</em> covers Topic 2.4 from <strong>32:53 to 38:33</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="d6ED_JTH3PQ" data-start="1973" data-end="2313" aria-label="Play Mr. Sinn's Topic 2.4 video section" style="background-image:url('https://i.ytimg.com/vi/d6ED_JTH3PQ/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 2.4 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=d6ED_JTH3PQ&amp;t=1973s" target="_blank" rel="noopener">Open it on YouTube (starts at 32:53)</a>.</p>
+    </section>
+    <section class="card" id="t24-check" data-toc="Check yourself">
+      <div class="sec-label">Part 5</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. To memorize a speech, Salama imagines walking through her house, placing each main point in a different room. Which technique is she using?</summary>
+        <div class="ans"><strong>The method of loci,</strong> a mnemonic device that uses a familiar route to encode items in order.</div></details>
+      <details class="q"><summary>2. You remember a credit card number by reading it as four groups of four digits. Which strategy is this?</summary>
+        <div class="ans"><strong>Chunking.</strong> Sixteen separate digits become four meaningful units.</div></details>
+      <details class="q"><summary>3. Two students both study for six hours. One studies the night before; the other studies an hour a day for six days. Who will remember more a month later, and what explains it?</summary>
+        <div class="ans"><strong>The second student.</strong> The spacing effect: distributed practice beats massed practice for long-term retention.</div></details>
+      <details class="q"><summary>4. Asked to recall a list of twenty grocery items immediately, Faisal remembers the first and last few but almost none from the middle. What is this pattern?</summary>
+        <div class="ans"><strong>The serial position effect,</strong> with a primacy effect for the first items and a recency effect for the last.</div></details>
+      <details class="q"><summary>5. The same test is given after a 30-minute delay instead of immediately. Which part of the pattern would you expect to weaken?</summary>
+        <div class="ans"><strong>The recency effect.</strong> The last items were held in short-term memory and are lost after a delay; the primacy effect remains.</div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t24_checklist">
+          <li><label><input type="checkbox" data-key="c1"> explain what a mnemonic is and describe the method of loci?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> give an example of chunking, categories and hierarchies?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> explain the spacing effect and compare massed and distributed practice?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> sketch the serial position curve and label the primacy and recency effects?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html?topic=2.4&amp;mode=practice">Practice 2.4 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t2-5" data-num="2.5" data-title="Storing Memories" data-short="Storing" data-sub="How long memories last, how much they hold, and what happens when storage breaks down." data-vtime="38:33 to 44:35">
+    <section class="card" id="t25-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Some memories vanish in a second; others last a lifetime. This topic compares the different memory stores by how long they last and how much they hold, explains how rehearsal keeps information alive, and looks at what happens when storage itself is damaged.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Compare sensory, short-term, working and long-term memory by duration, capacity and content.</li>
+        <li>Explain maintenance rehearsal and elaborative rehearsal.</li>
+        <li>Explain highly superior autobiographical memory and why self-related memories are easier to keep.</li>
+        <li>Explain retrograde and anterograde amnesia, Alzheimer's disease and infantile amnesia.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Expect to compare the memory stores, to pick the more effective type of rehearsal in a study scenario, and to tell retrograde from anterograde amnesia in a case description. That last pair is a favorite, so learn which direction each one points.</p>
+      </div>
+    </section>
+    <section class="card" id="t25-stores" data-toc="Memory stores">
+      <div class="sec-label">Part 1</div>
+      <h2>How long, how much, what kind</h2>
+      <p>The memory systems from Topic 2.3 differ in three ways: how long they hold information (duration), how much they hold (capacity) and what kind of information they hold (content).</p>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t25Stores" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t25Stores" class="stack">
+          <thead><tr><th>Store</th><th>Duration</th><th>Capacity</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Store">Sensory memory</td><td class="can-hide" data-label="Duration">A fraction of a second (sights) to a few seconds (sounds)</td><td class="can-hide" data-label="Capacity">Large: a brief copy of everything the senses take in</td><td class="can-hide" data-label="Content">Raw sensory information</td></tr>
+            <tr><td data-label="Store">Short-term memory</td><td class="can-hide" data-label="Duration">Around 20 to 30 seconds without rehearsal</td><td class="can-hide" data-label="Capacity">Small: roughly 7 items, give or take 2</td><td class="can-hide" data-label="Content">Whatever you are paying attention to right now</td></tr>
+            <tr><td data-label="Store">Working memory</td><td class="can-hide" data-label="Duration">As long as you keep actively using it</td><td class="can-hide" data-label="Capacity">Limited</td><td class="can-hide" data-label="Content">Information you are actively manipulating: solving, comparing, planning</td></tr>
+            <tr><td data-label="Store">Long-term memory</td><td class="can-hide" data-label="Duration">Minutes to a lifetime</td><td class="can-hide" data-label="Capacity">Essentially unlimited</td><td class="can-hide" data-label="Content">Knowledge, skills and experiences</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Keeping information alive: rehearsal</h3>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Maintenance rehearsal</h4><p>Repeating information over and over to keep it in memory. It prolongs storage, but adds little meaning.</p><p class="analogy">Repeating a Wi-Fi password until you have typed it in.</p></div>
+        <div class="mini"><h4>Elaborative rehearsal</h4><p>Rehearsing in a way that connects the information to meaning: linking it to what you know, to examples, to your own life. It leads to much better long-term retention.</p><p class="analogy">Explaining "negative reinforcement" using a time it happened to you.</p></div>
+      </div>
+    </section>
+    <section class="card" id="t25-hsam" data-toc="Autobiographical memory">
+      <div class="sec-label">Part 2</div>
+      <h2>Superior memory and the self</h2>
+      <p>A small number of people have <strong>highly superior autobiographical memory</strong>: give them almost any date from their adult life and they can tell you what day of the week it was and what they did. Cases like these suggest there may be <strong>biological processes</strong> that allow superior memory storage.</p>
+      <p>For everyone else, <strong>autobiographical memory</strong> (memory for the events of your own life) helps explain a useful pattern: information connected to <strong>ourselves</strong> is more memorable. Linking a new term to your own experience is a form of elaborative rehearsal, and it works.</p>
+      <div class="callout c-hook">
+        <strong class="tag">Make it personal</strong>
+        <p>When you learn a new term, ask: "When has this happened to me?" Connecting it to your own life gives it a stronger place in memory.</p>
+      </div>
+    </section>
+    <section class="card" id="t25-amnesia" data-toc="When storage fails">
+      <div class="sec-label">Part 3</div>
+      <h2>When storage breaks down</h2>
+      <p>Storage can be damaged by physical injury or illness, and it is limited by development.</p>
+      <div class="ex-visual wide" style="border:2px solid var(--line);border-radius:12px;margin:12px 0;">
+        <svg viewBox="0 0 640 170" role="img" aria-label="Timeline comparing retrograde and anterograde amnesia">
+          <defs><marker id="arrT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a2744"/></marker></defs>
+          <rect x="40" y="52" width="270" height="44" rx="8" fill="#C55A11" opacity=".15"/>
+          <rect x="330" y="52" width="270" height="44" rx="8" fill="#2E75B6" opacity=".15"/>
+          <line x1="30" y1="74" x2="610" y2="74" stroke="#1a2744" stroke-width="3" marker-end="url(#arrT)"/>
+          <line x1="320" y1="34" x2="320" y2="114" stroke="#C55A11" stroke-width="5"/>
+          <text class="lobe-label" x="320" y="26" text-anchor="middle">Brain injury</text>
+          <text class="lobe-label" x="175" y="132" text-anchor="middle" style="fill:#C55A11;">Retrograde</text>
+          <text class="hyp-level" x="175" y="152" text-anchor="middle">Lost: memories from before</text>
+          <text class="lobe-label" x="465" y="132" text-anchor="middle" style="fill:#2E75B6;">Anterograde</text>
+          <text class="hyp-level" x="465" y="152" text-anchor="middle">Can't form: new memories after</text>
+          <text class="hyp-level" x="610" y="100" text-anchor="end">time</text>
+        </svg>
+      </div>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Retrograde amnesia</h4><p>Loss of memories from <strong>before</strong> the injury or illness. The person may not remember the weeks leading up to an accident.</p><p class="analogy">Retro = backward in time.</p></div>
+        <div class="mini"><h4>Anterograde amnesia</h4><p>Inability to form <strong>new</strong> memories after the injury, while older memories may stay intact. The person may meet you every day and never remember you.</p><p class="analogy">Antero = forward in time.</p></div>
+        <div class="mini"><h4>Alzheimer's disease</h4><p>A progressive brain disease that gradually destroys memory. It often begins with difficulty forming new memories and, over time, erodes older ones too.</p></div>
+        <div class="mini"><h4>Infantile amnesia</h4><p>Most people have almost no memories from before about age 3 or 4. The brain systems needed to store lasting explicit memories are still developing.</p><p class="analogy">A developmental limit, not damage.</p></div>
+      </div>
+    </section>
+    <section class="card" id="t25-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 4</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Retrograde amnesia</h4>Can't remember the past, before the injury.</div>
+        <div><h4>Anterograde amnesia</h4>Can't make new memories after the injury.</div>
+        <div class="pair-note">Draw the timeline: retrograde points back, anterograde points forward.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Maintenance rehearsal</h4>Repetition; keeps information briefly.</div>
+        <div><h4>Elaborative rehearsal</h4>Adds meaning; stores it better long term.</div>
+        <div class="pair-note">If the student links it to examples or their own life, it is elaborative.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Short-term memory</h4>A brief, small store.</div>
+        <div><h4>Long-term memory</h4>A lasting, essentially unlimited store.</div>
+        <div class="pair-note">Short-term memory holds about 7 items; long-term memory has no known limit.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t25-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>AP Psychology Unit 2 Review</em> covers Topic 2.5 from <strong>38:33 to 44:35</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="d6ED_JTH3PQ" data-start="2313" data-end="2675" aria-label="Play Mr. Sinn's Topic 2.5 video section" style="background-image:url('https://i.ytimg.com/vi/d6ED_JTH3PQ/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 2.5 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=d6ED_JTH3PQ&amp;t=2313s" target="_blank" rel="noopener">Open it on YouTube (starts at 38:33)</a>.</p>
+    </section>
+    <section class="card" id="t25-check" data-toc="Check yourself">
+      <div class="sec-label">Part 5</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. Yusuf repeats a six-digit verification code over and over until he types it in, then forgets it a minute later. Which kind of rehearsal did he use?</summary>
+        <div class="ans"><strong>Maintenance rehearsal:</strong> simple repetition that keeps information briefly without adding meaning.</div></details>
+      <details class="q"><summary>2. To learn the term "availability heuristic", Dana links it to how she became nervous of flying after seeing news of an accident. What is she doing, and why does it work?</summary>
+        <div class="ans"><strong>Elaborative rehearsal.</strong> Connecting the term to meaning and to her own life (autobiographical memory) makes it more memorable.</div></details>
+      <details class="q"><summary>3. After a car accident, a man cannot remember anything from the month before the crash, but remembers everything since. What is this?</summary>
+        <div class="ans"><strong>Retrograde amnesia:</strong> loss of memories from before the injury.</div></details>
+      <details class="q"><summary>4. After surgery on her hippocampus, a patient recognizes old friends but cannot remember a nurse she has met every day for a week. What is this?</summary>
+        <div class="ans"><strong>Anterograde amnesia:</strong> she cannot form new long-term memories after the surgery.</div></details>
+      <details class="q"><summary>5. Why can almost no adults remember their second birthday?</summary>
+        <div class="ans"><strong>Infantile amnesia.</strong> The brain systems needed to store lasting explicit memories were not yet developed.</div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t25_checklist">
+          <li><label><input type="checkbox" data-key="c1"> compare the four memory stores by duration, capacity and content?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> explain the difference between maintenance and elaborative rehearsal?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> explain highly superior autobiographical memory and why self-related memories last?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> tell retrograde and anterograde amnesia apart, and explain Alzheimer's disease and infantile amnesia?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html?topic=2.5&amp;mode=practice">Practice 2.5 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t2-6" data-num="2.6" data-title="Retrieving Memories" data-short="Retrieving" data-sub="How we get information back out of memory, and how to make that easier on exam day." data-vtime="44:35 to 47:45">
+    <section class="card" id="t26-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">You know you studied it. You can almost see the page. But in the exam hall, the answer will not come. Retrieval is getting information back out of memory, and this topic explains why it sometimes fails and how to make it far more reliable.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Compare recall and recognition, and explain the role of retrieval cues.</li>
+        <li>Explain context-dependent, mood-congruent and state-dependent memory.</li>
+        <li>Explain the testing effect and metacognition as forms of retrieval practice.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Expect scenarios like "she remembers more when she studies and tests in the same room" and a question asking which retrieval effect it shows. Context (the place), mood (the feeling) and state (the physical condition) are easy to confuse, so match each to its clue word.</p>
+      </div>
+    </section>
+    <section class="card" id="t26-recall" data-toc="Recall and recognition">
+      <div class="sec-label">Part 1</div>
+      <h2>Recall and recognition</h2>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Recall</h4><p>Retrieving information <strong>without cues</strong>: you have to produce it yourself.</p><p class="analogy">A fill-in-the-blank question, or a free-response answer.</p></div>
+        <div class="mini"><h4>Recognition</h4><p>Identifying information when it is presented to you, using <strong>retrieval cues</strong>.</p><p class="analogy">A multiple-choice question: the right answer is in front of you.</p></div>
+      </div>
+      <p>Recognition is usually easier than recall, which is why you can recognize a classmate's face years later even if you could never recall their name unprompted.</p>
+    </section>
+    <section class="card" id="t26-match" data-toc="Context, mood and state">
+      <div class="sec-label">Part 2</div>
+      <h2>Matching the moment</h2>
+      <p>Retrieval improves when your situation at retrieval matches your situation when you encoded the information. The match acts as a retrieval cue.</p>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t26Table" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t26Table" class="stack">
+          <thead><tr><th>Effect</th><th>What has to match</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Effect">Context-dependent memory</td><td class="can-hide" data-label="What has to match">The <strong>environment</strong> or place</td><td data-label="Example">You walk into the kitchen and forget why, then remember once you are back at your desk.</td></tr>
+            <tr><td data-label="Effect">Mood-congruent memory</td><td class="can-hide" data-label="What has to match">Your <strong>mood</strong></td><td data-label="Example">When you are feeling low, sad memories come to mind more easily; when happy, happy ones do.</td></tr>
+            <tr><td data-label="Effect">State-dependent memory</td><td class="can-hide" data-label="What has to match">Your <strong>physical state</strong></td><td data-label="Example">Material learned while very tired, or after strong coffee, is recalled better in that same physical state.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout c-hook">
+        <strong class="tag">Clue words</strong>
+        <p><strong>Place</strong> or room: context. <strong>Feeling</strong> or emotion: mood. <strong>Body</strong> or physical condition: state.</p>
+      </div>
+    </section>
+    <section class="card" id="t26-practice" data-toc="Retrieval practice">
+      <div class="sec-label">Part 3</div>
+      <h2>Retrieval practice</h2>
+      <p>Successful retrieval becomes more likely with <strong>retrieval practice</strong>: deliberately pulling information out of memory, rather than just putting it in again.</p>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>The testing effect</h4><p>Remembering is enhanced by retrieving information, not just rereading it. Testing yourself is a way of learning, not only of checking.</p><p class="analogy">Answering practice questions beats highlighting your notes again.</p></div>
+        <div class="mini"><h4>Metacognition</h4><p>Thinking about your own thinking: judging what you really know and what you only recognize, then adjusting how you study.</p><p class="analogy">"I can recognize these terms, but can I explain them without looking?"</p></div>
+      </div>
+      <div class="callout c-exam">
+        <strong class="tag">Use this before May</strong>
+        <p>Rereading feels comfortable, because the material looks familiar. That feeling is recognition, not recall. The practice quizzes on this site use the testing effect, so do them before you feel ready, not after.</p>
+      </div>
+    </section>
+    <section class="card" id="t26-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 4</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Recall</h4>No cues: you produce the answer.</div>
+        <div><h4>Recognition</h4>Cues present: you identify the answer.</div>
+        <div class="pair-note">Free-response is recall; multiple-choice is recognition.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Context-dependent</h4>Same place.</div>
+        <div><h4>State-dependent</h4>Same physical condition.</div>
+        <div class="pair-note">A room is context; being tired or caffeinated is state.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Mood-congruent memory</h4>Your current mood brings up matching memories.</div>
+        <div><h4>State-dependent memory</h4>Your physical state matches the learning state.</div>
+        <div class="pair-note">Mood is emotional; state is physical.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t26-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>AP Psychology Unit 2 Review</em> covers Topic 2.6 from <strong>44:35 to 47:45</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="d6ED_JTH3PQ" data-start="2675" data-end="2865" aria-label="Play Mr. Sinn's Topic 2.6 video section" style="background-image:url('https://i.ytimg.com/vi/d6ED_JTH3PQ/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 2.6 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=d6ED_JTH3PQ&amp;t=2675s" target="_blank" rel="noopener">Open it on YouTube (starts at 44:35)</a>.</p>
+    </section>
+    <section class="card" id="t26-check" data-toc="Check yourself">
+      <div class="sec-label">Part 5</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. A test asks you to write the definition of "semantic memory" from scratch. Is this recall or recognition?</summary>
+        <div class="ans"><strong>Recall.</strong> You have to retrieve the information without cues.</div></details>
+      <details class="q"><summary>2. Returning to her old primary school, Shamma suddenly remembers dozens of details she had not thought about in years. What explains this?</summary>
+        <div class="ans"><strong>Context-dependent memory.</strong> Being in the original environment provides retrieval cues.</div></details>
+      <details class="q"><summary>3. After a breakup, Ahmed finds himself remembering every argument he ever had with friends, but few happy times. Which effect is this?</summary>
+        <div class="ans"><strong>Mood-congruent memory:</strong> his low mood makes memories with a matching mood easier to retrieve.</div></details>
+      <details class="q"><summary>4. Two groups study the same chapter. One rereads it three times; the other reads it once, then answers practice questions. Which group remembers more a week later, and why?</summary>
+        <div class="ans"><strong>The practice-question group,</strong> because of the testing effect: retrieving information strengthens memory more than rereading.</div></details>
+      <details class="q"><summary>5. Before a test, Noura covers her notes and asks herself which terms she could explain to a friend. What is she using?</summary>
+        <div class="ans"><strong>Metacognition:</strong> thinking about her own knowledge to judge what she really knows.</div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t26_checklist">
+          <li><label><input type="checkbox" data-key="c1"> explain recall and recognition, with an exam example of each?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> explain context-dependent, mood-congruent and state-dependent memory?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> explain the testing effect and metacognition, and use them in your own revision?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html?topic=2.6&amp;mode=practice">Practice 2.6 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t2-7" data-num="2.7" data-title="Forgetting and Other Memory Challenges" data-short="Forgetting" data-sub="Why we forget, and why even confident memories can be wrong." data-vtime="47:45 to 52:24">
+    <section class="card" id="t27-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Forgetting is not always failure. Your brain is constantly deciding what to keep, and it rebuilds memories every time you recall them. This topic explains why we forget, and why a memory can feel completely certain and still be wrong.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Interpret the forgetting curve.</li>
+        <li>Explain encoding failure, proactive and retroactive interference, and inadequate retrieval (the tip-of-the-tongue phenomenon).</li>
+        <li>Explain the psychodynamic idea of repression.</li>
+        <li>Explain the misinformation effect, source amnesia and constructive memory, including imagination inflation.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Proactive versus retroactive interference is one of the most tested pairs in the whole course: be sure which direction each one runs. Expect scenarios about eyewitnesses and false memories for the misinformation effect and source amnesia, and graph questions on the forgetting curve.</p>
+      </div>
+    </section>
+    <section class="card" id="t27-curve" data-toc="The forgetting curve">
+      <div class="sec-label">Part 1</div>
+      <h2>The forgetting curve</h2>
+      <p>The <strong>forgetting curve</strong>, first mapped by Hermann Ebbinghaus, shows that time is a major factor in forgetting. Most forgetting happens <strong>quickly, soon after learning</strong>, and then the curve <strong>levels off</strong>: what survives the first few days tends to last.</p>
+      <div class="ex-visual wide" style="border:2px solid var(--line);border-radius:12px;">
+        <svg viewBox="0 0 640 240" role="img" aria-label="Graph of the forgetting curve">
+          <line class="ax" x1="70" y1="20" x2="70" y2="195"/><line class="ax" x1="70" y1="195" x2="610" y2="195"/>
+          <text class="hyp-level" x="62" y="34" text-anchor="end">100%</text><text class="hyp-level" x="62" y="194" text-anchor="end">0%</text>
+          <text class="hyp-level" x="22" y="110" transform="rotate(-90 22 110)" text-anchor="middle">Amount remembered</text>
+          <path d="M72,30 C90,95 115,128 160,140 C230,156 330,160 420,163 C500,165 560,166 605,167" fill="none" stroke="#C55A11" stroke-width="4"/>
+          <text class="lobe-label" x="150" y="82" style="fill:#C55A11;">Steep drop soon after learning</text>
+          <text class="lobe-label" x="400" y="148" style="fill:#1a2744;">then it levels off</text>
+          <text class="hyp-level" x="340" y="225" text-anchor="middle">Time since learning &rarr;</text>
+        </svg>
+      </div>
+      <div class="callout c-exam">
+        <strong class="tag">The study lesson</strong>
+        <p>The steep early drop is why reviewing a lesson within a day or two (distributed practice, Topic 2.4) is so effective: it catches the memory before most of it slips away.</p>
+      </div>
+    </section>
+    <section class="card" id="t27-why" data-toc="Why we forget">
+      <div class="sec-label">Part 2</div>
+      <h2>Why we forget</h2>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t27Table" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t27Table" class="stack">
+          <thead><tr><th>Reason</th><th>What happens</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Reason">Encoding failure</td><td class="can-hide" data-label="What happens">The information never got into long-term memory in the first place.</td><td data-label="Example">You have handled one-dirham coins a thousand times, but could you draw the front from memory?</td></tr>
+            <tr><td data-label="Reason">Proactive interference</td><td class="can-hide" data-label="What happens"><strong>Old</strong> learning gets in the way of remembering <strong>new</strong> information.</td><td data-label="Example">You keep typing your old password after changing it.</td></tr>
+            <tr><td data-label="Reason">Retroactive interference</td><td class="can-hide" data-label="What happens"><strong>New</strong> learning gets in the way of remembering <strong>old</strong> information.</td><td data-label="Example">After learning your new class timetable, you cannot remember last year's.</td></tr>
+            <tr><td data-label="Reason">Inadequate retrieval</td><td class="can-hide" data-label="What happens">The memory is stored, but you cannot access it right now.</td><td data-label="Example">The tip-of-the-tongue phenomenon: you know the actor's name, you know it starts with M, but it will not come.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout c-hook">
+        <strong class="tag">Memory hook for interference</strong>
+        <p><strong>Pro</strong>active: the old memory moves <strong>forward</strong> and blocks the new. <strong>Retro</strong>active: the new memory reaches <strong>back</strong> and blocks the old. Ask which memory is the one you are failing to remember: if it is the new one, it is proactive.</p>
+      </div>
+      <h3>Repression: a psychodynamic explanation</h3>
+      <p>Psychodynamic theorists, following Freud, believe some memories are forgotten to protect the ego from distress: the mind pushes painful memories out of conscious awareness. This is called <strong>repression</strong>. Many researchers question how often this really happens, but you need to know what the psychodynamic perspective claims.</p>
+    </section>
+    <section class="card" id="t27-accuracy" data-toc="When memories are wrong">
+      <div class="sec-label">Part 3</div>
+      <h2>When memories are wrong</h2>
+      <p>Memory is not a video recording. Each time you recall something, you rebuild it, and the rebuilt version can change.</p>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Misinformation effect</h4><p>Misleading information introduced <strong>after</strong> an event distorts the memory of it. In classic studies, people who were asked how fast cars were going when they "smashed" into each other gave higher speed estimates, and were more likely to falsely remember broken glass, than people asked about cars that "hit" each other.</p><p class="analogy">The wording of the question rewrote the memory.</p></div>
+        <div class="mini"><h4>Source amnesia</h4><p>Remembering information but forgetting <strong>where</strong> it came from. You are sure your teacher said a "fact" that you actually saw in a social media video.</p><p class="analogy">The content stays; the source fades.</p></div>
+        <div class="mini"><h4>Constructive memory</h4><p>Memories are reconstructed each time they are recalled and consolidated again, so gaps get filled with what seems likely.</p><p class="analogy">Your memory of a family trip slowly absorbs details from the photos and stories.</p></div>
+        <div class="mini"><h4>Imagination inflation</h4><p>Repeatedly imagining an event that never happened increases your confidence that it did.</p><p class="analogy">Picturing yourself getting lost as a child can make you more confident it really happened.</p></div>
+      </div>
+      <div class="callout c-exam">
+        <strong class="tag">Why this matters beyond the exam</strong>
+        <p>These findings are why psychologists urge caution about eyewitness memory and leading questions: a confident memory is not always an accurate one.</p>
+      </div>
+    </section>
+    <section class="card" id="t27-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 4</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Proactive interference</h4>Old blocks new.</div>
+        <div><h4>Retroactive interference</h4>New blocks old.</div>
+        <div class="pair-note">Old password typed by mistake: proactive. Forgetting last year's timetable: retroactive.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Encoding failure</h4>It never went in.</div>
+        <div><h4>Inadequate retrieval</h4>It went in, but you can't get it out right now.</div>
+        <div class="pair-note">Tip of the tongue is a retrieval failure, not an encoding failure.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Misinformation effect</h4>Later information changes the memory itself.</div>
+        <div><h4>Source amnesia</h4>The memory is fine; its source is forgotten.</div>
+        <div class="pair-note">Ask whether the content changed or only the source was lost.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Repression</h4>Forgetting to protect the ego (a psychodynamic idea).</div>
+        <div><h4>Ordinary forgetting</h4>Time, interference, encoding or retrieval failure.</div>
+        <div class="pair-note">If the memory is distressing and pushed out of awareness, the answer is repression.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t27-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>AP Psychology Unit 2 Review</em> covers Topic 2.7 from <strong>47:45 to 52:24</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="d6ED_JTH3PQ" data-start="2865" data-end="3144" aria-label="Play Mr. Sinn's Topic 2.7 video section" style="background-image:url('https://i.ytimg.com/vi/d6ED_JTH3PQ/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 2.7 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=d6ED_JTH3PQ&amp;t=2865s" target="_blank" rel="noopener">Open it on YouTube (starts at 47:45)</a>.</p>
+    </section>
+    <section class="card" id="t27-check" data-toc="Check yourself">
+      <div class="sec-label">Part 5</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. After moving house, Rawdha keeps giving her old address when filling in forms. Which kind of interference is this?</summary>
+        <div class="ans"><strong>Proactive interference:</strong> old information is getting in the way of the new.</div></details>
+      <details class="q"><summary>2. After memorizing this year's locker code, Sultan can no longer remember last year's. Which kind of interference?</summary>
+        <div class="ans"><strong>Retroactive interference:</strong> new learning is blocking the older memory.</div></details>
+      <details class="q"><summary>3. You are sure the singer's name starts with an R, but you cannot quite get it. What is this, and what kind of forgetting?</summary>
+        <div class="ans"><strong>The tip-of-the-tongue phenomenon,</strong> a form of inadequate retrieval: the memory is stored but temporarily inaccessible.</div></details>
+      <details class="q"><summary>4. Witnesses to a minor collision are asked how fast the cars were going when they "smashed". A week later, several remember broken glass that was never there. What explains this?</summary>
+        <div class="ans"><strong>The misinformation effect.</strong> The misleading wording after the event changed the memory.</div></details>
+      <details class="q"><summary>5. Jasim confidently tells his friends a health fact "from his science teacher". It actually came from a video he watched. What is this?</summary>
+        <div class="ans"><strong>Source amnesia:</strong> he remembers the information but has the source wrong.</div></details>
+      <details class="q"><summary>6. A graph shows students remembered 60 percent of a lesson after one day and 50 percent after a month. What does this pattern show?</summary>
+        <div class="ans"><strong>The forgetting curve:</strong> rapid forgetting soon after learning, then a leveling off.</div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t27_checklist">
+          <li><label><input type="checkbox" data-key="c1"> describe and sketch the forgetting curve?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> explain encoding failure, proactive interference, retroactive interference and the tip-of-the-tongue phenomenon?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> explain what psychodynamic theorists mean by repression?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> explain the misinformation effect, source amnesia, constructive memory and imagination inflation?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html?topic=2.7&amp;mode=practice">Practice 2.7 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t2-8" data-num="2.8" data-title="Intelligence and Achievement" data-short="Intelligence" data-sub="What intelligence is, how it is measured, and how test scores have been used and misused." data-vtime="from 52:24">
+    <section class="card" id="t28-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">What does it mean to be "smart"? Is it one ability or many? Can a test measure it fairly? And what happens when test scores are used to decide people's futures? This topic covers how psychologists have tried to answer these questions, and where they got it wrong.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Explain the debate over whether intelligence is a general ability (g) or several abilities.</li>
+        <li>Explain how IQ was calculated, and what makes a test standardized, valid and reliable.</li>
+        <li>Explain stereotype threat, stereotype lift and the Flynn effect.</li>
+        <li>Explain how intelligence scores can be affected by bias and inequity, and how they have been misused.</li>
+        <li>Compare achievement and aptitude tests, and fixed and growth mindsets.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Expect questions on psychometrics: which type of reliability or validity a scenario describes, or whether a test is reliable but not valid. You should also be ready to use the Flynn effect and within-group variation to evaluate claims about group differences in IQ.</p>
+      </div>
+      <div class="callout c-scope">
+        <strong class="tag">Not on the exam</strong>
+        <p>Labeling or describing particular cognitive abilities and disabilities.</p>
+      </div>
+    </section>
+    <section class="card" id="t28-define" data-toc="Defining intelligence">
+      <div class="sec-label">Part 1</div>
+      <h2>What is intelligence?</h2>
+      <p>Psychologists still do not agree on exactly how to define intelligence, and definitions and measures have been subject to bias throughout history. The central debate:</p>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>One general ability (g)</h4><p>Intelligence is a single <strong>general ability</strong>, called <em>g</em>, that underlies performance on many different tasks. People who do well on one kind of test tend to do well on others.</p><p class="analogy">Associated with Charles Spearman.</p></div>
+        <div class="mini"><h4>Multiple abilities</h4><p>Intelligence is made up of <strong>several different abilities</strong> that can be strong or weak independently, such as musical, interpersonal or practical intelligence.</p><p class="analogy">Associated with Howard Gardner and Robert Sternberg.</p></div>
+      </div>
+      <p>(The CED does not require the theorists' names, but they often appear in questions and textbooks.)</p>
+    </section>
+    <section class="card" id="t28-measure" data-toc="Measuring intelligence">
+      <div class="sec-label">Part 2</div>
+      <h2>Measuring intelligence</h2>
+      <div class="widget">
+        <h4>Try it: the original IQ formula</h4>
+        <p>Early tests compared a child's <strong>mental age</strong> (the age level they performed at) with their <strong>chronological age</strong> (their actual age).</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:end;">
+          <label>Mental age<br><input type="number" id="iqMA" value="10" min="1" max="30" style="width:110px;padding:8px;border-radius:8px;border:2px solid var(--line);font-size:16px;"></label>
+          <label>Chronological age<br><input type="number" id="iqCA" value="8" min="1" max="30" style="width:110px;padding:8px;border-radius:8px;border:2px solid var(--line);font-size:16px;"></label>
+        </div>
+        <div class="readout" id="iqOut"></div>
+        <p style="margin:10px 0 0;font-size:14px;color:var(--muted);">IQ = mental age &divide; chronological age &times; 100. Modern tests no longer use this formula; they compare your score with others your age, with 100 set as the average.</p>
+      </div>
+      <p>Today, IQ scores are often used to <strong>identify students for educational services</strong>, such as extra support or advanced programs.</p>
+      <h3>What makes a test useful?</h3>
+      <p>Every psychological test, intelligence tests included, should follow sound <strong>psychometric</strong> principles.</p>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t28Psy" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t28Psy" class="stack">
+          <thead><tr><th>Principle</th><th>Meaning</th><th>Types you need to know</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Principle">Standardized</td><td class="can-hide" data-label="Meaning">Given and scored using the same procedures and conditions for everyone, so scores can be compared fairly.</td><td class="can-hide" data-label="Types you need to know">Same instructions, same time limit, same scoring rules</td></tr>
+            <tr><td data-label="Principle">Valid</td><td class="can-hide" data-label="Meaning">Measures what it claims to measure.</td><td class="can-hide" data-label="Types you need to know"><strong>Construct validity</strong>: does it really measure the idea (the construct) it is meant to? <strong>Predictive validity</strong>: does it predict the future behavior it should, such as success at university?</td></tr>
+            <tr><td data-label="Principle">Reliable</td><td class="can-hide" data-label="Meaning">Gives consistent results each time.</td><td class="can-hide" data-label="Types you need to know"><strong>Test-retest</strong>: similar scores when the same people take it again later. <strong>Split-half</strong>: the two halves of the test (say, odd and even questions) give similar scores.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout c-hook">
+        <strong class="tag">The bathroom scale test</strong>
+        <p>A scale that always shows you 5 kg heavier than you really are is <strong>reliable</strong> (same reading every time) but <strong>not valid</strong> (wrong reading). A test can be reliable without being valid, but it cannot be valid without being reliable.</p>
+      </div>
+    </section>
+    <section class="card" id="t28-fairness" data-toc="Fairness and misuse">
+      <div class="sec-label">Part 3</div>
+      <h2>Fairness, bias and misuse</h2>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Stereotype threat</h4><p>Worry about confirming a negative stereotype about your group can lower your performance. For example, older adults who are reminded beforehand that memory declines with age tend to score lower on a memory test.</p><p class="analogy">The worry itself uses up attention.</p></div>
+        <div class="mini"><h4>Stereotype lift</h4><p>A performance boost that can come from being compared with a group that is negatively stereotyped. It can widen gaps in scores that have nothing to do with ability.</p><p class="analogy">The flip side of threat.</p></div>
+      </div>
+      <p>For these reasons, researchers try to develop intelligence tests that are <strong>socio-culturally responsive</strong>, reducing stereotype threat and the unfair gaps that stereotype lift can create.</p>
+      <h3>Systemic issues in intelligence testing</h3>
+      <ul>
+        <li><strong>The Flynn effect:</strong> average IQ scores across much of the world have risen over the past century. Genes cannot change that fast, so the rise points to <strong>societal factors</strong> such as better nutrition, better health care and higher living standards.</li>
+        <li><strong>Variation within and between groups:</strong> IQ scores vary more <strong>within</strong> any group than <strong>between</strong> groups. Personal and sociocultural biases can affect how an individual's score is interpreted.</li>
+        <li><strong>Inequity:</strong> poverty, discrimination and unequal access to education can lower the intelligence scores of individuals and groups around the world.</li>
+        <li><strong>Misuse:</strong> intelligence test scores have been used to limit people's access to jobs, military ranks, educational institutions and immigration to the United States.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">Using these on the exam</strong>
+        <p>If a claim says differences in average IQ between two groups must be genetic, the Flynn effect and the role of poverty, discrimination and educational inequity give you strong evidence to challenge it.</p>
+      </div>
+    </section>
+    <section class="card" id="t28-achieve" data-toc="Achievement and mindset">
+      <div class="sec-label">Part 4</div>
+      <h2>Achievement, aptitude and mindset</h2>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Achievement test</h4><p>Measures what you have <strong>already learned</strong>.</p><p class="analogy">Your AP Psychology exam, or a driving theory test.</p></div>
+        <div class="mini"><h4>Aptitude test</h4><p>Predicts how well you will <strong>learn or perform in the future</strong>.</p><p class="analogy">A test that predicts how quickly someone could learn a new language.</p></div>
+        <div class="mini"><h4>Fixed mindset</h4><p>The belief that intelligence is set from birth and cannot change much.</p><p class="analogy">"I'm just not a science person."</p></div>
+        <div class="mini"><h4>Growth mindset</h4><p>The belief that intelligence can grow through effort, strategies and experience.</p><p class="analogy">"I'm not good at this <em>yet</em>."</p></div>
+      </div>
+      <p>These beliefs matter: students' views about whether intelligence is fixed or can grow are linked to their academic achievement, partly because they shape how students respond to difficulty and mistakes.</p>
+    </section>
+    <section class="card" id="t28-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 5</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Reliability</h4>Consistent results.</div>
+        <div><h4>Validity</h4>Measures what it claims to.</div>
+        <div class="pair-note">Reliable but not valid is possible; valid but not reliable is not.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Test-retest reliability</h4>Same people, same test, two different times.</div>
+        <div><h4>Split-half reliability</h4>Comparing two halves of one test.</div>
+        <div class="pair-note">Two sittings: test-retest. One sitting split in two: split-half.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Construct validity</h4>Does it measure the intended concept?</div>
+        <div><h4>Predictive validity</h4>Does it predict future performance?</div>
+        <div class="pair-note">"Predicts" in the question usually signals predictive validity.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Achievement test</h4>What you know now.</div>
+        <div><h4>Aptitude test</h4>What you could do in the future.</div>
+        <div class="pair-note">End-of-unit tests are achievement tests.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Stereotype threat</h4>Fear of confirming a stereotype lowers performance.</div>
+        <div><h4>Stereotype lift</h4>Comparison with a stereotyped group raises performance.</div>
+        <div class="pair-note">Threat pulls down; lift pushes up.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t28-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>AP Psychology Unit 2 Review</em> covers Topic 2.8 from <strong>52:24</strong> to the end of the video. The player below starts at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="d6ED_JTH3PQ" data-start="3144" aria-label="Play Mr. Sinn's Topic 2.8 video section" style="background-image:url('https://i.ytimg.com/vi/d6ED_JTH3PQ/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 2.8 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=d6ED_JTH3PQ&amp;t=3144s" target="_blank" rel="noopener">Open it on YouTube (starts at 52:24)</a>.</p>
+    </section>
+    <section class="card" id="t28-check" data-toc="Check yourself">
+      <div class="sec-label">Part 6</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. An 8-year-old performs at the level of a typical 10-year-old. Using the original formula, what is her IQ?</summary>
+        <div class="ans"><strong>125.</strong> Mental age 10 divided by chronological age 8, times 100.</div></details>
+      <details class="q"><summary>2. Students who take the same test twice, two weeks apart, get very similar scores. What does this show?</summary>
+        <div class="ans"><strong>Test-retest reliability.</strong> The test gives consistent results over time.</div></details>
+      <details class="q"><summary>3. A university entrance test turns out to predict students' first-year grades well. Which kind of validity is this?</summary>
+        <div class="ans"><strong>Predictive validity:</strong> the test predicts the future performance it is meant to.</div></details>
+      <details class="q"><summary>4. A test of "leadership ability" turns out to measure mostly how fast people can read. What is the problem?</summary>
+        <div class="ans"><strong>Poor construct validity.</strong> It is not measuring the concept it claims to measure.</div></details>
+      <details class="q"><summary>5. Average IQ scores in many countries rose sharply over the twentieth century. What is this called, and what does it suggest?</summary>
+        <div class="ans"><strong>The Flynn effect.</strong> The rise was too fast for genes, so it points to societal factors such as nutrition, health care and education.</div></details>
+      <details class="q"><summary>6. After failing a quiz, Abdulla says, "I'll never be good at math, my brain just isn't built for it." Which mindset is this, and why might it matter?</summary>
+        <div class="ans"><strong>A fixed mindset.</strong> Believing ability cannot change can lead students to give up, which is linked to lower achievement.</div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t28_checklist">
+          <li><label><input type="checkbox" data-key="c1"> explain the debate between g and multiple abilities?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> calculate an IQ with the original formula?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> define standardization, validity (construct, predictive) and reliability (test-retest, split-half)?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> explain stereotype threat, stereotype lift and the Flynn effect?</label></li>
+          <li><label><input type="checkbox" data-key="c5"> explain how bias, inequity and misuse have affected intelligence testing?</label></li>
+          <li><label><input type="checkbox" data-key="c6"> compare achievement and aptitude tests, and fixed and growth mindsets?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html?topic=2.8&amp;mode=practice">Practice 2.8 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+  </main>
+</div>
+
+<footer>
+  These notes were written for our AP Psychology class and follow the AP Psychology Course and Exam Description (2024). The recommended videos belong to Mr. Sinn and are shown from YouTube.<br>
+  AP&reg; is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this site.
+</footer>
+
+<script>
+// ================= Topic switching =================
+(function(){
+  var topics=[].slice.call(document.querySelectorAll('.topic'));
+  var tabs=[].slice.call(document.querySelectorAll('#topicTabs a'));
+  var toc=document.getElementById('tocList');
+  var current=null;
+
+  function buildNav(t,i){
+    var nav=t.querySelector('.topic-nav');
+    if(!nav)return;
+    var html='';
+    if(i>0){var p=topics[i-1];html+='<a class="prev" href="#'+p.id+'"><small>Previous</small>&larr; '+p.dataset.num+' '+p.dataset.short+'</a>';}
+    else html+='<span class="spacer"></span>';
+    if(i<topics.length-1){var n=topics[i+1];html+='<a class="next" href="#'+n.id+'"><small>Next</small>'+n.dataset.num+' '+n.dataset.short+' &rarr;</a>';}
+    else html+='<span class="spacer"></span>';
+    nav.innerHTML=html;
+  }
+  topics.forEach(buildNav);
+
+  function show(t){
+    if(current===t)return;
+    current=t;
+    topics.forEach(function(x){x.classList.toggle('shown',x===t);});
+    tabs.forEach(function(a){
+      var on=a.dataset.tab===t.id;
+      a.classList.toggle('on',on);
+      if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    document.getElementById('heroTitle').textContent=t.dataset.num+' '+t.dataset.title;
+    document.getElementById('heroSub').textContent=t.dataset.sub;
+    document.getElementById('heroVtime').textContent='('+t.dataset.vtime+')';
+    var v=t.querySelector('.video-card');
+    document.getElementById('heroVideo').setAttribute('href','#'+(v?v.id:t.id));
+    document.getElementById('heroNum').textContent=t.dataset.num;
+    document.getElementById('heroPractice').setAttribute('href',document.body.dataset.quiz+'?topic='+t.dataset.num+'&mode=practice');
+    document.title=document.body.dataset.unit+': '+t.dataset.num+' '+t.dataset.title+' | AP Psychology Revision';
+    toc.innerHTML='';
+    t.querySelectorAll('section.card[data-toc]').forEach(function(s){
+      var li=document.createElement('li');
+      li.innerHTML='<a href="#'+s.id+'">'+s.dataset.toc+'</a>';
+      toc.appendChild(li);
+    });
+    observeSections(t);
+  }
+
+  function route(){
+    var id=decodeURIComponent(location.hash.slice(1));
+    var el=id?document.getElementById(id):null;
+    var t=el?(el.classList.contains('topic')?el:el.closest('.topic')):null;
+    if(!t)t=topics[0];
+    show(t);
+    if(el&&el!==t){el.scrollIntoView();}
+    else if(el===t){window.scrollTo(0,0);}
+  }
+  window.addEventListener('hashchange',route);
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]');
+    if(!a)return;
+    var id=decodeURIComponent(a.getAttribute('href').slice(1));
+    var el=id?document.getElementById(id):null;
+    if(!el)return;
+    e.preventDefault();
+    var t=el.classList.contains('topic')?el:el.closest('.topic');
+    if(t)show(t);
+    try{history.pushState(null,'','#'+id);}catch(err){}
+    if(el===t){var top=document.querySelector('.topbar');window.scrollTo(0,top?top.offsetTop:0);}
+    else el.scrollIntoView();
+  });
+  window.addEventListener('popstate',route);
+
+  // highlight current section in the side menu
+  var obs=null;
+  function observeSections(t){
+    if(!('IntersectionObserver' in window))return;
+    if(obs)obs.disconnect();
+    var links=[].slice.call(toc.querySelectorAll('a'));
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){links.forEach(function(a){a.classList.remove('active');});var a=map[en.target.id];if(a)a.classList.add('active');}
+      });
+    },{rootMargin:'-30% 0px -60% 0px'});
+    t.querySelectorAll('section.card[data-toc]').forEach(function(s){obs.observe(s);});
+  }
+  route();
+})();
+
+// ================= 1.3 neural firing stepper =================
+(function(){
+  var root=document.getElementById('stepper');
+  if(!root)return;
+  var cards=[].slice.call(root.querySelectorAll('.step-card'));
+  var total=cards.length,cur=1;
+  var prev=document.getElementById('prevBtn'),next=document.getElementById('nextBtn');
+  var dotsWrap=document.getElementById('dots');
+  var ap=document.getElementById('apGraph'),syn=document.getElementById('synGraph');
+  var dots=[];
+  for(var i=1;i<=total;i++){
+    var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Step '+i);
+    (function(n){d.addEventListener('click',function(){go(n);});})(i);
+    dotsWrap.appendChild(d);dots.push(d);
+  }
+  function el(id){return document.getElementById(id);}
+  function setHot(ids){['seg1','seg2','seg3','seg4','seg5'].forEach(function(s){el(s).classList.toggle('hot',ids.indexOf(s)>-1);});}
+  function labels(on){['lab-rest','lab-sum','lab-thr','lab-ap','lab-refr','lab-refr2'].forEach(function(l){el(l).setAttribute('opacity',on.indexOf(l)>-1?'1':'0');});}
+  function go(n){
+    cur=Math.max(1,Math.min(total,n));
+    cards.forEach(function(c){c.classList.toggle('active',+c.dataset.step===cur);});
+    dots.forEach(function(d,i){d.classList.toggle('on',i+1===cur);});
+    prev.disabled=(cur===1);next.disabled=(cur===total);
+    next.textContent=(cur===total)?'Done':'Next step';
+    var onGraph=cur<=5;
+    ap.style.display=onGraph?'block':'none';syn.style.display=onGraph?'none':'block';
+    el('band-refr').classList.toggle('hot',cur===5);
+    el('thrDot').setAttribute('r',cur===3?'7':'0');
+    if(cur===1){setHot(['seg1']);labels(['lab-rest']);}
+    else if(cur===2){setHot(['seg2']);labels(['lab-sum']);}
+    else if(cur===3){setHot([]);labels(['lab-thr']);}
+    else if(cur===4){setHot(['seg3']);labels(['lab-ap']);}
+    else if(cur===5){setHot(['seg4']);labels(['lab-refr','lab-refr2']);}
+    el('released').classList.toggle('syn-hide',cur<6);
+    el('reup').classList.toggle('syn-hide',cur!==7);
+  }
+  prev.addEventListener('click',function(){go(cur-1);});
+  next.addEventListener('click',function(){go(cur+1);});
+  go(1);
+})();
+
+// ================= Explorers (click a part to read about it) =================
+document.querySelectorAll('.explorer').forEach(function(ex){
+  var chips=[].slice.call(ex.querySelectorAll('.ex-chips button'));
+  var nodes=[].slice.call(ex.querySelectorAll('.ex-node'));
+  var panels=[].slice.call(ex.querySelectorAll('.ex-panel'));
+  function pick(key){
+    ex.dataset.sel=key;
+    chips.forEach(function(c){c.classList.toggle('on',c.dataset.key===key);});
+    nodes.forEach(function(n){n.classList.toggle('on',n.dataset.key===key);});
+    panels.forEach(function(p){p.classList.toggle('on',p.dataset.key===key);});
+    ex.querySelectorAll('[data-hl]').forEach(function(h){h.classList.toggle('on',h.dataset.hl.split(' ').indexOf(key)>-1);});
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){pick(c.dataset.key);});});
+  nodes.forEach(function(n){
+    n.setAttribute('tabindex','0');n.setAttribute('role','button');
+    n.addEventListener('click',function(){pick(n.dataset.key);});
+    n.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(n.dataset.key);}});
+  });
+  var first=ex.dataset.start||(panels[0]&&panels[0].dataset.key);
+  if(first)pick(first);
+});
+
+// ================= Self-test blur toggles =================
+document.querySelectorAll('.toggle-btn[data-target]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var t=document.getElementById(btn.dataset.target);
+    var on=!t.classList.contains('testing');
+    t.classList.toggle('testing',on);
+    t.querySelectorAll('td.can-hide').forEach(function(td){td.classList.remove('revealed');});
+    btn.setAttribute('aria-pressed',on?'true':'false');
+    btn.textContent=on?'Show all the answers':(btn.dataset.label||'Test yourself: hide the answers');
+  });
+});
+document.querySelectorAll('td.can-hide').forEach(function(td){
+  td.addEventListener('click',function(){if(td.closest('table').classList.contains('testing'))td.classList.toggle('revealed');});
+});
+
+// ================= Video facades (YouTube loads only when clicked) =================
+document.querySelectorAll('.video-facade').forEach(function(f){
+  f.addEventListener('click',function(){
+    var src='https://www.youtube-nocookie.com/embed/'+f.dataset.vid+'?start='+f.dataset.start+(f.dataset.end?'&end='+f.dataset.end:'')+'&rel=0&autoplay=1';
+    var ifr=document.createElement('iframe');
+    ifr.src=src;ifr.title=f.getAttribute('aria-label');
+    ifr.setAttribute('allow','accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+    ifr.setAttribute('allowfullscreen','');
+    ifr.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+    f.parentNode.replaceChild(ifr,f);
+  });
+});
+
+// ================= Checklists (saved on this device only) =================
+document.querySelectorAll('ul.checklist[data-store]').forEach(function(list){
+  var KEY=list.dataset.store,saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){saved={};}
+  list.querySelectorAll('input').forEach(function(box){
+    box.checked=!!saved[box.dataset.key];
+    box.addEventListener('change',function(){
+      saved[box.dataset.key]=box.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}
+    });
+  });
+});
+
+// ================= 1.6 Weber's law widget =================
+(function(){
+  var slider=document.getElementById('weberSlider');
+  if(!slider)return;
+  var out=document.getElementById('weberOut'),val=document.getElementById('weberVal');
+  function upd(){
+    var kg=+slider.value;
+    var jnd=kg*0.02;
+    val.textContent=kg+' kg';
+    out.innerHTML='You would need to add roughly <span class="big">'+(jnd<1?Math.round(jnd*1000)+' g':jnd.toFixed(1)+' kg')+'</span> before most people notice the bag feels heavier.';
+  }
+  slider.addEventListener('input',upd);upd();
+})();
+
+// ================= 1.6 Afterimage demo =================
+(function(){
+  var stage=document.getElementById('aiStage');
+  if(!stage)return;
+  var btn=document.getElementById('aiStart'),count=document.getElementById('aiCount'),timer=null;
+  btn.addEventListener('click',function(){
+    clearInterval(timer);
+    stage.classList.remove('white');
+    var s=20;count.textContent='Keep staring at the dot: '+s;
+    btn.disabled=true;
+    timer=setInterval(function(){
+      s--;
+      if(s>0){count.textContent='Keep staring at the dot: '+s;}
+      else{
+        clearInterval(timer);stage.classList.add('white');
+        count.textContent='Now keep looking at the dot on the white space. What colors do you see?';
+        btn.disabled=false;btn.textContent='Try again';
+      }
+    },1000);
+  });
+})();
+// ================= 2.8 IQ formula widget =================
+(function(){
+  var ma=document.getElementById('iqMA'),ca=document.getElementById('iqCA'),out=document.getElementById('iqOut');
+  if(!ma||!ca||!out)return;
+  function upd(){
+    var m=parseFloat(ma.value),c=parseFloat(ca.value);
+    if(!(m>0)||!(c>0)){out.textContent='Enter two ages above zero.';return;}
+    out.innerHTML='IQ = '+m+' &divide; '+c+' &times; 100 = <span class="big">'+Math.round(m/c*100)+'</span>';
+  }
+  ma.addEventListener('input',upd);ca.addEventListener('input',upd);upd();
+})();
+</script>
+</body>
+</html>
