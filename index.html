@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP Psychology Revision Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--navy:#1a2744;--blue:#2E75B6;--light:#DEEAF1;--orange:#C55A11;--ink:#1a2744;--muted:#4a6080;--line:#d9e3f1;}
+body{font-family:'Outfit',sans-serif;background:#f0f4fb;color:var(--ink);min-height:100vh;line-height:1.5;}
+a{color:inherit;}
+header{background:var(--navy);color:#fff;padding:36px 20px 30px;text-align:center;}
+header .eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#7fa8d4;margin-bottom:8px;}
+header h1{font-family:'Playfair Display',serif;font-size:32px;line-height:1.25;}
+header .subtitle{margin-top:8px;font-size:15px;color:#a8c4e0;}
+.toplinks{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px;}
+.toplinks a{font-size:13px;font-weight:600;text-decoration:none;color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;}
+.toplinks a:hover{background:rgba(255,255,255,.12);}
+.wrap{max-width:880px;margin:28px auto;padding:0 14px 60px;}
+.section-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7a90b5;font-weight:700;margin:26px 4px 10px;}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.step{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 2px 16px rgba(26,39,68,.07);}
+.step b{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--light);color:var(--navy);font-size:13px;margin-bottom:6px;}
+.step h3{font-size:16px;}
+.step p{font-size:14px;color:var(--muted);margin-top:2px;}
+.unit{background:#fff;border-radius:12px;padding:22px 24px;box-shadow:0 2px 16px rgba(26,39,68,.07);border-left:6px solid var(--blue);margin-bottom:14px;}
+.unit .tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7a90b5;font-weight:700;}
+.unit h2{font-size:21px;margin-top:2px;}
+.unit h2 a{text-decoration:none;}
+.unit h2 a:hover{color:var(--blue);}
+.unit .desc{font-size:14px;color:var(--muted);margin-top:4px;}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-top:14px;}
+.chip{display:flex;align-items:center;gap:8px;text-decoration:none;background:#f4f7fc;border:1.5px solid var(--line);border-radius:10px;padding:9px 11px;font-size:14px;font-weight:500;transition:border-color .15s,background .15s;}
+.chip:hover{border-color:var(--blue);background:#eaf3fc;}
+.chip .num{font-weight:700;color:var(--blue);min-width:26px;}
+.chip .nm{flex:1;}
+.chip .tick{font-size:12px;font-weight:700;color:#1e7b34;}
+.chip.done{border-color:#9fd3ad;background:#eef8f1;}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:700;font-size:14px;border-radius:9px;padding:10px 16px;border:2px solid var(--navy);}
+.btn small{font-weight:500;opacity:.75;}
+.btn-primary{background:var(--navy);color:#fff;}
+.btn-primary:hover{background:var(--blue);border-color:var(--blue);}
+.btn-ghost{background:#fff;color:var(--navy);}
+.btn-ghost:hover{background:var(--light);}
+.progress{margin-top:12px;}
+.progress .bar{height:7px;background:#e3eaf5;border-radius:4px;overflow:hidden;}
+.progress .bar span{display:block;height:100%;width:0;background:#2e9a4f;border-radius:4px;transition:width .4s;}
+.progress .ptext{font-size:12.5px;color:var(--muted);margin-top:5px;}
+a.practice{display:block;background:#fff;border-radius:12px;padding:18px 22px;text-decoration:none;box-shadow:0 2px 16px rgba(26,39,68,.07);border-left:6px solid #E8731A;margin-bottom:12px;transition:transform .15s,box-shadow .15s;}
+a.practice:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(26,39,68,.12);}
+a.practice .tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#C25E0E;font-weight:700;}
+a.practice .title{font-size:18px;font-weight:700;margin-top:2px;}
+a.practice .desc{font-size:14px;color:var(--muted);margin-top:2px;}
+.foot{font-size:13px;color:#7a90b5;text-align:center;margin-top:26px;}
+.foot button{font-family:inherit;font-size:12px;color:#7a90b5;background:none;border:none;text-decoration:underline;cursor:pointer;}
+@media(max-width:640px){
+  header h1{font-size:26px;}
+  .steps{grid-template-columns:1fr;gap:8px;}
+  .step{padding:10px 14px;display:grid;grid-template-columns:30px 1fr;column-gap:8px;}
+  .step b{grid-row:span 2;margin:2px 0 0;}
+  .step h3{font-size:15px;}
+  .step p{font-size:13px;}
+  .unit{padding:18px 16px;}
+  .chips{grid-template-columns:1fr 1fr;}
+  .chip{font-size:13px;padding:8px 9px;}
+  .actions .btn{flex:1 1 100%;justify-content:center;}
+}
+@media print{header .toplinks,.actions,.progress,.foot{display:none;} body{background:#fff;} .unit{box-shadow:none;border:1px solid #ccc;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">AP Psychology</div>
+  <h1>Revision Notes</h1>
+  <p class="subtitle">Pick a unit, read the notes for each topic, then test yourself.</p>
+  <nav class="toplinks" aria-label="Other revision tools">
+    <a href="https://psych4everybody.github.io/psych-revision/">Interactive revision quizzes</a>
+    <a href="https://psych4everybody.github.io/AP-psych-MCQ-Practice/practice.html">MCQ Practice Bank</a>
+    <a href="https://psych4everybody.github.io/psych-revision/aaq_practice.html">AAQ Practice</a>
+  </nav>
+</header>
+<main class="wrap">
+  <div class="section-label">How to use these notes</div>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>Read a topic</h3><p>Each topic page starts with what you need to be able to do, then explains it with examples, diagrams and a short video.</p></div>
+    <div class="step"><b>2</b><h3>Check yourself</h3><p>Hide the answers in the tables, try the questions at the end, and tick the checklist when you can do each thing.</p></div>
+    <div class="step"><b>3</b><h3>Practice</h3><p>Use the Practice button on each topic to jump straight to that topic in the revision quiz.</p></div>
+  </div>
+
+  <div class="section-label">Units</div>
+  <section class="unit" id="unit0">
+    <div class="unit-head">
+      <div>
+        <div class="tag">Unit 0</div>
+        <h2><a href="Unit0_Notes.html">Scientific Foundations of Psychology</a></h2>
+        <p class="desc">History and perspectives, the scientific method, research methods, experimental design, sampling, statistics and ethics.</p>
+      </div>
+    </div>
+    <div class="progress" data-unit="0" hidden>
+      <div class="bar"><span></span></div>
+      <p class="ptext"></p>
+    </div>
+    <div class="chips">
+      <a class="chip" href="Unit0_Notes.html#t0-1" data-chip="u0-t0-1" title="History and Perspectives"><span class="num">0.1</span><span class="nm">Perspectives</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit0_Notes.html#t0-2" data-chip="u0-t0-2" title="Scientific Method and Critical Thinking"><span class="num">0.2</span><span class="nm">Thinking</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit0_Notes.html#t0-3" data-chip="u0-t0-3" title="Research Methods"><span class="num">0.3</span><span class="nm">Methods</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit0_Notes.html#t0-4" data-chip="u0-t0-4" title="Experimental Design"><span class="num">0.4</span><span class="nm">Experiments</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit0_Notes.html#t0-5" data-chip="u0-t0-5" title="Sampling"><span class="num">0.5</span><span class="nm">Sampling</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit0_Notes.html#t0-6" data-chip="u0-t0-6" title="Statistics"><span class="num">0.6</span><span class="nm">Statistics</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit0_Notes.html#t0-7" data-chip="u0-t0-7" title="Ethics"><span class="num">0.7</span><span class="nm">Ethics</span><span class="tick" aria-hidden="true"></span></a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="Unit0_Notes.html">Open the notes</a>
+      <a class="btn btn-ghost" href="https://psych4everybody.github.io/psych-revision/unit0_revision_quiz.html">Revision quiz</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/document/d/1Vdn-Rzcr1TV8n5AD2j-xx_7qZoqAO9nLxYLYLqCUs1U/edit?tab=t.0" target="_blank" rel="noopener">Printable guide <small>(DAA login)</small></a>
+    </div>
+  </section>
+  <section class="unit" id="unit1">
+    <div class="unit-head">
+      <div>
+        <div class="tag">Unit 1</div>
+        <h2><a href="Unit1_Notes.html">Biological Bases of Behavior</a></h2>
+        <p class="desc">Heredity and environment, the nervous system, neurons, the brain, sleep and sensation.</p>
+      </div>
+    </div>
+    <div class="progress" data-unit="1" hidden>
+      <div class="bar"><span></span></div>
+      <p class="ptext"></p>
+    </div>
+    <div class="chips">
+      <a class="chip" href="Unit1_Notes.html#t1-1" data-chip="u1-t1-1" title="Interaction of Heredity and Environment"><span class="num">1.1</span><span class="nm">Heredity</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit1_Notes.html#t1-2" data-chip="u1-t1-2" title="Overview of the Nervous System"><span class="num">1.2</span><span class="nm">Nervous system</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit1_Notes.html#t1-3" data-chip="u1-t1-3" title="The Neuron and Neural Firing"><span class="num">1.3</span><span class="nm">Neurons</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit1_Notes.html#t1-4" data-chip="u1-t1-4" title="The Brain"><span class="num">1.4</span><span class="nm">Brain</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit1_Notes.html#t1-5" data-chip="u1-t1-5" title="Sleep"><span class="num">1.5</span><span class="nm">Sleep</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit1_Notes.html#t1-6" data-chip="u1-t1-6" title="Sensation"><span class="num">1.6</span><span class="nm">Sensation</span><span class="tick" aria-hidden="true"></span></a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="Unit1_Notes.html">Open the notes</a>
+      <a class="btn btn-ghost" href="https://psych4everybody.github.io/psych-revision/unit1_revision_quiz.html">Revision quiz</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/document/d/1s3E7YtV9hcPSRQwfuUcp2K_gTKalLcfgP0g5StFlfM8/edit?tab=t.0" target="_blank" rel="noopener">Printable guide <small>(DAA login)</small></a>
+    </div>
+  </section>
+  <section class="unit" id="unit2">
+    <div class="unit-head">
+      <div>
+        <div class="tag">Unit 2</div>
+        <h2><a href="Unit2_Notes.html">Cognition</a></h2>
+        <p class="desc">Perception, thinking and decision-making, memory, forgetting, and intelligence.</p>
+      </div>
+    </div>
+    <div class="progress" data-unit="2" hidden>
+      <div class="bar"><span></span></div>
+      <p class="ptext"></p>
+    </div>
+    <div class="chips">
+      <a class="chip" href="Unit2_Notes.html#t2-1" data-chip="u2-t2-1" title="Perception"><span class="num">2.1</span><span class="nm">Perception</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit2_Notes.html#t2-2" data-chip="u2-t2-2" title="Thinking, Problem-Solving, Judgments, and Decision-Making"><span class="num">2.2</span><span class="nm">Thinking</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit2_Notes.html#t2-3" data-chip="u2-t2-3" title="Introduction to Memory"><span class="num">2.3</span><span class="nm">Memory</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit2_Notes.html#t2-4" data-chip="u2-t2-4" title="Encoding Memories"><span class="num">2.4</span><span class="nm">Encoding</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit2_Notes.html#t2-5" data-chip="u2-t2-5" title="Storing Memories"><span class="num">2.5</span><span class="nm">Storing</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit2_Notes.html#t2-6" data-chip="u2-t2-6" title="Retrieving Memories"><span class="num">2.6</span><span class="nm">Retrieving</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit2_Notes.html#t2-7" data-chip="u2-t2-7" title="Forgetting and Other Memory Challenges"><span class="num">2.7</span><span class="nm">Forgetting</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit2_Notes.html#t2-8" data-chip="u2-t2-8" title="Intelligence and Achievement"><span class="num">2.8</span><span class="nm">Intelligence</span><span class="tick" aria-hidden="true"></span></a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="Unit2_Notes.html">Open the notes</a>
+      <a class="btn btn-ghost" href="https://psych4everybody.github.io/psych-revision/unit2_revision_quiz.html">Revision quiz</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/document/d/1_TAqTY5gPHjjr_UPE9ERvevpP0ET34urkdCZKaqhCPc/edit?tab=t.0" target="_blank" rel="noopener">Printable guide <small>(DAA login)</small></a>
+    </div>
+  </section>
+  <section class="unit" id="unit3">
+    <div class="unit-head">
+      <div>
+        <div class="tag">Unit 3</div>
+        <h2><a href="Unit3_Notes.html">Development and Learning</a></h2>
+        <p class="desc">Developmental themes, physical and cognitive development, language, conditioning and observational learning.</p>
+      </div>
+    </div>
+    <div class="progress" data-unit="3" hidden>
+      <div class="bar"><span></span></div>
+      <p class="ptext"></p>
+    </div>
+    <div class="chips">
+      <a class="chip" href="Unit3_Notes.html#t3-1" data-chip="u3-t3-1" title="Themes and Methods in Developmental Psychology"><span class="num">3.1</span><span class="nm">Themes</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit3_Notes.html#t3-2" data-chip="u3-t3-2" title="Physical Development Across the Lifespan"><span class="num">3.2</span><span class="nm">Physical</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit3_Notes.html#t3-4" data-chip="u3-t3-4" title="Cognitive Development Across the Lifespan"><span class="num">3.4</span><span class="nm">Cognitive</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit3_Notes.html#t3-5" data-chip="u3-t3-5" title="Communication and Language Development"><span class="num">3.5</span><span class="nm">Language</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit3_Notes.html#t3-6" data-chip="u3-t3-6" title="Social-Emotional Development Across the Lifespan"><span class="num">3.6</span><span class="nm">Social-emotional</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit3_Notes.html#t3-7" data-chip="u3-t3-7" title="Classical Conditioning"><span class="num">3.7</span><span class="nm">Classical</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit3_Notes.html#t3-8" data-chip="u3-t3-8" title="Operant Conditioning"><span class="num">3.8</span><span class="nm">Operant</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit3_Notes.html#t3-9" data-chip="u3-t3-9" title="Social, Cognitive, and Neurological Factors in Learning"><span class="num">3.9</span><span class="nm">Social learning</span><span class="tick" aria-hidden="true"></span></a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="Unit3_Notes.html">Open the notes</a>
+      <a class="btn btn-ghost" href="https://psych4everybody.github.io/psych-revision/unit3_revision_quiz.html">Revision quiz</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/document/d/1t5F9EUubgyoHRKTg_-jk2q7NXCT0zqs4gKiReoVfJr0/edit?tab=t.0" target="_blank" rel="noopener">Printable guide <small>(DAA login)</small></a>
+    </div>
+  </section>
+  <section class="unit" id="unit4">
+    <div class="unit-head">
+      <div>
+        <div class="tag">Unit 4</div>
+        <h2><a href="Unit4_Notes.html">Social Psychology and Personality</a></h2>
+        <p class="desc">Attribution, attitudes, social influence, personality theories, motivation and emotion.</p>
+      </div>
+    </div>
+    <div class="progress" data-unit="4" hidden>
+      <div class="bar"><span></span></div>
+      <p class="ptext"></p>
+    </div>
+    <div class="chips">
+      <a class="chip" href="Unit4_Notes.html#t4-1" data-chip="u4-t4-1" title="Attribution Theory and Person Perception"><span class="num">4.1</span><span class="nm">Attribution</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit4_Notes.html#t4-2" data-chip="u4-t4-2" title="Attitude Formation and Attitude Change"><span class="num">4.2</span><span class="nm">Attitudes</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit4_Notes.html#t4-3" data-chip="u4-t4-3" title="Psychology of Social Situations"><span class="num">4.3</span><span class="nm">Social situations</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit4_Notes.html#t4-4" data-chip="u4-t4-4" title="Psychodynamic and Humanistic Theories of Personality"><span class="num">4.4</span><span class="nm">Psychodynamic</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit4_Notes.html#t4-5" data-chip="u4-t4-5" title="Social-Cognitive and Trait Theories of Personality"><span class="num">4.5</span><span class="nm">Traits</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit4_Notes.html#t4-6" data-chip="u4-t4-6" title="Motivation"><span class="num">4.6</span><span class="nm">Motivation</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit4_Notes.html#t4-7" data-chip="u4-t4-7" title="Emotion"><span class="num">4.7</span><span class="nm">Emotion</span><span class="tick" aria-hidden="true"></span></a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="Unit4_Notes.html">Open the notes</a>
+      <a class="btn btn-ghost" href="https://psych4everybody.github.io/psych-revision/unit4_revision_quiz.html">Revision quiz</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/document/d/19I2vrJ8N5N-_0VrINr_ElfcJ8Gjd5_0131utWKR_BHs/edit?tab=t.0" target="_blank" rel="noopener">Printable guide <small>(DAA login)</small></a>
+    </div>
+  </section>
+  <section class="unit" id="unit5">
+    <div class="unit-head">
+      <div>
+        <div class="tag">Unit 5</div>
+        <h2><a href="Unit5_Notes.html">Mental and Physical Health</a></h2>
+        <p class="desc">Stress and health, positive psychology, defining and explaining disorders, categories of disorders, and treatment.</p>
+      </div>
+    </div>
+    <div class="progress" data-unit="5" hidden>
+      <div class="bar"><span></span></div>
+      <p class="ptext"></p>
+    </div>
+    <div class="chips">
+      <a class="chip" href="Unit5_Notes.html#t5-1" data-chip="u5-t5-1" title="Introduction to Health Psychology"><span class="num">5.1</span><span class="nm">Health</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit5_Notes.html#t5-2" data-chip="u5-t5-2" title="Positive Psychology"><span class="num">5.2</span><span class="nm">Positive psych</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit5_Notes.html#t5-3" data-chip="u5-t5-3" title="Explaining and Classifying Psychological Disorders"><span class="num">5.3</span><span class="nm">Classifying</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit5_Notes.html#t5-4" data-chip="u5-t5-4" title="Selection of Categories of Psychological Disorders"><span class="num">5.4</span><span class="nm">Disorders</span><span class="tick" aria-hidden="true"></span></a><a class="chip" href="Unit5_Notes.html#t5-5" data-chip="u5-t5-5" title="Treatment of Psychological Disorders"><span class="num">5.5</span><span class="nm">Treatment</span><span class="tick" aria-hidden="true"></span></a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="Unit5_Notes.html">Open the notes</a>
+      <a class="btn btn-ghost" href="https://psych4everybody.github.io/psych-revision/unit5_revision_quiz.html">Revision quiz</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/document/d/15CAmD2wDKpwkp5ZW7_prXjhuZPLgUxLhSXylBQoCivc/edit?tab=t.0" target="_blank" rel="noopener">Printable guide <small>(DAA login)</small></a>
+    </div>
+  </section>
+
+  <div class="section-label">Exam practice</div>
+  <a class="practice" href="https://psych4everybody.github.io/AP-psych-MCQ-Practice/practice.html">
+    <div class="tag">MCQ Practice</div>
+    <div class="title">MCQ Practice Bank</div>
+    <div class="desc">Multiple-choice practice questions to build speed and accuracy for the exam.</div>
+  </a>
+  <a class="practice" href="https://psych4everybody.github.io/psych-revision/aaq_practice.html">
+    <div class="tag">FRQ Practice</div>
+    <div class="title">AAQ Practice</div>
+    <div class="desc">Timed Article Analysis Question practice. Read a study summary, answer Parts A to F, then mark yourself against the ideal response.</div>
+  </a>
+
+  <p class="foot">Your checklist ticks are saved in this browser on this device only. Printable guides open in Google Docs and need your DAA school account.<br><button type="button" id="resetBtn" hidden>Clear my ticks on this device</button></p>
+</main>
+<script>
+(function(){
+  var DATA={"0": [{"keys": ["appsych_t01_checklist"], "total": 5, "chip": "t0-1"}, {"keys": ["appsych_t02_checklist"], "total": 6, "chip": "t0-2"}, {"keys": ["appsych_t03_checklist"], "total": 5, "chip": "t0-3"}, {"keys": ["appsych_t04_checklist"], "total": 5, "chip": "t0-4"}, {"keys": ["appsych_t05_checklist"], "total": 4, "chip": "t0-5"}, {"keys": ["appsych_t06_checklist"], "total": 6, "chip": "t0-6"}, {"keys": ["appsych_t07_checklist"], "total": 4, "chip": "t0-7"}], "1": [{"keys": ["appsych_u1_t11_checklist"], "total": 5, "chip": "t1-1"}, {"keys": ["appsych_u1_t12_checklist"], "total": 4, "chip": "t1-2"}, {"keys": ["appsych_u1_t13_checklist"], "total": 7, "chip": "t1-3"}, {"keys": ["appsych_u1_t14_checklist"], "total": 7, "chip": "t1-4"}, {"keys": ["appsych_u1_t15_checklist"], "total": 5, "chip": "t1-5"}, {"keys": ["appsych_u1_t16_checklist"], "total": 7, "chip": "t1-6"}], "2": [{"keys": ["appsych_t21_checklist"], "total": 6, "chip": "t2-1"}, {"keys": ["appsych_t22_checklist"], "total": 5, "chip": "t2-2"}, {"keys": ["appsych_t23_checklist"], "total": 5, "chip": "t2-3"}, {"keys": ["appsych_t24_checklist"], "total": 4, "chip": "t2-4"}, {"keys": ["appsych_t25_checklist"], "total": 4, "chip": "t2-5"}, {"keys": ["appsych_t26_checklist"], "total": 3, "chip": "t2-6"}, {"keys": ["appsych_t27_checklist"], "total": 4, "chip": "t2-7"}, {"keys": ["appsych_t28_checklist"], "total": 6, "chip": "t2-8"}], "3": [{"keys": ["appsych_t31_checklist"], "total": 4, "chip": "t3-1"}, {"keys": ["appsych_t32_checklist"], "total": 5, "chip": "t3-2"}, {"keys": ["appsych_t34_checklist"], "total": 5, "chip": "t3-4"}, {"keys": ["appsych_t35_checklist"], "total": 4, "chip": "t3-5"}, {"keys": ["appsych_t36_checklist"], "total": 7, "chip": "t3-6"}, {"keys": ["appsych_t37_checklist"], "total": 5, "chip": "t3-7"}, {"keys": ["appsych_t38_checklist"], "total": 5, "chip": "t3-8"}, {"keys": ["appsych_t39_checklist"], "total": 5, "chip": "t3-9"}], "4": [{"keys": ["appsych_t41_checklist"], "total": 5, "chip": "t4-1"}, {"keys": ["appsych_t42_checklist"], "total": 4, "chip": "t4-2"}, {"keys": ["appsych_t43_checklist"], "total": 6, "chip": "t4-3"}, {"keys": ["appsych_t44_checklist"], "total": 4, "chip": "t4-4"}, {"keys": ["appsych_t45_checklist"], "total": 4, "chip": "t4-5"}, {"keys": ["appsych_t46_checklist"], "total": 6, "chip": "t4-6"}, {"keys": ["appsych_t47_checklist"], "total": 4, "chip": "t4-7"}], "5": [{"keys": ["appsych_t51_checklist"], "total": 6, "chip": "t5-1"}, {"keys": ["appsych_t52_checklist"], "total": 4, "chip": "t5-2"}, {"keys": ["appsych_t53_checklist"], "total": 5, "chip": "t5-3"}, {"keys": ["appsych_t54_checklist"], "total": 6, "chip": "t5-4"}, {"keys": ["appsych_t55_checklist"], "total": 6, "chip": "t5-5"}]};
+  var any=false, allKeys=[];
+  function read(k){try{return JSON.parse(localStorage.getItem(k)||'{}')||{};}catch(e){return {};}}
+  Object.keys(DATA).forEach(function(u){
+    var got=0,total=0;
+    DATA[u].forEach(function(t){
+      var n=0;
+      t.keys.forEach(function(k){allKeys.push(k);var s=read(k);Object.keys(s).forEach(function(x){if(s[x])n++;});});
+      n=Math.min(n,t.total); got+=n; total+=t.total;
+      var chip=document.querySelector('[data-chip="u'+u+'-'+t.chip+'"]');
+      if(chip&&n>0){
+        chip.querySelector('.tick').textContent=(n===t.total?'\u2713 ':'')+n+'/'+t.total;
+        if(n===t.total)chip.classList.add('done');
+        chip.setAttribute('aria-label',chip.title+': '+n+' of '+t.total+' checklist items ticked');
+      }
+    });
+    if(got>0){
+      any=true;
+      var p=document.querySelector('.progress[data-unit="'+u+'"]');
+      p.hidden=false;
+      p.querySelector('.bar span').style.width=Math.round(got/total*100)+'%';
+      p.querySelector('.ptext').textContent='Your checklist: '+got+' of '+total+' ticked on this device';
+    }
+  });
+  var rb=document.getElementById('resetBtn');
+  if(any){rb.hidden=false;}
+  var armed=false;
+  rb.addEventListener('click',function(){
+    if(!armed){armed=true;rb.textContent='Click again to clear all ticks';return;}
+    allKeys.forEach(function(k){try{localStorage.removeItem(k);}catch(e){}});
+    location.reload();
+  });
+})();
+</script>
+</body>
+</html>

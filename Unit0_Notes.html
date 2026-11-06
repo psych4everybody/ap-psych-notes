@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 0 Notes: Scientific Foundations of Psychology | AP Psychology Revision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#1a2744; --blue:#2E75B6; --light:#DEEAF1; --bg:#f0f4fb; --orange:#C55A11;
+  --ink:#1a2744; --muted:#4a6080; --line:#d0ddef; --card:#ffffff;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;}
+a{color:var(--blue);}
+
+/* HEADER */
+header{background:var(--navy);color:#fff;padding:28px 20px 26px;text-align:center;}
+header .eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#7fa8d4;margin-bottom:8px;}
+header h1{font-family:'Playfair Display',serif;font-size:30px;line-height:1.25;}
+header .subtitle{margin:8px auto 0;font-size:15px;color:#c3d6ec;max-width:620px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s;}
+.btn-primary{background:var(--blue);color:#fff;}
+.btn-primary:hover{background:#1f5f99;}
+.btn-ghost{background:transparent;color:#fff;border-color:#7fa8d4;}
+.btn-ghost:hover{background:#ffffff1a;}
+.btn-dark{background:var(--navy);color:#fff;}
+.btn-dark:hover{background:var(--blue);}
+.btn small{font-weight:500;opacity:.8;}
+
+/* TOP BAR */
+.topbar{background:#fff;border-bottom:2px solid #dde6f4;position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(26,39,68,.08);}
+.topbar-inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.back-link{font-weight:700;font-size:14px;text-decoration:none;color:var(--navy);padding:6px 10px;border-radius:6px;border:2px solid var(--line);}
+.back-link:hover{border-color:var(--blue);color:var(--blue);}
+.topic-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto;}
+.topic-tabs a,.topic-tabs span{font-size:13px;font-weight:600;padding:6px 11px;border-radius:6px;text-decoration:none;}
+.topic-tabs a{background:var(--navy);color:#fff;}
+.topic-tabs span{background:#eef2f8;color:#9aabc4;cursor:not-allowed;}
+
+/* LAYOUT */
+.layout{max-width:1100px;margin:26px auto;padding:0 16px 70px;display:grid;grid-template-columns:220px 1fr;gap:28px;}
+.toc{position:sticky;top:76px;align-self:start;background:#fff;border-radius:12px;padding:16px 16px 12px;box-shadow:0 2px 14px rgba(26,39,68,.06);}
+.toc h2{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7a90b5;margin-bottom:8px;}
+.toc ol{list-style:none;}
+.toc li{margin-bottom:2px;}
+.toc a{display:block;font-size:14px;text-decoration:none;color:var(--muted);padding:5px 8px;border-radius:6px;border-left:3px solid transparent;}
+.toc a:hover,.toc a.active{background:var(--light);color:var(--navy);border-left-color:var(--blue);}
+main{min-width:0;}
+section.card{background:var(--card);border-radius:12px;padding:28px 30px;box-shadow:0 2px 16px rgba(26,39,68,.07);margin-bottom:22px;scroll-margin-top:80px;}
+.card h2{font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin-bottom:6px;}
+.card h3{font-size:17px;margin:20px 0 8px;color:var(--navy);}
+.card p{margin-bottom:12px;}
+.card ul,.card ol{margin:0 0 12px 22px;}
+.card li{margin-bottom:6px;}
+.lede{font-size:17px;color:#2a3b5c;}
+.sec-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7fa8d4;margin-bottom:4px;}
+
+/* CALLOUTS */
+.callout{border-radius:10px;padding:14px 18px;margin:16px 0;font-size:15px;}
+.callout strong.tag{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
+.callout p:last-child,.callout ul:last-child{margin-bottom:0;}
+.c-exam{background:#fdf1e9;border-left:5px solid var(--orange);}
+.c-exam strong.tag{color:var(--orange);}
+.c-hook{background:var(--light);border-left:5px solid var(--blue);}
+.c-hook strong.tag{color:var(--blue);}
+.c-scope{background:#f4f6fb;border-left:5px solid #9aabc4;}
+.c-scope strong.tag{color:#6a7f9f;}
+
+/* TABLES */
+.table-wrap{overflow-x:auto;margin:12px 0 16px;border-radius:10px;border:1px solid var(--line);}
+table{width:100%;border-collapse:collapse;font-size:14.5px;}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;white-space:nowrap;}
+td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;}
+tr:nth-child(even) td{background:#f8fafd;}
+td:first-child{font-weight:700;white-space:nowrap;}
+.hook{color:var(--blue);font-weight:600;}
+.selftest-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0 4px;}
+.toggle-btn{padding:8px 14px;border-radius:8px;border:2px solid var(--navy);background:#fff;color:var(--navy);font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;cursor:pointer;}
+.toggle-btn:hover,.toggle-btn[aria-pressed="true"]{background:var(--navy);color:#fff;}
+.selftest-note{font-size:13px;color:var(--muted);}
+.testing td.can-hide{filter:blur(6px);cursor:pointer;user-select:none;transition:filter .2s;}
+.testing td.can-hide.revealed{filter:none;}
+
+/* REFLEX ARC */
+.arc{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0;}
+.arc-step{background:#f8fafd;border:2px solid var(--line);border-radius:10px;padding:14px;position:relative;}
+.arc-step .num{display:inline-block;background:var(--blue);color:#fff;font-weight:700;font-size:12px;border-radius:20px;padding:2px 10px;margin-bottom:6px;}
+.arc-step h4{font-size:15px;margin-bottom:4px;}
+.arc-step p{font-size:14px;margin:0;}
+
+/* STEPPER */
+.stepper{border:2px solid var(--line);border-radius:12px;overflow:hidden;margin:16px 0;}
+.stepper-visual{background:#f8fafd;padding:12px 10px 4px;border-bottom:2px solid var(--line);}
+.stepper-visual svg{width:100%;height:auto;display:block;}
+.stepper-body{padding:16px 20px 18px;}
+.step-card{display:none;}
+.step-card.active{display:block;}
+.step-card .step-count{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#7fa8d4;}
+.step-card h4{font-size:18px;margin:2px 0 6px;color:var(--navy);}
+.step-card p{margin:0;}
+.stepper-nav{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.stepper-nav button{padding:9px 18px;border-radius:8px;border:none;font-family:'Outfit',sans-serif;font-weight:700;font-size:14px;cursor:pointer;background:var(--navy);color:#fff;}
+.stepper-nav button:disabled{opacity:.35;cursor:default;}
+.stepper-nav button.prev{background:#fff;color:var(--navy);border:2px solid var(--navy);}
+.dots{display:flex;gap:6px;margin-left:auto;}
+.dots button{width:12px;height:12px;border-radius:50%;padding:0;border:2px solid var(--blue);background:#fff;cursor:pointer;}
+.dots button.on{background:var(--blue);}
+.seg{fill:none;stroke:#b7c7de;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s,stroke-width .25s;}
+.seg.hot{stroke:var(--orange);stroke-width:6;}
+.band{fill:var(--orange);opacity:0;transition:opacity .25s;}
+.band.hot{opacity:.13;}
+.ax{stroke:#9aabc4;stroke-width:1;}
+.ax-dash{stroke:#9aabc4;stroke-width:1.5;stroke-dasharray:6 5;}
+.thr{stroke:var(--blue);stroke-width:2;stroke-dasharray:7 5;}
+.svg-label{font-family:'Outfit',sans-serif;font-size:13px;fill:#4a6080;}
+.svg-label.b{fill:var(--blue);font-weight:700;}
+.svg-label.o{fill:var(--orange);font-weight:700;}
+.syn-part{transition:opacity .3s;}
+.syn-hide{opacity:0;}
+
+/* CARDS GRID */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0;}
+.mini{background:#f8fafd;border:2px solid var(--line);border-radius:10px;padding:16px;}
+.mini h4{font-size:16px;color:var(--navy);margin-bottom:6px;}
+.mini p{font-size:14.5px;margin-bottom:8px;}
+.mini .analogy{font-size:13.5px;color:var(--blue);font-weight:600;margin:0;}
+
+/* MIX-UPS */
+.pair{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.pair div{padding:12px 16px;font-size:14.5px;}
+.pair div:first-child{border-right:2px solid var(--line);}
+.pair h4{font-size:15px;color:var(--navy);margin-bottom:4px;}
+.pair-note{grid-column:1 / -1;background:var(--light);border-top:2px solid var(--line);font-size:14px !important;}
+
+/* CHECK YOURSELF */
+details.q{border:2px solid var(--line);border-radius:10px;margin:10px 0;background:#f8fafd;}
+details.q summary{cursor:pointer;padding:13px 16px;font-weight:600;list-style:none;position:relative;padding-right:120px;}
+details.q summary::-webkit-details-marker{display:none;}
+details.q summary::after{content:"Show answer";position:absolute;right:14px;top:12px;font-size:12px;font-weight:700;color:var(--blue);border:2px solid var(--blue);border-radius:20px;padding:2px 10px;background:#fff;}
+details.q[open] summary::after{content:"Hide";}
+details.q .ans{padding:0 16px 14px;font-size:15px;}
+details.q .ans strong{color:#1e7b34;}
+.checklist{list-style:none;margin:10px 0 0 !important;}
+.checklist li{margin-bottom:8px;}
+.checklist label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;}
+.checklist input{margin-top:5px;width:17px;height:17px;accent-color:var(--blue);flex-shrink:0;}
+.check-meta{font-size:13px;color:var(--muted);margin-top:8px;}
+
+/* VIDEO */
+.video-wrap{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#0d1526;margin:12px 0 8px;}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.video-facade{position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;}
+.video-facade::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,21,38,.15),rgba(13,21,38,.65));}
+.play{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:15px;}
+.play .circle{width:68px;height:68px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.35);}
+.play .circle::after{content:"";margin-left:6px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff;}
+.video-note{font-size:13.5px;color:var(--muted);}
+
+.end-cta{text-align:center;padding:10px 0 4px;}
+.end-cta p{color:var(--muted);margin-bottom:12px;}
+footer{max-width:1100px;margin:0 auto;padding:0 16px 40px;font-size:12.5px;color:#7a90b5;text-align:center;line-height:1.6;}
+
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr;}
+  .toc{position:static;}
+  .toc ol{display:flex;flex-wrap:wrap;gap:4px;}
+  .toc a{border-left:none;border:1px solid var(--line);}
+  .topic-tabs{margin-left:0;}
+}
+@media(max-width:640px){
+  header h1{font-size:24px;}
+  section.card{padding:20px 18px;}
+  .arc,.grid3{grid-template-columns:1fr;}
+  .pair{grid-template-columns:1fr;}
+  .pair div:first-child{border-right:none;border-bottom:2px solid var(--line);}
+  td:first-child{white-space:normal;}
+  .topbar{position:static;}
+  .topic-tabs{flex-wrap:nowrap;overflow-x:auto;width:100%;}
+  .topic-tabs a,.topic-tabs span{flex-shrink:0;}
+  .svg-label{font-size:20px;}
+  table.stack thead{display:none;}
+  table.stack,table.stack tbody,table.stack tr,table.stack td{display:block;width:100%;}
+  table.stack tr{border-top:2px solid var(--line);padding:8px 0;}
+  table.stack tr:first-child{border-top:none;}
+  table.stack td{border-top:none;padding:5px 16px;}
+  table.stack td::before{content:attr(data-label);display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6a7f9f;font-weight:700;margin-bottom:2px;}
+  table.stack td[data-label=""]::before{display:none;}
+  table.stack td:first-child{font-size:16px;}
+  table.stack.testing td.can-hide:not(.revealed){filter:none;color:transparent;text-shadow:0 0 9px rgba(30,40,70,.6);}
+  table.stack.testing td.can-hide:not(.revealed) *{color:transparent !important;text-shadow:0 0 9px rgba(30,40,70,.6);}
+  table.stack.testing td.can-hide::before{color:#6a7f9f;text-shadow:none;}
+}
+@media print{
+  .topbar,.toc,.hero-actions,.stepper-visual,.stepper-nav,.video-card,.selftest-bar,.end-cta,.checklist-card{display:none !important;}
+  body{background:#fff;}
+  header{background:#fff;color:#000;padding:0 0 10px;}
+  header h1,header .subtitle{color:#000;}
+  .layout{display:block;margin:0;padding:0;}
+  section.card{box-shadow:none;padding:10px 0;border-bottom:1px solid #ccc;border-radius:0;break-inside:avoid-page;}
+  .step-card{display:block !important;margin-bottom:10px;}
+  details.q{break-inside:avoid;}
+  details.q .ans{display:block;}
+  th{background:#eee;color:#000;}
+}
+
+
+/* ===== Unit page additions ===== */
+.topic{display:none;}
+.topic.shown{display:block;}
+.topic-tabs a{background:#eef2f8;color:var(--navy);}
+.topic-tabs a:hover{background:var(--light);}
+.topic-tabs a.on{background:var(--navy);color:#fff;}
+.topic-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:6px 0 10px;}
+.topic-nav a{flex:1 1 220px;background:#fff;border:2px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--navy);font-weight:700;}
+.topic-nav a small{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7a90b5;font-weight:700;}
+.topic-nav a:hover{border-color:var(--blue);}
+.topic-nav a.next{text-align:right;}
+.topic-nav .spacer{flex:1 1 220px;}
+
+/* Explorer (click a part, read about it) */
+.explorer{border:2px solid var(--line);border-radius:12px;overflow:hidden;margin:16px 0;}
+.ex-visual{background:#f8fafd;padding:12px 10px 6px;border-bottom:2px solid var(--line);}
+.ex-visual svg{width:100%;height:auto;display:block;}
+.ex-chips{display:flex;flex-wrap:wrap;gap:6px;padding:12px 16px 0;}
+.ex-chips button{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;padding:6px 12px;border-radius:20px;border:2px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;}
+.ex-chips button:hover{border-color:var(--blue);}
+.ex-chips button.on{background:var(--navy);border-color:var(--navy);color:#fff;}
+.ex-panels{padding:12px 20px 18px;}
+.ex-panel{display:none;}
+.ex-panel.on{display:block;}
+.ex-panel h4{font-size:18px;color:var(--navy);margin-bottom:4px;}
+.ex-panel p{margin-bottom:8px;}
+.ex-panel p:last-child{margin-bottom:0;}
+.ex-hint{font-size:13px;color:var(--muted);padding:10px 20px 0;}
+.ex-node{cursor:pointer;}
+.ex-node rect,.ex-node path,.ex-node ellipse,.ex-node circle{transition:fill .2s,stroke .2s,stroke-width .2s;}
+.ex-node:hover rect,.ex-node:hover path,.ex-node:hover ellipse{stroke:var(--blue);stroke-width:3;}
+.ex-node.on rect,.ex-node.on path,.ex-node.on ellipse,.ex-node.on circle{stroke:var(--orange);stroke-width:4;}
+.tree-line{stroke:#9aabc4;stroke-width:2;fill:none;}
+.tree-node rect{fill:#fff;stroke:#b7c7de;stroke-width:2;}
+.tree-node.on rect{fill:#fdf1e9;}
+.tree-node text{font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;fill:var(--navy);pointer-events:none;}
+.lobe{stroke:#fff;stroke-width:3;}
+.lobe-label{font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;fill:#1a2744;pointer-events:none;}
+.mark-label{font-family:'Outfit',sans-serif;font-size:12.5px;font-weight:700;pointer-events:none;}
+.hyp-level{font-family:'Outfit',sans-serif;font-size:13px;fill:#4a6080;}
+.hyp-band{fill:var(--orange);opacity:0;transition:opacity .2s;}
+.hyp-band.on{opacity:.14;}
+.hyp-line{fill:none;stroke:var(--navy);stroke-width:3;stroke-linejoin:round;}
+.hyp-rem{stroke:var(--orange);stroke-width:5;fill:none;stroke-linecap:round;}
+
+.hl{opacity:0;transition:opacity .2s;}
+.hl.on{opacity:1;}
+
+.grid2{grid-template-columns:1fr 1fr;}
+
+/* Widgets */
+.widget{border:2px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0;background:#f8fafd;}
+.widget h4{font-size:17px;color:var(--navy);margin-bottom:6px;}
+.widget label{font-weight:600;font-size:14px;}
+.widget input[type=range]{width:100%;accent-color:var(--blue);margin:8px 0;}
+.widget select{font-family:'Outfit',sans-serif;font-size:14px;padding:6px 10px;border-radius:8px;border:2px solid var(--line);background:#fff;color:var(--navy);}
+.readout{background:#fff;border:2px solid var(--line);border-radius:10px;padding:12px 16px;margin-top:10px;font-size:15px;}
+.readout .big{font-size:22px;font-weight:700;color:var(--orange);}
+.ai-stage{position:relative;height:220px;border-radius:10px;overflow:hidden;background:#fff;border:2px solid var(--line);margin:12px 0;display:flex;align-items:center;justify-content:center;}
+.ai-art{display:flex;align-items:center;gap:22px;}
+.ai-art .c1{width:90px;height:90px;border-radius:50%;background:#1f9e3a;}
+.ai-art .c2{width:90px;height:90px;background:#f4d21f;}
+.ai-art .c3{width:44px;height:120px;background:#111;}
+.ai-dot{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#C55A11;z-index:2;}
+.ai-blank{position:absolute;inset:0;background:#fff;display:none;}
+.ai-stage.white .ai-blank{display:block;}
+.ai-count{font-weight:700;color:var(--navy);}
+.wave-row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--line);}
+.wave-row:first-child{border-top:none;}
+.wave-row svg{width:100%;height:40px;}
+.wave-row strong{font-size:14.5px;}
+.wave-row span{display:block;font-size:12.5px;color:var(--muted);}
+@media(max-width:640px){
+  .grid2{grid-template-columns:1fr;}
+  .topic-tabs{display:grid !important;grid-template-columns:repeat(3,1fr);gap:6px;width:100%;overflow:visible !important;}
+  .topic-tabs a{display:flex;align-items:center;justify-content:center;text-align:center;padding:9px 4px !important;font-size:13px !important;line-height:1.25;}
+  .wave-row{grid-template-columns:110px 1fr;}
+  .tree-node text{font-size:17px;}
+  .ai-art .c1,.ai-art .c2{width:70px;height:70px;}
+}
+@media print{
+  .topic{display:none !important;}
+  .topic.shown{display:block !important;}
+  .topic-nav,.explorer .ex-chips,.widget{display:none !important;}
+  .ex-panel{display:block !important;margin-bottom:10px;}
+}
+</style>
+</head>
+<body data-quiz="https://psych4everybody.github.io/psych-revision/unit0_revision_quiz.html" data-unit="Unit 0 Notes">
+
+<header>
+  <div class="eyebrow">AP Psychology &nbsp;|&nbsp; Unit 0: Scientific Foundations of Psychology</div>
+  <h1 id="heroTitle">Unit 0 Notes</h1>
+  <p class="subtitle" id="heroSub"></p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" id="heroVideo" href="#">Watch the video <small id="heroVtime"></small></a>
+    <a class="btn btn-ghost" id="heroPractice" href="https://psych4everybody.github.io/psych-revision/unit0_revision_quiz.html">Practice <span id="heroNum"></span> questions</a>
+    <a class="btn btn-ghost" href="https://docs.google.com/document/d/1Vdn-Rzcr1TV8n5AD2j-xx_7qZoqAO9nLxYLYLqCUs1U/edit?tab=t.0" target="_blank" rel="noopener">Printable guide <small>(DAA login)</small></a>
+  </div>
+</header>
+
+<nav class="topbar" aria-label="Unit navigation">
+  <div class="topbar-inner">
+    <a class="back-link" href="index.html">&larr; All units</a>
+    <div class="topic-tabs" id="topicTabs" aria-label="Unit 0 topics">
+      <a href="#t0-1" data-tab="t0-1">0.1 Perspectives</a>
+      <a href="#t0-2" data-tab="t0-2">0.2 Thinking</a>
+      <a href="#t0-3" data-tab="t0-3">0.3 Methods</a>
+      <a href="#t0-4" data-tab="t0-4">0.4 Experiments</a>
+      <a href="#t0-5" data-tab="t0-5">0.5 Sampling</a>
+      <a href="#t0-6" data-tab="t0-6">0.6 Statistics</a>
+      <a href="#t0-7" data-tab="t0-7">0.7 Ethics</a>
+    </div>
+  </div>
+</nav>
+
+<div class="layout">
+  <aside class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol id="tocList"></ol>
+  </aside>
+  <main>
+<div class="topic" id="t0-1" data-num="0.1" data-title="History and Perspectives" data-short="Perspectives" data-sub="What psychology is, where it came from, and the seven lenses psychologists use to explain behavior." data-vtime="8:16">
+    <section class="card" id="t01-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Why do you put off your homework until the last minute? Ask seven psychologists and you might get seven different answers: your brain chemistry, your habits, your thoughts, your culture, your childhood, your need for growth, even your ancestors. None of them is "the" answer. Each perspective is a lens, and good psychologists switch between them.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Define psychology as a science.</li>
+        <li>Describe the early schools of psychology (background).</li>
+        <li>Explain the seven perspectives: biological, behavioral, cognitive, evolutionary, humanistic, psychodynamic and sociocultural.</li>
+        <li>Compare how different perspectives explain the same behavior, and explain the biopsychosocial model.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>You won't be asked to recite the history, but you will be asked to apply and compare the seven perspectives: "Which perspective best explains this?" or "How would a cognitive psychologist explain this differently from a behavioral one?" Every unit after this one uses them.</p>
+      </div>
+    </section>
+    <section class="card" id="t01-what" data-toc="What psychology is">
+      <div class="sec-label">Part 1</div>
+      <h2>What psychology is</h2>
+      <p><strong>Psychology</strong> is the scientific study of <strong>behavior</strong> (what we do, which can be observed) and <strong>mental processes</strong> (thoughts, feelings and memories, which have to be inferred). It is built on <strong>empiricism</strong>: the idea that knowledge should come from careful observation and evidence, not from authority or gut feeling.</p>
+      <div class="callout c-scope">
+        <strong class="tag">Background: where it started</strong>
+        <p>Psychology became a science in 1879, when Wilhelm Wundt opened the first psychology laboratory in Germany. Early schools included <strong>structuralism</strong> (Wundt and Titchener, breaking conscious experience into basic elements using <strong>introspection</strong>, or looking inward and reporting) and <strong>functionalism</strong> (William James, asking how mental processes help us adapt). Introspection proved too subjective to replicate, which pushed psychology toward more objective methods.</p>
+      </div>
+    </section>
+    <section class="card" id="t01-persp" data-toc="The seven perspectives">
+      <div class="sec-label">Part 2</div>
+      <h2>The seven perspectives</h2>
+      <p>Here's one behavior seen through all seven lenses. A student keeps putting off an essay until the night before it's due:</p>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t01Persp" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t01Persp" class="stack">
+          <thead><tr><th>Perspective</th><th>Focuses on</th><th>The procrastinating student</th></tr></thead>
+          <tbody>
+            <tr><td class="can-hide" data-label="Perspective">Biological</td><td data-label="Focuses on">The brain, neurotransmitters, hormones and genes.</td><td data-label="The procrastinating student">Lower activity in the brain's planning areas, and a dopamine "reward" from doing something fun right now.</td></tr>
+            <tr><td class="can-hide" data-label="Perspective">Behavioral</td><td data-label="Focuses on">Learning from the environment through conditioning and observation; observable behavior.</td><td data-label="The procrastinating student">Every time she delays, she's rewarded with relief, so the habit is reinforced.</td></tr>
+            <tr><td class="can-hide" data-label="Perspective">Cognitive</td><td data-label="Focuses on">Thinking, memory, beliefs and problem-solving.</td><td data-label="The procrastinating student">She thinks, "I work best under pressure," and underestimates how long the essay will take.</td></tr>
+            <tr><td class="can-hide" data-label="Perspective">Evolutionary</td><td data-label="Focuses on">How natural selection shaped behavior that helped our ancestors survive and reproduce.</td><td data-label="The procrastinating student">Our ancestors survived by focusing on immediate needs, so we're wired to favor rewards now over rewards later.</td></tr>
+            <tr><td class="can-hide" data-label="Perspective">Humanistic</td><td data-label="Focuses on">Free will, personal growth and reaching one's potential.</td><td data-label="The procrastinating student">She doesn't find the essay meaningful; given more choice, she'd be motivated to grow.</td></tr>
+            <tr><td class="can-hide" data-label="Perspective">Psychodynamic</td><td data-label="Focuses on">Unconscious motives and conflicts, often from early experience.</td><td data-label="The procrastinating student">An unconscious fear of failure, rooted in childhood, makes starting feel threatening.</td></tr>
+            <tr><td class="can-hide" data-label="Perspective">Sociocultural</td><td data-label="Focuses on">Culture, social norms, family and the people around us.</td><td data-label="The procrastinating student">Her friends all leave work to the last minute, and it's seen as normal in her group.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout c-hook">
+        <strong class="tag">Remember all seven</strong>
+        <p><strong>B</strong>e <strong>B</strong>rave, <strong>C</strong>urious, <strong>E</strong>nergetic, <strong>H</strong>appy, <strong>P</strong>atient and <strong>S</strong>ocial: Biological, Behavioral, Cognitive, Evolutionary, Humanistic, Psychodynamic, Sociocultural.</p>
+      </div>
+      <h3>Putting the lenses together</h3>
+      <p>Most behavior is too complex for one lens. The <strong>biopsychosocial model</strong> combines <strong>biological</strong>, <strong>psychological</strong> (thoughts, emotions, learning) and <strong>sociocultural</strong> factors. Most psychologists take an <strong>eclectic approach</strong>, drawing on several perspectives at once (you'll meet this again in Unit 5).</p>
+    </section>
+    <section class="card" id="t01-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 3</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Behavioral</h4>Learned through rewards, punishments and observation.</div>
+        <div><h4>Cognitive</h4>Shaped by thoughts and beliefs.</div>
+        <div class="pair-note">Look for the clue: is the cause what happened to the person, or what they think?</div>
+      </div>
+      <div class="pair">
+        <div><h4>Biological</h4>Brain, chemicals, genes in this person.</div>
+        <div><h4>Evolutionary</h4>Traits that helped our ancestors survive.</div>
+        <div class="pair-note">Biological is about this body now; evolutionary is about why the trait exists in our species.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Humanistic</h4>Growth, free will, potential.</div>
+        <div><h4>Psychodynamic</h4>Unconscious conflicts, early experience.</div>
+        <div class="pair-note">Humanistic looks forward to who you could become; psychodynamic looks back to what's hidden.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Structuralism</h4>What are the elements of the mind?</div>
+        <div><h4>Functionalism</h4>What is the mind for?</div>
+        <div class="pair-note">Structure versus function: what it's made of, or what it does.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t01-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's short review video <em>Psychological Perspectives</em> (8:16) covers this topic, and ends with a practice quiz.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="fbfhRKENScw" data-start="0" aria-label="Play Mr. Sinn's Topic 0.1 video" style="background-image:url('https://i.ytimg.com/vi/fbfhRKENScw/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 0.1 video</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=fbfhRKENScw" target="_blank" rel="noopener">Open it on YouTube</a>.</p>
+    </section>
+    <section class="card" id="t01-check" data-toc="Check yourself">
+      <div class="sec-label">Part 4</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. A researcher explains a fear of snakes by pointing out that ancestors who avoided snakes were more likely to survive. Which perspective?</summary>
+        <div class="ans"><strong>Evolutionary.</strong></div></details>
+      <details class="q"><summary>2. A therapist says a client's anxiety comes from the belief "If I make one mistake, everyone will think I'm a failure." Which perspective?</summary>
+        <div class="ans"><strong>Cognitive.</strong></div></details>
+      <details class="q"><summary>3. A psychologist explains a child's tantrums by noting that the parents give in every time, rewarding the behavior. Which perspective?</summary>
+        <div class="ans"><strong>Behavioral.</strong></div></details>
+      <details class="q"><summary>4. Studies show that people in some countries are more likely to describe themselves by their family roles than by their personal traits. Which perspective does this research reflect?</summary>
+        <div class="ans"><strong>Sociocultural.</strong></div></details>
+      <details class="q"><summary>5. Depression is explained as a mix of genetic risk, negative thinking and social isolation. Which model?</summary>
+        <div class="ans"><strong>The biopsychosocial model.</strong></div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t01_checklist">
+          <li><label><input type="checkbox" data-key="c1"> define psychology, behavior and mental processes?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> describe structuralism, functionalism and introspection as background?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> explain each of the seven perspectives with an example?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> compare how two perspectives would explain the same behavior?</label></li>
+          <li><label><input type="checkbox" data-key="c5"> explain the biopsychosocial model and the eclectic approach?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit0_revision_quiz.html?topic=0.1&amp;mode=practice">Practice 0.1 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t0-2" data-num="0.2" data-title="Scientific Method and Critical Thinking" data-short="Thinking" data-sub="How psychology tests ideas, and the thinking traps that science is designed to catch." data-vtime="9:02">
+    <section class="card" id="t02-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">"I knew it all along." "It's obvious." "Everyone knows that." Our intuition is often wrong, and our brains are very good at convincing us that it isn't. The scientific method is psychology's way of checking ideas against evidence instead of against our hunches.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Describe the steps of the scientific method, and tell a theory from a hypothesis.</li>
+        <li>Explain falsifiability and operational definitions.</li>
+        <li>Explain how peer review and replication help science correct itself.</li>
+        <li>Explain confirmation bias, hindsight bias and overconfidence.</li>
+        <li>Explain how cultural norms affect behavior, and the risks of applying psychology in inappropriate or discriminatory ways.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>On free-response questions you may be asked to state a study's hypothesis and say whether it is falsifiable, or to identify an operational definition and explain how it allows replication. Hindsight bias and overconfidence are classic multiple-choice scenarios.</p>
+      </div>
+    </section>
+    <section class="card" id="t02-method" data-toc="Scientific method">
+      <div class="sec-label">Part 1</div>
+      <h2>The scientific method</h2>
+      <div class="ex-visual" style="border:2px solid var(--line);border-radius:12px;padding:16px 18px;">
+        <div class="mark-label" style="color:#2E75B6;font-size:1rem;margin-bottom:8px;">The scientific method</div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;"><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #1F3864;background:#DEEAF1;color:#1F3864;font-size:0.95rem;">Ask a question</span><span style="color:#1F3864;font-weight:700;">&rarr;</span><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #1F3864;background:#DEEAF1;color:#1F3864;font-size:0.95rem;">Form a hypothesis</span><span style="color:#1F3864;font-weight:700;">&rarr;</span><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #1F3864;background:#DEEAF1;color:#1F3864;font-size:0.95rem;">Test it (collect data)</span><span style="color:#1F3864;font-weight:700;">&rarr;</span><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #1F3864;background:#DEEAF1;color:#1F3864;font-size:0.95rem;">Analyze the results</span><span style="color:#1F3864;font-weight:700;">&rarr;</span><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #1F3864;background:#DEEAF1;color:#1F3864;font-size:0.95rem;">Draw conclusions</span><span style="color:#1F3864;font-weight:700;">&rarr;</span><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #C55A11;background:#FBE5D6;color:#8a3c0b;font-weight:700;font-size:0.95rem;">Report, review and replicate</span></div>
+      </div>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Theory</h4><p>A well-tested <strong>explanation</strong> that organizes many observations and predicts behavior. In science, a theory is not a guess.</p><p class="analogy">A theory that sleep helps us process and store memories.</p></div>
+        <div class="mini"><h4>Hypothesis</h4><p>A specific, <strong>testable prediction</strong>, often drawn from a theory.</p><p class="analogy">"Students who sleep 8 hours after studying will recall more words than students who sleep 4 hours."</p></div>
+        <div class="mini"><h4>Falsifiable</h4><p>A hypothesis is falsifiable if evidence <strong>could</strong> show it to be wrong. A claim no evidence could ever disprove isn't scientific.</p><p class="analogy">Falsifiable: "Exercise reduces anxiety scores." Not falsifiable: "Everything happens for a reason."</p></div>
+        <div class="mini"><h4>Operational definition</h4><p>A precise statement of <strong>how a variable will be measured</strong> in a study, so others can replicate it.</p><p class="analogy">"Anxiety" = a score on a 20-question anxiety questionnaire; "sleep" = hours recorded by a sleep tracker.</p></div>
+      </div>
+      <h3>How science checks itself</h3>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Peer review</h4><p>Before publication, other experts examine a study's methods and conclusions for flaws.</p><p class="analogy">A journal sends a study to three psychologists who question how the sample was chosen.</p></div>
+        <div class="mini"><h4>Replication</h4><p>Repeating a study, often with different participants or settings, to see if the results hold up. Findings that replicate earn more confidence.</p><p class="analogy">A famous finding fails to replicate in ten new labs, so psychologists rethink it.</p></div>
+      </div>
+    </section>
+    <section class="card" id="t02-bias" data-toc="Thinking traps">
+      <div class="sec-label">Part 2</div>
+      <h2>Thinking traps and culture</h2>
+      <p>Science matters because our everyday thinking has built-in biases:</p>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t02Bias" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t02Bias" class="stack">
+          <thead><tr><th>Bias</th><th>What it is</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td class="can-hide" data-label="Bias">Confirmation bias</td><td data-label="What it is">Looking for, noticing and remembering information that supports what we already believe, while ignoring evidence against it.</td><td data-label="Example">Believing your favorite team's referee is unfair, and remembering only the calls that went against you.</td></tr>
+            <tr><td class="can-hide" data-label="Bias">Hindsight bias</td><td data-label="What it is">Believing, after learning an outcome, that we "knew it all along".</td><td data-label="Example">After the election result, saying, "It was obvious who would win."</td></tr>
+            <tr><td class="can-hide" data-label="Bias">Overconfidence</td><td data-label="What it is">Being more confident in our judgments and knowledge than the evidence justifies.</td><td data-label="Example">Being sure you'll finish a project in one evening, and needing three.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Culture and the misuse of psychology</h3>
+      <p><strong>Cultural norms, expectations and circumstances</strong> shape behavior. Making eye contact with a teacher may show respect in one culture and disrespect in another. A finding from one cultural group may not apply to another, so psychologists ask whose behavior a study actually describes.</p>
+      <p>Psychological ideas can also be <strong>applied in inappropriate or discriminatory ways</strong>: using test scores to label whole groups as less able, or calling a classmate "so OCD" for liking things neat, which trivializes a real disorder. Part of thinking like a psychologist is noticing when an idea is being stretched beyond its evidence.</p>
+    </section>
+    <section class="card" id="t02-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 3</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Theory</h4>A broad, well-tested explanation.</div>
+        <div><h4>Hypothesis</h4>A specific, testable prediction.</div>
+        <div class="pair-note">Theories generate hypotheses.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Hindsight bias</h4>"I knew it all along" (after the outcome).</div>
+        <div><h4>Overconfidence</h4>"I'm sure I'm right" (before the outcome).</div>
+        <div class="pair-note">Timing: hindsight looks back; overconfidence looks ahead.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Confirmation bias</h4>Seeking evidence that agrees with you.</div>
+        <div><h4>Belief perseverance (Unit 4)</h4>Keeping a belief despite contrary evidence.</div>
+        <div class="pair-note">Confirmation bias is how belief perseverance is kept alive.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Peer review</h4>Experts check a study before publication.</div>
+        <div><h4>Replication</h4>Repeating the study to see if results hold.</div>
+        <div class="pair-note">Review checks the method; replication checks the result.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t02-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's short review video <em>Cognitive Biases and Culture Reshaping Behavior</em> (9:02) covers this topic, and ends with a practice quiz.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="sUAGsWEA8TQ" data-start="0" aria-label="Play Mr. Sinn's Topic 0.2 video" style="background-image:url('https://i.ytimg.com/vi/sUAGsWEA8TQ/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 0.2 video</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=sUAGsWEA8TQ" target="_blank" rel="noopener">Open it on YouTube</a>.</p>
+    </section>
+    <section class="card" id="t02-check" data-toc="Check yourself">
+      <div class="sec-label">Part 4</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. A researcher measures "aggression" as the number of times a child hits a toy doll in five minutes. What is this?</summary>
+        <div class="ans"><strong>An operational definition.</strong> It states exactly how the variable is measured, so the study can be replicated.</div></details>
+      <details class="q"><summary>2. Is this hypothesis falsifiable? "Students who use flashcards will score higher on a vocabulary test than students who reread their notes."</summary>
+        <div class="ans"><strong>Yes.</strong> Test scores could show no difference, or the opposite, which would disprove it.</div></details>
+      <details class="q"><summary>3. After his friend's business fails, Saeed says, "I always knew that idea wouldn't work." Which bias?</summary>
+        <div class="ans"><strong>Hindsight bias.</strong></div></details>
+      <details class="q"><summary>4. Before the exam, a student is certain she'll get every question right, and then gets half of them wrong. Which bias?</summary>
+        <div class="ans"><strong>Overconfidence.</strong></div></details>
+      <details class="q"><summary>5. A study's surprising result is repeated in five other countries, with the same findings. Which scientific process does this show?</summary>
+        <div class="ans"><strong>Replication.</strong></div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t02_checklist">
+          <li><label><input type="checkbox" data-key="c1"> describe the steps of the scientific method?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> tell a theory from a hypothesis, and judge whether a hypothesis is falsifiable?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> write an operational definition and explain why it matters for replication?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> explain peer review and replication?</label></li>
+          <li><label><input type="checkbox" data-key="c5"> explain and give examples of confirmation bias, hindsight bias and overconfidence?</label></li>
+          <li><label><input type="checkbox" data-key="c6"> explain how cultural norms matter, and give an example of psychology being misapplied?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit0_revision_quiz.html?topic=0.2&amp;mode=practice">Practice 0.2 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t0-3" data-num="0.3" data-title="Research Methods" data-short="Methods" data-sub="Case studies, correlations, observations, surveys and meta-analyses: what each one can and can't tell us." data-vtime="3:01">
+    <section class="card" id="t03-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Every method in psychology is a trade-off. Some describe behavior in rich detail; some reveal relationships across thousands of people; only one can show cause and effect. The skill here is knowing what each method can, and can't, tell you.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Tell experimental and non-experimental methods apart.</li>
+        <li>Describe case studies, correlational studies, naturalistic observation, surveys and meta-analyses, with a strength and a limitation of each.</li>
+        <li>Explain why correlation does not equal causation: the directionality and third variable problems.</li>
+        <li>Tell qualitative and quantitative measures apart, and explain self-report and social desirability bias in surveys.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>A very common question: "Which research method is this?" followed by "What can the researchers conclude?" If nothing is manipulated and no one is randomly assigned, it is <strong>not</strong> an experiment, and you can't conclude cause and effect.</p>
+      </div>
+    </section>
+    <section class="card" id="t03-methods" data-toc="Methods">
+      <div class="sec-label">Part 1</div>
+      <h2>Experimental and non-experimental methods</h2>
+      <p>An <strong>experiment</strong> manipulates an <strong>independent variable</strong> and uses <strong>random assignment</strong> to groups (Topic 0.4). Everything else is <strong>non-experimental</strong>: it can describe and find relationships, but it can't prove cause.</p>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t03Methods" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t03Methods" class="stack">
+          <thead><tr><th>Method</th><th>What it is</th><th>Strength</th><th>Limitation</th></tr></thead>
+          <tbody>
+            <tr><td class="can-hide" data-label="Method">Case study</td><td data-label="What it is">An in-depth study of one person or a small group.</td><td data-label="Strength">Rich detail; useful for rare cases.</td><td data-label="Limitation">Results may not generalize to others.</td></tr>
+            <tr><td class="can-hide" data-label="Method">Correlational study</td><td data-label="What it is">Measures two or more variables to see whether, and how strongly, they are related.</td><td data-label="Strength">Shows relationships and allows prediction.</td><td data-label="Limitation">Can't show cause and effect.</td></tr>
+            <tr><td class="can-hide" data-label="Method">Naturalistic observation</td><td data-label="What it is">Watching and recording behavior in its natural setting without interfering.</td><td data-label="Strength">Shows real-life behavior.</td><td data-label="Limitation">Can't explain why; people may act differently if they know they're watched.</td></tr>
+            <tr><td class="can-hide" data-label="Method">Survey</td><td data-label="What it is">Asking many people questions about their attitudes or behavior.</td><td data-label="Strength">Quick, cheap, large samples.</td><td data-label="Limitation">People may not answer accurately or honestly.</td></tr>
+            <tr><td class="can-hide" data-label="Method">Meta-analysis</td><td data-label="What it is">A statistical combination of the results of many studies on the same question.</td><td data-label="Strength">A clearer, more reliable overall picture.</td><td data-label="Limitation">Only as good as the studies it includes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout c-hook">
+        <strong class="tag">Being watched changes things</strong>
+        <p>When people behave differently because they know they're being observed, it's sometimes called the <strong>Hawthorne effect</strong>. It's one reason observers try to stay unnoticed.</p>
+      </div>
+    </section>
+    <section class="card" id="t03-correlation" data-toc="Correlation and causation">
+      <div class="sec-label">Part 2</div>
+      <h2>Correlation is not causation</h2>
+      <p>Studies often find that students who use their phones more at night get lower grades. Does phone use <em>cause</em> lower grades? A correlation alone can't tell us, for two reasons:</p>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Directionality problem</h4><p>We don't know which variable affects which. Maybe phone use lowers grades, or maybe students who are struggling turn to their phones to escape.</p><p class="analogy">A &harr; B: which way does it go?</p></div>
+        <div class="mini"><h4>Third variable problem</h4><p>A different, unmeasured variable may cause both. Stress could lead to more phone use <strong>and</strong> lower grades.</p><p class="analogy">C causes both A and B.</p></div>
+      </div>
+      <div class="callout c-exam">
+        <strong class="tag">Correlation does not equal causation</strong>
+        <p>If a free-response question describes a correlational study and the conclusion says "causes", "leads to" or "makes", that's your cue to explain the directionality or third variable problem.</p>
+      </div>
+      <p>An <strong>illusory correlation</strong> is believing two things are related when they aren't, often because a few memorable cases stand out: "Every time I wear these socks, we win."</p>
+    </section>
+    <section class="card" id="t03-measures" data-toc="Measures and surveys">
+      <div class="sec-label">Part 3</div>
+      <h2>Measures and surveys</h2>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Qualitative measures</h4><p>Collect <strong>non-numerical</strong> data: words, descriptions, themes. A <strong>structured interview</strong> asks every participant the same questions in the same order.</p><p class="analogy">Interviewing students about how they feel on exam days, then looking for common themes.</p></div>
+        <div class="mini"><h4>Quantitative measures</h4><p>Collect <strong>numerical</strong> data that can be analyzed statistically. A <strong>Likert scale</strong> asks people to rate their agreement on a scale.</p><p class="analogy">"I feel stressed before exams": 1 (strongly disagree) to 5 (strongly agree).</p></div>
+      </div>
+      <h3>Survey pitfalls</h3>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Self-report bias</h4><p>People may not report their own behavior accurately because of poor memory or poor self-insight.</p><p class="analogy">Students underestimate how many hours a day they spend on their phones.</p></div>
+        <div class="mini"><h4>Social desirability bias</h4><p>People answer in ways that make them look good, rather than truthfully.</p><p class="analogy">Overreporting how often you recycle or read for pleasure.</p></div>
+        <div class="mini"><h4>Wording effects</h4><p>The way a question is worded can change the answers.</p><p class="analogy">"Should schools ban phones?" gets different answers from "Should students be allowed to keep phones for emergencies?"</p></div>
+      </div>
+    </section>
+    <section class="card" id="t03-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 4</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Correlational study</h4>Measures variables as they are.</div>
+        <div><h4>Experiment</h4>Manipulates a variable, with random assignment.</div>
+        <div class="pair-note">Was anything manipulated? If not, it isn't an experiment.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Directionality problem</h4>Which came first?</div>
+        <div><h4>Third variable problem</h4>Something else causes both.</div>
+        <div class="pair-note">Two variables or three?</div>
+      </div>
+      <div class="pair">
+        <div><h4>Case study</h4>One person in depth.</div>
+        <div><h4>Naturalistic observation</h4>Many people, observed in real settings.</div>
+        <div class="pair-note">Depth on one, or watching many without interfering?</div>
+      </div>
+      <div class="pair">
+        <div><h4>Structured interview</h4>Qualitative.</div>
+        <div><h4>Likert scale</h4>Quantitative.</div>
+        <div class="pair-note">Words versus numbers.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t03-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>Research Methods and Design (Unit 0 Topic 2)</em> covers Topic 0.3 from <strong>0:26 to 3:27</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="GjthAOIJuJg" data-start="26" data-end="207" aria-label="Play Mr. Sinn's Topic 0.3 video section" style="background-image:url('https://i.ytimg.com/vi/GjthAOIJuJg/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 0.3 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=GjthAOIJuJg&amp;t=26s" target="_blank" rel="noopener">Open it on YouTube (starts at 0:26)</a>.</p>
+    </section>
+    <section class="card" id="t03-check" data-toc="Check yourself">
+      <div class="sec-label">Part 5</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. Researchers survey 500 teenagers and find that those who play more video games report less sleep. Which method, and can they conclude that games cause less sleep?</summary>
+        <div class="ans"><strong>A correlational study (using a survey).</strong> No: there could be a directionality or third variable problem.</div></details>
+      <details class="q"><summary>2. A psychologist studies one patient's memory for years after brain surgery. Which method, and what is its main limitation?</summary>
+        <div class="ans"><strong>A case study.</strong> The results may not generalize to other people.</div></details>
+      <details class="q"><summary>3. A team combines results from 80 studies on mindfulness and stress to estimate the overall effect. Which method?</summary>
+        <div class="ans"><strong>A meta-analysis.</strong></div></details>
+      <details class="q"><summary>4. Ice cream sales and drowning rates rise together. What best explains this?</summary>
+        <div class="ans"><strong>A third variable:</strong> hot weather increases both.</div></details>
+      <details class="q"><summary>5. Asked whether they cheat on homework, most students say "never". What may be distorting the results?</summary>
+        <div class="ans"><strong>Social desirability bias.</strong></div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t03_checklist">
+          <li><label><input type="checkbox" data-key="c1"> tell experimental and non-experimental methods apart?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> describe each non-experimental method with a strength and a limitation?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> explain the directionality and third variable problems, and illusory correlation?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> tell qualitative (structured interviews) and quantitative (Likert scales) measures apart?</label></li>
+          <li><label><input type="checkbox" data-key="c5"> explain self-report bias, social desirability bias and wording effects?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit0_revision_quiz.html?topic=0.3&amp;mode=practice">Practice 0.3 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t0-4" data-num="0.4" data-title="Experimental Design" data-short="Experiments" data-sub="How a well-designed experiment lets us say one thing causes another." data-vtime="5:26">
+    <section class="card" id="t04-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Does caffeine really help you remember more? To answer a cause-and-effect question, you need an experiment, and a good one has to rule out every other explanation. This topic is the toolkit for doing exactly that.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Identify the independent, dependent and confounding variables in a study.</li>
+        <li>Explain experimental and control groups, and the purpose of random assignment.</li>
+        <li>Explain placebos and the placebo effect.</li>
+        <li>Explain single-blind and double-blind procedures, and the biases they control: experimenter bias and social desirability bias.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Almost every AP exam includes a research scenario where you must identify the IV, DV, a confounding variable, the control group, and whether the study was single- or double-blind. Practice saying each one in a full sentence tied to the scenario.</p>
+      </div>
+    </section>
+    <section class="card" id="t04-variables" data-toc="Variables and groups">
+      <div class="sec-label">Part 1</div>
+      <h2>Variables and groups</h2>
+      <div class="ex-visual" style="border:2px solid var(--line);border-radius:12px;padding:16px 18px;">
+        <div class="mark-label" style="color:#2E75B6;font-size:1rem;margin-bottom:8px;">The basic experiment</div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;"><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #1F3864;background:#DEEAF1;color:#1F3864;font-size:0.95rem;">Participants</span><span style="color:#1F3864;font-weight:700;">&rarr;</span><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #1F3864;background:#DEEAF1;color:#1F3864;font-size:0.95rem;">Random assignment</span><span style="color:#1F3864;font-weight:700;">&rarr;</span><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #1F3864;background:#DEEAF1;color:#1F3864;font-size:0.95rem;">Experimental group gets the IV / control group doesn't</span><span style="color:#1F3864;font-weight:700;">&rarr;</span><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #1F3864;background:#DEEAF1;color:#1F3864;font-size:0.95rem;">Measure the DV</span><span style="color:#1F3864;font-weight:700;">&rarr;</span><span style="display:inline-block;padding:8px 14px;border-radius:10px;border:1.5px solid #C55A11;background:#FBE5D6;color:#8a3c0b;font-weight:700;font-size:0.95rem;">Compare the groups</span></div>
+      </div>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t04Terms" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t04Terms" class="stack">
+          <thead><tr><th>Term</th><th>What it is</th><th>In a caffeine and memory study</th></tr></thead>
+          <tbody>
+            <tr><td class="can-hide" data-label="Term">Independent variable (IV)</td><td data-label="What it is">The variable the researcher <strong>manipulates</strong>: the presumed cause.</td><td data-label="In a caffeine and memory study">Whether participants get a caffeine pill or a placebo pill.</td></tr>
+            <tr><td class="can-hide" data-label="Term">Dependent variable (DV)</td><td data-label="What it is">The variable that is <strong>measured</strong>: the presumed effect.</td><td data-label="In a caffeine and memory study">The number of words recalled from a list of 30.</td></tr>
+            <tr><td class="can-hide" data-label="Term">Confounding variable</td><td data-label="What it is">Any other variable that could affect the DV, offering an alternative explanation.</td><td data-label="In a caffeine and memory study">Some participants slept badly the night before.</td></tr>
+            <tr><td class="can-hide" data-label="Term">Experimental group</td><td data-label="What it is">Participants who receive the treatment (the IV).</td><td data-label="In a caffeine and memory study">The group given caffeine.</td></tr>
+            <tr><td class="can-hide" data-label="Term">Control group</td><td data-label="What it is">Participants who don't receive the treatment; a baseline for comparison.</td><td data-label="In a caffeine and memory study">The group given the placebo.</td></tr>
+            <tr><td class="can-hide" data-label="Term">Random assignment</td><td data-label="What it is">Placing participants into groups by chance, so the groups are similar at the start and confounds are spread evenly.</td><td data-label="In a caffeine and memory study">A computer randomly decides who gets which pill.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout c-hook">
+        <strong class="tag">IV and DV</strong>
+        <p>The IV is what <strong>I V</strong>ary. The DV <strong>D</strong>epends on the IV. Try: "The effect of [IV] on [DV]."</p>
+      </div>
+    </section>
+    <section class="card" id="t04-control" data-toc="Placebos and blinding">
+      <div class="sec-label">Part 2</div>
+      <h2>Placebos and blind procedures</h2>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Placebo</h4><p>An inactive substance or fake treatment that looks like the real one, given to the control group.</p><p class="analogy">A sugar pill that looks exactly like the caffeine pill.</p></div>
+        <div class="mini"><h4>Placebo effect</h4><p>Changes in behavior or health caused by <strong>expecting</strong> a treatment to work, not by the treatment itself.</p><p class="analogy">Placebo-takers recall more words simply because they believe they had caffeine.</p></div>
+      </div>
+      <h3>Controlling expectations</h3>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t04Blind" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t04Blind" class="stack">
+          <thead><tr><th>Procedure</th><th>Who doesn't know which group is which?</th><th>What it controls</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Procedure">Single-blind</td><td class="can-hide" data-label="Who doesn't know which group is which?">The <strong>participants</strong>.</td><td data-label="What it controls">Participant expectations, such as the placebo effect and <strong>social desirability bias</strong> (acting the way they think they should).</td></tr>
+            <tr><td data-label="Procedure">Double-blind</td><td class="can-hide" data-label="Who doesn't know which group is which?">Both the <strong>participants and the researchers</strong> who interact with them or record the data.</td><td data-label="What it controls">Participant expectations <strong>and</strong> <strong>experimenter bias</strong>: researchers unintentionally influencing the results.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>A <strong>quasi-experiment</strong> compares groups that weren't randomly assigned, such as students in two existing classes. It looks like an experiment, but without random assignment it can't firmly show cause and effect.</p>
+    </section>
+    <section class="card" id="t04-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 3</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Random assignment</h4>How participants are put into groups. Allows cause and effect.</div>
+        <div><h4>Random sampling (0.5)</h4>How participants are chosen from the population. Allows generalization.</div>
+        <div class="pair-note">Assignment = groups; sampling = who's in the study.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Independent variable</h4>Manipulated.</div>
+        <div><h4>Dependent variable</h4>Measured.</div>
+        <div class="pair-note">If the researcher sets it, it's the IV.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Single-blind</h4>Participants don't know.</div>
+        <div><h4>Double-blind</h4>Participants and researchers don't know.</div>
+        <div class="pair-note">Double-blind adds protection against experimenter bias.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Control group</h4>Gets no treatment or a placebo.</div>
+        <div><h4>Confounding variable</h4>An uncontrolled outside factor.</div>
+        <div class="pair-note">The control group is part of the design; a confound is a flaw in it.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t04-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>Research Methods and Design (Unit 0 Topic 2)</em> covers Topic 0.4 from <strong>9:07 to 14:33</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="GjthAOIJuJg" data-start="547" data-end="873" aria-label="Play Mr. Sinn's Topic 0.4 video section" style="background-image:url('https://i.ytimg.com/vi/GjthAOIJuJg/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 0.4 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=GjthAOIJuJg&amp;t=547s" target="_blank" rel="noopener">Open it on YouTube (starts at 9:07)</a>.</p>
+    </section>
+    <section class="card" id="t04-check" data-toc="Check yourself">
+      <div class="sec-label">Part 4</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. Researchers test whether listening to music while studying affects test scores. Half the students (randomly chosen) study with music, half in silence. Identify the IV and DV.</summary>
+        <div class="ans"><strong>IV: music or silence while studying.</strong> DV: test scores.</div></details>
+      <details class="q"><summary>2. In the same study, the music group happens to study in a brighter room. What is the brighter room?</summary>
+        <div class="ans"><strong>A confounding variable.</strong> It offers another possible explanation for any difference in scores.</div></details>
+      <details class="q"><summary>3. Why do researchers use random assignment?</summary>
+        <div class="ans"><strong>To make the groups similar at the start,</strong> so differences in the DV can be attributed to the IV rather than to pre-existing differences.</div></details>
+      <details class="q"><summary>4. Participants don't know whether they got caffeine or a placebo, but the researcher handing out the pills and scoring the tests does. Single- or double-blind, and what risk remains?</summary>
+        <div class="ans"><strong>Single-blind.</strong> Experimenter bias is still possible, because the researcher knows who got caffeine.</div></details>
+      <details class="q"><summary>5. Patients given a sugar pill report less pain. What is this called?</summary>
+        <div class="ans"><strong>The placebo effect.</strong></div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t04_checklist">
+          <li><label><input type="checkbox" data-key="c1"> identify the IV, DV and a confounding variable in a scenario?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> explain experimental and control groups, and the purpose of random assignment?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> explain a placebo and the placebo effect?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> tell single-blind and double-blind procedures apart and say what each controls?</label></li>
+          <li><label><input type="checkbox" data-key="c5"> explain experimenter bias, social desirability bias and quasi-experiments?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit0_revision_quiz.html?topic=0.4&amp;mode=practice">Practice 0.4 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t0-5" data-num="0.5" data-title="Sampling" data-short="Sampling" data-sub="Who takes part in a study, and how far the results can be stretched." data-vtime="2:07">
+    <section class="card" id="t05-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Imagine you want to know how much sleep teenagers in the UAE get, so you survey the 25 students in your IB Psychology class. Can you say anything about teenagers in the UAE? Sampling is about who takes part in a study, and how far the results can fairly be stretched.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Identify the population and the sample in a study.</li>
+        <li>Tell random sampling and convenience sampling apart, and explain a representative sample.</li>
+        <li>Explain sampling bias and how it limits generalizability.</li>
+        <li>Explain why appropriate representation of participants matters for research outcomes.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Expect a scenario asking whether a sample is representative, whether there is sampling bias, and how far the results can be generalized. Don't mix up random <strong>sampling</strong> (who is chosen for the study) with random <strong>assignment</strong> (who goes into which group, Topic 0.4).</p>
+      </div>
+    </section>
+    <section class="card" id="t05-samples" data-toc="Populations and samples">
+      <div class="sec-label">Part 1</div>
+      <h2>Populations and samples</h2>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Population</h4><p>The <strong>whole group</strong> a researcher wants to draw conclusions about.</p><p class="analogy">All secondary school students in the UAE.</p></div>
+        <div class="mini"><h4>Sample</h4><p>The <strong>subset</strong> of the population who actually take part.</p><p class="analogy">The 600 students who complete the survey.</p></div>
+      </div>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t05Sampling" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t05Sampling" class="stack">
+          <thead><tr><th>Sampling method</th><th>How participants are chosen</th><th>Effect on the results</th></tr></thead>
+          <tbody>
+            <tr><td class="can-hide" data-label="Sampling method">Random sampling</td><td data-label="How participants are chosen">Every member of the population has an <strong>equal chance</strong> of being chosen.</td><td data-label="Effect on the results">Most likely to give a <strong>representative sample</strong>, so results can be generalized.</td></tr>
+            <tr><td class="can-hide" data-label="Sampling method">Stratified sampling</td><td data-label="How participants are chosen">The population is divided into subgroups (such as grade levels or emirates), and people are randomly sampled from each in proportion.</td><td data-label="Effect on the results">Makes sure key subgroups are represented.</td></tr>
+            <tr><td class="can-hide" data-label="Sampling method">Convenience sampling</td><td data-label="How participants are chosen">Choosing people who are <strong>easy to reach</strong>.</td><td data-label="Effect on the results">Quick and cheap, but the sample is often unrepresentative.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>A <strong>representative sample</strong> closely matches the population on important characteristics (age, background, school type). When it doesn't, the study has <strong>sampling bias</strong>, which limits <strong>generalizability</strong>: how far the results can be applied to the wider population. <strong>Volunteer bias</strong> is one source: people who choose to take part may differ from those who don't.</p>
+    </section>
+    <section class="card" id="t05-represent" data-toc="Representation">
+      <div class="sec-label">Part 2</div>
+      <h2>Why representation matters</h2>
+      <p>For much of psychology's history, many studies were run on university students from a narrow range of countries. Their findings were then treated as if they described all people. When participants are <strong>appropriately represented</strong> (different ages, cultures, backgrounds and abilities), results are more accurate and fair, and we find out where findings <strong>don't</strong> apply.</p>
+      <div class="callout c-exam">
+        <strong class="tag">A sample size trap</strong>
+        <p>A big sample isn't automatically a good one. A million people surveyed through one social media app still only represents that app's users. How participants are chosen matters more than how many there are.</p>
+      </div>
+    </section>
+    <section class="card" id="t05-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 3</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Random sampling</h4>Who is in the study.</div>
+        <div><h4>Random assignment</h4>Which group each participant is in.</div>
+        <div class="pair-note">Sampling supports generalization; assignment supports cause and effect.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Random sampling</h4>Everyone has an equal chance.</div>
+        <div><h4>Convenience sampling</h4>Whoever is easy to reach.</div>
+        <div class="pair-note">Ask: could anyone in the population have been chosen?</div>
+      </div>
+      <div class="pair">
+        <div><h4>Population</h4>Everyone you want to know about.</div>
+        <div><h4>Sample</h4>The people you actually study.</div>
+        <div class="pair-note">The sample is drawn from the population.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t05-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>Research Methods and Design (Unit 0 Topic 2)</em> covers Topic 0.5 from <strong>7:00 to 9:07</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="GjthAOIJuJg" data-start="420" data-end="547" aria-label="Play Mr. Sinn's Topic 0.5 video section" style="background-image:url('https://i.ytimg.com/vi/GjthAOIJuJg/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 0.5 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=GjthAOIJuJg&amp;t=420s" target="_blank" rel="noopener">Open it on YouTube (starts at 7:00)</a>.</p>
+    </section>
+    <section class="card" id="t05-check" data-toc="Check yourself">
+      <div class="sec-label">Part 4</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. A researcher studying sleep in UAE teenagers surveys students at the school where she teaches. Which sampling method, and what's the problem?</summary>
+        <div class="ans"><strong>Convenience sampling.</strong> The sample is unlikely to represent all UAE teenagers, so results can't be widely generalized.</div></details>
+      <details class="q"><summary>2. A computer randomly selects 1,000 names from a list of every secondary student in the country. Which method?</summary>
+        <div class="ans"><strong>Random sampling.</strong></div></details>
+      <details class="q"><summary>3. Identify the population and the sample: "300 Grade 11 students from 10 Dubai schools were surveyed about study habits, to learn about Grade 11 students in Dubai."</summary>
+        <div class="ans"><strong>Population: Grade 11 students in Dubai.</strong> Sample: the 300 students surveyed.</div></details>
+      <details class="q"><summary>4. An online poll about exercise is answered mostly by people who already go to the gym. What problem does this show?</summary>
+        <div class="ans"><strong>Sampling (volunteer) bias:</strong> the sample over-represents active people.</div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t05_checklist">
+          <li><label><input type="checkbox" data-key="c1"> identify the population and sample in a scenario?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> tell random, stratified and convenience sampling apart?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> explain a representative sample, sampling bias and generalizability?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> explain why appropriate representation of participants matters?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit0_revision_quiz.html?topic=0.5&amp;mode=practice">Practice 0.5 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t0-6" data-num="0.6" data-title="Statistics" data-short="Statistics" data-sub="Describing data, reading graphs and judging whether a result matters." data-vtime="14:10">
+    <section class="card" id="t06-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Statistics is how psychologists turn a pile of numbers into a conclusion. You don't need to be a math whiz: on the AP exam you calculate a few simple things (mean, median, mode, range) and interpret the rest. The key question is always: what does this number tell us about the people in the study?</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Calculate the mean, median, mode and range, and interpret the standard deviation and percentile rank.</li>
+        <li>Explain the normal curve, skewed distributions and bimodal distributions.</li>
+        <li>Explain regression toward the mean.</li>
+        <li>Interpret scatterplots and correlation coefficients.</li>
+        <li>Interpret statistical significance and effect size.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>Expect to read a table or graph and calculate or interpret. Classic questions: which measure of central tendency best fits skewed data (the median), what a percentile rank means, whether a correlation is strong or weak, and whether a significant result is also a large effect.</p>
+      </div>
+    </section>
+    <section class="card" id="t06-describe" data-toc="Describing data">
+      <div class="sec-label">Part 1</div>
+      <h2>Central tendency and variation</h2>
+      <p><strong>Descriptive statistics</strong> summarize data; <strong>inferential statistics</strong> help decide whether results are likely to apply beyond the sample (Part 4).</p>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t06Central" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t06Central" class="stack">
+          <thead><tr><th>Measure</th><th>What it is</th><th>For 4, 7, 7, 8, 9, 10, 18</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Measure">Mean</td><td data-label="What it is">The average: add the scores and divide by how many there are. Pulled toward outliers.</td><td class="can-hide" data-label="For 4, 7, 7, 8, 9, 10, 18">63 &divide; 7 = 9</td></tr>
+            <tr><td data-label="Measure">Median</td><td data-label="What it is">The middle score when scores are in order. Not pulled by outliers.</td><td class="can-hide" data-label="For 4, 7, 7, 8, 9, 10, 18">8</td></tr>
+            <tr><td data-label="Measure">Mode</td><td data-label="What it is">The most frequent score.</td><td class="can-hide" data-label="For 4, 7, 7, 8, 9, 10, 18">7</td></tr>
+            <tr><td data-label="Measure">Range</td><td data-label="What it is">Highest score minus lowest score. A simple measure of spread.</td><td class="can-hide" data-label="For 4, 7, 7, 8, 9, 10, 18">18 &minus; 4 = 14</td></tr>
+            <tr><td data-label="Measure">Standard deviation</td><td data-label="What it is">How much scores vary around the mean, on average. Small SD = scores bunched together; large SD = spread out.</td><td class="can-hide" data-label="For 4, 7, 7, 8, 9, 10, 18">About 4.1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="widget" style="border:2px solid var(--line);border-radius:12px;padding:16px 18px;">
+        <h3 style="margin-top:0;">Try it: descriptive statistics calculator</h3>
+        <p>Type a set of scores separated by commas or spaces, then check your own working against the answers.</p>
+        <input id="statIn" type="text" inputmode="decimal" value="4, 7, 7, 8, 9, 10, 18" style="width:100%;padding:10px 12px;border:2px solid var(--line);border-radius:8px;font-size:16px;font-family:inherit;">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;"><button class="toggle-btn" type="button" id="statGo">Calculate</button></div>
+        <div id="statOut" style="margin-top:12px;line-height:1.8;"></div>
+      </div>
+      <script>
+      (function(){
+        var inp=document.getElementById('statIn'),out=document.getElementById('statOut');
+        function r(n){return Math.round(n*100)/100;}
+        function run(){
+          var a=(inp.value.match(/-?\d+(\.\d+)?/g)||[]).map(Number);
+          if(a.length<2){out.innerHTML='Enter at least two numbers.';return;}
+          a.sort(function(x,y){return x-y;});
+          var n=a.length,sum=a.reduce(function(s,x){return s+x;},0),mean=sum/n;
+          var med=n%2?a[(n-1)/2]:(a[n/2-1]+a[n/2])/2;
+          var c={},mx=0;a.forEach(function(x){c[x]=(c[x]||0)+1;if(c[x]>mx)mx=c[x];});
+          var modes=Object.keys(c).filter(function(k){return c[k]===mx;}).map(Number);
+          var mode=mx===1?'none (every score appears once)':modes.join(' and ');
+          var sd=Math.sqrt(a.reduce(function(s,x){return s+(x-mean)*(x-mean);},0)/n);
+          out.innerHTML='<strong>Ordered:</strong> '+a.join(', ')+'<br><strong>Mean:</strong> '+r(sum)+' &divide; '+n+' = '+r(mean)+
+            '<br><strong>Median:</strong> '+r(med)+'<br><strong>Mode:</strong> '+mode+
+            '<br><strong>Range:</strong> '+a[n-1]+' &minus; '+a[0]+' = '+r(a[n-1]-a[0])+
+            '<br><strong>Standard deviation:</strong> about '+r(sd)+' <span style="color:#6a7f9f;">(you won\'t calculate this on the exam, only interpret it)</span>'+
+            (mean>med+0.01?'<br><em>The mean is higher than the median: a high outlier is pulling it up (positive skew).</em>':mean<med-0.01?'<br><em>The mean is lower than the median: a low outlier is pulling it down (negative skew).</em>':'');
+        }
+        document.getElementById('statGo').addEventListener('click',run);
+        inp.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
+        run();
+      })();
+      </script>
+      <div class="callout c-exam">
+        <strong class="tag">Which average?</strong>
+        <p>When there are extreme scores (outliers) or the data are skewed, the <strong>median</strong> is the best measure of central tendency, because the mean gets pulled toward the outliers. Think of house prices or salaries.</p>
+      </div>
+    </section>
+    <section class="card" id="t06-curves" data-toc="Distributions">
+      <div class="sec-label">Part 2</div>
+      <h2>The normal curve and skew</h2>
+      <p>Many traits, such as height or intelligence test scores, fall in a <strong>normal curve</strong>: a symmetrical, bell-shaped distribution where the mean, median and mode are the same and most scores sit near the middle.</p>
+      <div class="ex-visual" style="border:2px solid var(--line);border-radius:12px;">
+        <svg viewBox="0 0 640 300" role="img" aria-label="Normal curve: about 68 percent of scores within 1 standard deviation, 95 percent within 2, 99.7 percent within 3">
+          <path d="M240.0,200 L240.0,103.0 L244.0,98.1 L248.0,93.3 L252.0,88.5 L256.0,83.8 L260.0,79.2 L264.0,74.8 L268.0,70.5 L272.0,66.4 L276.0,62.5 L280.0,58.8 L284.0,55.4 L288.0,52.3 L292.0,49.5 L296.0,47.0 L300.0,44.9 L304.0,43.2 L308.0,41.8 L312.0,40.8 L316.0,40.2 L320.0,40.0 L320.0,200 Z" fill="#9cc3e6"/><path d="M320.0,200 L320.0,40.0 L324.0,40.2 L328.0,40.8 L332.0,41.8 L336.0,43.2 L340.0,44.9 L344.0,47.0 L348.0,49.5 L352.0,52.3 L356.0,55.4 L360.0,58.8 L364.0,62.5 L368.0,66.4 L372.0,70.5 L376.0,74.8 L380.0,79.2 L384.0,83.8 L388.0,88.5 L392.0,93.3 L396.0,98.1 L400.0,103.0 L400.0,200 Z" fill="#9cc3e6"/><path d="M160.0,200 L160.0,178.3 L164.0,176.1 L168.0,173.7 L172.0,171.1 L176.0,168.3 L180.0,165.4 L184.0,162.3 L188.0,159.0 L192.0,155.5 L196.0,151.9 L200.0,148.1 L204.0,144.1 L208.0,140.0 L212.0,135.7 L216.0,131.3 L220.0,126.7 L224.0,122.1 L228.0,117.4 L232.0,112.6 L236.0,107.8 L240.0,103.0 L240.0,200 Z" fill="#c9def1"/><path d="M400.0,200 L400.0,103.0 L404.0,107.8 L408.0,112.6 L412.0,117.4 L416.0,122.1 L420.0,126.7 L424.0,131.3 L428.0,135.7 L432.0,140.0 L436.0,144.1 L440.0,148.1 L444.0,151.9 L448.0,155.5 L452.0,159.0 L456.0,162.3 L460.0,165.4 L464.0,168.3 L468.0,171.1 L472.0,173.7 L476.0,176.1 L480.0,178.3 L480.0,200 Z" fill="#c9def1"/><path d="M80.0,200 L80.0,198.2 L84.0,197.9 L88.0,197.6 L92.0,197.2 L96.0,196.8 L100.0,196.4 L104.0,195.8 L108.0,195.2 L112.0,194.6 L116.0,193.8 L120.0,193.0 L124.0,192.0 L128.0,191.0 L132.0,189.9 L136.0,188.6 L140.0,187.3 L144.0,185.8 L148.0,184.1 L152.0,182.4 L156.0,180.4 L160.0,178.3 L160.0,200 Z" fill="#e7eff8"/><path d="M480.0,200 L480.0,178.3 L484.0,180.4 L488.0,182.4 L492.0,184.1 L496.0,185.8 L500.0,187.3 L504.0,188.6 L508.0,189.9 L512.0,191.0 L516.0,192.0 L520.0,193.0 L524.0,193.8 L528.0,194.6 L532.0,195.2 L536.0,195.8 L540.0,196.4 L544.0,196.8 L548.0,197.2 L552.0,197.6 L556.0,197.9 L560.0,198.2 L560.0,200 Z" fill="#e7eff8"/><line x1="160" y1="200" x2="160" y2="178.3" stroke="#ffffff" stroke-width="1.5"/><line x1="240" y1="200" x2="240" y2="103.0" stroke="#ffffff" stroke-width="1.5"/><line x1="320" y1="200" x2="320" y2="40.0" stroke="#ffffff" stroke-width="1.5"/><line x1="400" y1="200" x2="400" y2="103.0" stroke="#ffffff" stroke-width="1.5"/><line x1="480" y1="200" x2="480" y2="178.3" stroke="#ffffff" stroke-width="1.5"/>
+          <path d="M20.0,199.9 L24.0,199.8 L28.0,199.8 L32.0,199.8 L36.0,199.7 L40.0,199.7 L44.0,199.6 L48.0,199.5 L52.0,199.4 L56.0,199.3 L60.0,199.2 L64.0,199.0 L68.0,198.9 L72.0,198.7 L76.0,198.5 L80.0,198.2 L84.0,197.9 L88.0,197.6 L92.0,197.2 L96.0,196.8 L100.0,196.4 L104.0,195.8 L108.0,195.2 L112.0,194.6 L116.0,193.8 L120.0,193.0 L124.0,192.0 L128.0,191.0 L132.0,189.9 L136.0,188.6 L140.0,187.3 L144.0,185.8 L148.0,184.1 L152.0,182.4 L156.0,180.4 L160.0,178.3 L164.0,176.1 L168.0,173.7 L172.0,171.1 L176.0,168.3 L180.0,165.4 L184.0,162.3 L188.0,159.0 L192.0,155.5 L196.0,151.9 L200.0,148.1 L204.0,144.1 L208.0,140.0 L212.0,135.7 L216.0,131.3 L220.0,126.7 L224.0,122.1 L228.0,117.4 L232.0,112.6 L236.0,107.8 L240.0,103.0 L244.0,98.1 L248.0,93.3 L252.0,88.5 L256.0,83.8 L260.0,79.2 L264.0,74.8 L268.0,70.5 L272.0,66.4 L276.0,62.5 L280.0,58.8 L284.0,55.4 L288.0,52.3 L292.0,49.5 L296.0,47.0 L300.0,44.9 L304.0,43.2 L308.0,41.8 L312.0,40.8 L316.0,40.2 L320.0,40.0 L324.0,40.2 L328.0,40.8 L332.0,41.8 L336.0,43.2 L340.0,44.9 L344.0,47.0 L348.0,49.5 L352.0,52.3 L356.0,55.4 L360.0,58.8 L364.0,62.5 L368.0,66.4 L372.0,70.5 L376.0,74.8 L380.0,79.2 L384.0,83.8 L388.0,88.5 L392.0,93.3 L396.0,98.1 L400.0,103.0 L404.0,107.8 L408.0,112.6 L412.0,117.4 L416.0,122.1 L420.0,126.7 L424.0,131.3 L428.0,135.7 L432.0,140.0 L436.0,144.1 L440.0,148.1 L444.0,151.9 L448.0,155.5 L452.0,159.0 L456.0,162.3 L460.0,165.4 L464.0,168.3 L468.0,171.1 L472.0,173.7 L476.0,176.1 L480.0,178.3 L484.0,180.4 L488.0,182.4 L492.0,184.1 L496.0,185.8 L500.0,187.3 L504.0,188.6 L508.0,189.9 L512.0,191.0 L516.0,192.0 L520.0,193.0 L524.0,193.8 L528.0,194.6 L532.0,195.2 L536.0,195.8 L540.0,196.4 L544.0,196.8 L548.0,197.2 L552.0,197.6 L556.0,197.9 L560.0,198.2 L564.0,198.5 L568.0,198.7 L572.0,198.9 L576.0,199.0 L580.0,199.2 L584.0,199.3 L588.0,199.4 L592.0,199.5 L596.0,199.6 L600.0,199.7 L604.0,199.7 L608.0,199.8 L612.0,199.8 L616.0,199.8 L620.0,199.9" fill="none" stroke="#1F3864" stroke-width="3"/>
+          <line class="ax" x1="60" y1="200" x2="580" y2="200"/>
+          <text class="mark-label" x="280" y="175" text-anchor="middle" style="fill:#1F3864;">34%</text><text class="mark-label" x="360" y="175" text-anchor="middle" style="fill:#1F3864;">34%</text><text class="mark-label" x="200" y="190" text-anchor="middle" style="fill:#1F3864;">13.5%</text><text class="mark-label" x="440" y="190" text-anchor="middle" style="fill:#1F3864;">13.5%</text><text class="mark-label" x="116" y="176" text-anchor="middle" style="fill:#1F3864;">2%</text><text class="mark-label" x="524" y="176" text-anchor="middle" style="fill:#1F3864;">2%</text><text class="hyp-level" x="80" y="220" text-anchor="middle">-3 SD</text><text class="hyp-level" x="160" y="220" text-anchor="middle">-2 SD</text><text class="hyp-level" x="240" y="220" text-anchor="middle">-1 SD</text><text class="hyp-level" x="320" y="220" text-anchor="middle">Mean</text><text class="hyp-level" x="400" y="220" text-anchor="middle">+1 SD</text><text class="hyp-level" x="480" y="220" text-anchor="middle">+2 SD</text><text class="hyp-level" x="560" y="220" text-anchor="middle">+3 SD</text>
+          <text class="mark-label" x="320" y="248" text-anchor="middle" style="fill:#2E75B6;">68% within 1 SD of the mean</text>
+          <text class="mark-label" x="320" y="268" text-anchor="middle" style="fill:#2E75B6;">95% within 2 SD</text>
+          <text class="mark-label" x="320" y="288" text-anchor="middle" style="fill:#2E75B6;">99.7% within 3 SD</text>
+        </svg>
+      </div>
+      <p><strong>Percentile rank</strong> is the percentage of scores at or below a given score. Scoring in the 84th percentile means you scored as well as or better than 84% of test-takers (about 1 SD above the mean on a normal curve).</p>
+      <h3>Skewed distributions</h3>
+      <div class="grid2" style="display:grid;gap:14px;margin:12px 0;">
+      <div class="ex-visual" style="border:2px solid var(--line);border-radius:12px;">
+        <svg viewBox="0 0 300 215" role="img" aria-label="Positive skew: tail to the right">
+          <text class="mark-label" x="150" y="20" text-anchor="middle" style="fill:#1F3864;">Positive skew: tail to the right</text>
+          <path d="M20.0,140.0 L22.6,138.2 L25.2,133.6 L27.8,127.1 L30.4,119.2 L33.0,110.6 L35.6,101.7 L38.2,92.8 L40.8,84.2 L43.4,76.1 L46.0,68.6 L48.6,61.9 L51.2,55.9 L53.8,50.7 L56.4,46.3 L59.0,42.6 L61.6,39.7 L64.2,37.6 L66.8,36.1 L69.4,35.3 L72.0,35.0 L74.6,35.3 L77.2,36.0 L79.8,37.1 L82.4,38.6 L85.0,40.5 L87.6,42.6 L90.2,45.0 L92.8,47.5 L95.4,50.2 L98.0,53.1 L100.6,56.0 L103.2,59.0 L105.8,62.1 L108.4,65.2 L111.0,68.2 L113.6,71.3 L116.2,74.4 L118.8,77.3 L121.4,80.3 L124.0,83.2 L126.6,86.0 L129.2,88.7 L131.8,91.3 L134.4,93.9 L137.0,96.4 L139.6,98.7 L142.2,101.0 L144.8,103.2 L147.4,105.3 L150.0,107.3 L152.6,109.2 L155.2,111.1 L157.8,112.8 L160.4,114.5 L163.0,116.0 L165.6,117.5 L168.2,118.9 L170.8,120.2 L173.4,121.5 L176.0,122.7 L178.6,123.8 L181.2,124.9 L183.8,125.9 L186.4,126.8 L189.0,127.7 L191.6,128.5 L194.2,129.3 L196.8,130.0 L199.4,130.7 L202.0,131.3 L204.6,131.9 L207.2,132.5 L209.8,133.0 L212.4,133.5 L215.0,134.0 L217.6,134.4 L220.2,134.8 L222.8,135.2 L225.4,135.5 L228.0,135.8 L230.6,136.1 L233.2,136.4 L235.8,136.7 L238.4,136.9 L241.0,137.1 L243.6,137.4 L246.2,137.6 L248.8,137.7 L251.4,137.9 L254.0,138.1 L256.6,138.2 L259.2,138.3 L261.8,138.5 L264.4,138.6 L267.0,138.7 L269.6,138.8 L272.2,138.9 L274.8,139.0 L277.4,139.0 L280.0,139.1" fill="#DEEAF1" stroke="#1F3864" stroke-width="3"/>
+          <line class="ax" x1="20" y1="140" x2="280" y2="140"/><line x1="72.0" y1="140" x2="72.0" y2="35.0" stroke="#555" stroke-width="2.5" stroke-dasharray="5 4"/><line x1="89.4" y1="140" x2="89.4" y2="44.2" stroke="#2E75B6" stroke-width="2.5" stroke-dasharray="5 4"/><line x1="98.0" y1="140" x2="98.0" y2="53.1" stroke="#C55A11" stroke-width="2.5" stroke-dasharray="5 4"/><text class="mark-label" x="70" y="168" text-anchor="middle" style="fill:#555;">Mode</text><text class="mark-label" x="150" y="168" text-anchor="middle" style="fill:#2E75B6;">Median</text><text class="mark-label" x="230" y="168" text-anchor="middle" style="fill:#C55A11;">Mean</text>
+          <text class="hyp-level" x="150" y="198" text-anchor="middle">most scores low, a few very high</text>
+        </svg>
+      </div>
+      <div class="ex-visual" style="border:2px solid var(--line);border-radius:12px;">
+        <svg viewBox="0 0 300 215" role="img" aria-label="Negative skew: tail to the left">
+          <text class="mark-label" x="150" y="20" text-anchor="middle" style="fill:#1F3864;">Negative skew: tail to the left</text>
+          <path d="M280.0,140.0 L277.4,138.2 L274.8,133.6 L272.2,127.1 L269.6,119.2 L267.0,110.6 L264.4,101.7 L261.8,92.8 L259.2,84.2 L256.6,76.1 L254.0,68.6 L251.4,61.9 L248.8,55.9 L246.2,50.7 L243.6,46.3 L241.0,42.6 L238.4,39.7 L235.8,37.6 L233.2,36.1 L230.6,35.3 L228.0,35.0 L225.4,35.3 L222.8,36.0 L220.2,37.1 L217.6,38.6 L215.0,40.5 L212.4,42.6 L209.8,45.0 L207.2,47.5 L204.6,50.2 L202.0,53.1 L199.4,56.0 L196.8,59.0 L194.2,62.1 L191.6,65.2 L189.0,68.2 L186.4,71.3 L183.8,74.4 L181.2,77.3 L178.6,80.3 L176.0,83.2 L173.4,86.0 L170.8,88.7 L168.2,91.3 L165.6,93.9 L163.0,96.4 L160.4,98.7 L157.8,101.0 L155.2,103.2 L152.6,105.3 L150.0,107.3 L147.4,109.2 L144.8,111.1 L142.2,112.8 L139.6,114.5 L137.0,116.0 L134.4,117.5 L131.8,118.9 L129.2,120.2 L126.6,121.5 L124.0,122.7 L121.4,123.8 L118.8,124.9 L116.2,125.9 L113.6,126.8 L111.0,127.7 L108.4,128.5 L105.8,129.3 L103.2,130.0 L100.6,130.7 L98.0,131.3 L95.4,131.9 L92.8,132.5 L90.2,133.0 L87.6,133.5 L85.0,134.0 L82.4,134.4 L79.8,134.8 L77.2,135.2 L74.6,135.5 L72.0,135.8 L69.4,136.1 L66.8,136.4 L64.2,136.7 L61.6,136.9 L59.0,137.1 L56.4,137.4 L53.8,137.6 L51.2,137.7 L48.6,137.9 L46.0,138.1 L43.4,138.2 L40.8,138.3 L38.2,138.5 L35.6,138.6 L33.0,138.7 L30.4,138.8 L27.8,138.9 L25.2,139.0 L22.6,139.0 L20.0,139.1" fill="#DEEAF1" stroke="#1F3864" stroke-width="3"/>
+          <line class="ax" x1="20" y1="140" x2="280" y2="140"/><line x1="228.0" y1="140" x2="228.0" y2="35.0" stroke="#555" stroke-width="2.5" stroke-dasharray="5 4"/><line x1="210.6" y1="140" x2="210.6" y2="44.2" stroke="#2E75B6" stroke-width="2.5" stroke-dasharray="5 4"/><line x1="202.0" y1="140" x2="202.0" y2="53.1" stroke="#C55A11" stroke-width="2.5" stroke-dasharray="5 4"/><text class="mark-label" x="70" y="168" text-anchor="middle" style="fill:#C55A11;">Mean</text><text class="mark-label" x="150" y="168" text-anchor="middle" style="fill:#2E75B6;">Median</text><text class="mark-label" x="230" y="168" text-anchor="middle" style="fill:#555;">Mode</text>
+          <text class="hyp-level" x="150" y="198" text-anchor="middle">most scores high, a few very low</text>
+        </svg>
+      </div>
+      </div>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Positive skew</h4><p>The tail points to the <strong>right</strong> (toward high scores). Most scores are low; a few very high scores pull the <strong>mean above the median</strong>.</p><p class="analogy">Scores on a very hard test: most students score low, a few score very high.</p></div>
+        <div class="mini"><h4>Negative skew</h4><p>The tail points to the <strong>left</strong> (toward low scores). Most scores are high; a few very low scores pull the <strong>mean below the median</strong>.</p><p class="analogy">Scores on a very easy test: most students score high, a few score very low.</p></div>
+      </div>
+      <p>A <strong>bimodal distribution</strong> has <strong>two peaks</strong>, which often means two different groups are mixed together: for example, test scores from students who did and didn't attend a review session.</p>
+      <div class="callout c-hook">
+        <strong class="tag">Follow the tail</strong>
+        <p>The skew is named after the direction the <strong>tail</strong> points, not where the hump is. And the mean always gets dragged toward the tail.</p>
+      </div>
+    </section>
+    <section class="card" id="t06-correlation" data-toc="Correlation">
+      <div class="sec-label">Part 3</div>
+      <h2>Correlation and regression toward the mean</h2>
+      <p>A <strong>correlation coefficient (r)</strong> runs from <strong>-1.0 to +1.0</strong>. The <strong>sign</strong> shows the direction; the <strong>number</strong> shows the strength. -0.85 is just as strong as +0.85.</p>
+      <div class="ex-visual" style="border:2px solid var(--line);border-radius:12px;">
+        <svg viewBox="0 0 640 230" role="img" aria-label="Three scatterplots: positive correlation, negative correlation and no correlation">
+          <line class="ax" x1="25" y1="30" x2="25" y2="190"/><line class="ax" x1="25" y1="190" x2="200" y2="190"/><circle cx="83.0" cy="154.5" r="4.5" fill="#2E75B6"/><circle cx="133.1" cy="113.9" r="4.5" fill="#2E75B6"/><circle cx="115.5" cy="116.2" r="4.5" fill="#2E75B6"/><circle cx="42.4" cy="174.3" r="4.5" fill="#2E75B6"/><circle cx="39.2" cy="180.4" r="4.5" fill="#2E75B6"/><circle cx="44.2" cy="185.5" r="4.5" fill="#2E75B6"/><circle cx="98.5" cy="110.5" r="4.5" fill="#2E75B6"/><circle cx="52.4" cy="178.2" r="4.5" fill="#2E75B6"/><circle cx="129.5" cy="77.6" r="4.5" fill="#2E75B6"/><circle cx="121.8" cy="109.2" r="4.5" fill="#2E75B6"/><circle cx="182.9" cy="71.1" r="4.5" fill="#2E75B6"/><circle cx="164.8" cy="76.1" r="4.5" fill="#2E75B6"/><circle cx="55.6" cy="180.2" r="4.5" fill="#2E75B6"/><circle cx="80.7" cy="126.6" r="4.5" fill="#2E75B6"/><circle cx="61.2" cy="154.4" r="4.5" fill="#2E75B6"/><circle cx="131.3" cy="102.0" r="4.5" fill="#2E75B6"/><circle cx="117.3" cy="128.2" r="4.5" fill="#2E75B6"/><circle cx="42.6" cy="185.5" r="4.5" fill="#2E75B6"/><circle cx="137.6" cy="93.9" r="4.5" fill="#2E75B6"/><circle cx="81.6" cy="136.2" r="4.5" fill="#2E75B6"/><circle cx="102.8" cy="130.3" r="4.5" fill="#2E75B6"/><circle cx="155.0" cy="66.3" r="4.5" fill="#2E75B6"/>
+          <text class="mark-label" x="112" y="215" text-anchor="middle" style="fill:#1F3864;">Positive (r near +0.9)</text>
+          <line class="ax" x1="235" y1="30" x2="235" y2="190"/><line class="ax" x1="235" y1="190" x2="410" y2="190"/><circle cx="280.8" cy="77.1" r="4.5" fill="#2E75B6"/><circle cx="323.9" cy="101.5" r="4.5" fill="#2E75B6"/><circle cx="355.1" cy="155.5" r="4.5" fill="#2E75B6"/><circle cx="393.5" cy="185.5" r="4.5" fill="#2E75B6"/><circle cx="307.5" cy="92.4" r="4.5" fill="#2E75B6"/><circle cx="266.8" cy="68.5" r="4.5" fill="#2E75B6"/><circle cx="249.5" cy="45.2" r="4.5" fill="#2E75B6"/><circle cx="360.5" cy="147.4" r="4.5" fill="#2E75B6"/><circle cx="377.4" cy="174.1" r="4.5" fill="#2E75B6"/><circle cx="349.9" cy="137.1" r="4.5" fill="#2E75B6"/><circle cx="332.2" cy="127.8" r="4.5" fill="#2E75B6"/><circle cx="372.0" cy="140.9" r="4.5" fill="#2E75B6"/><circle cx="316.0" cy="104.1" r="4.5" fill="#2E75B6"/><circle cx="252.8" cy="46.6" r="4.5" fill="#2E75B6"/><circle cx="342.5" cy="112.7" r="4.5" fill="#2E75B6"/><circle cx="369.3" cy="168.2" r="4.5" fill="#2E75B6"/><circle cx="302.5" cy="92.0" r="4.5" fill="#2E75B6"/><circle cx="247.0" cy="52.3" r="4.5" fill="#2E75B6"/><circle cx="269.2" cy="87.4" r="4.5" fill="#2E75B6"/><circle cx="252.5" cy="44.5" r="4.5" fill="#2E75B6"/><circle cx="263.3" cy="76.3" r="4.5" fill="#2E75B6"/><circle cx="303.3" cy="83.6" r="4.5" fill="#2E75B6"/>
+          <text class="mark-label" x="322" y="215" text-anchor="middle" style="fill:#1F3864;">Negative (r near -0.9)</text>
+          <line class="ax" x1="445" y1="30" x2="445" y2="190"/><line class="ax" x1="445" y1="190" x2="620" y2="190"/><circle cx="465.8" cy="121.9" r="4.5" fill="#2E75B6"/><circle cx="537.6" cy="63.2" r="4.5" fill="#2E75B6"/><circle cx="578.8" cy="65.9" r="4.5" fill="#2E75B6"/><circle cx="496.1" cy="126.4" r="4.5" fill="#2E75B6"/><circle cx="508.4" cy="63.1" r="4.5" fill="#2E75B6"/><circle cx="600.0" cy="162.1" r="4.5" fill="#2E75B6"/><circle cx="480.5" cy="151.2" r="4.5" fill="#2E75B6"/><circle cx="489.2" cy="117.0" r="4.5" fill="#2E75B6"/><circle cx="543.6" cy="147.0" r="4.5" fill="#2E75B6"/><circle cx="454.1" cy="125.9" r="4.5" fill="#2E75B6"/><circle cx="510.0" cy="106.0" r="4.5" fill="#2E75B6"/><circle cx="599.3" cy="89.3" r="4.5" fill="#2E75B6"/><circle cx="532.4" cy="99.1" r="4.5" fill="#2E75B6"/><circle cx="557.0" cy="175.2" r="4.5" fill="#2E75B6"/><circle cx="591.1" cy="77.2" r="4.5" fill="#2E75B6"/><circle cx="587.3" cy="74.8" r="4.5" fill="#2E75B6"/><circle cx="513.5" cy="128.6" r="4.5" fill="#2E75B6"/><circle cx="469.3" cy="96.9" r="4.5" fill="#2E75B6"/><circle cx="463.0" cy="173.4" r="4.5" fill="#2E75B6"/><circle cx="485.4" cy="160.6" r="4.5" fill="#2E75B6"/><circle cx="505.5" cy="175.4" r="4.5" fill="#2E75B6"/><circle cx="453.5" cy="162.1" r="4.5" fill="#2E75B6"/>
+          <text class="mark-label" x="532" y="215" text-anchor="middle" style="fill:#1F3864;">None (r near 0)</text>
+        </svg>
+      </div>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Positive correlation</h4><p>Both variables move in the <strong>same direction</strong>.</p><p class="analogy">More hours of revision, higher exam scores.</p></div>
+        <div class="mini"><h4>Negative correlation</h4><p>The variables move in <strong>opposite directions</strong>.</p><p class="analogy">More hours on social media at night, fewer hours of sleep.</p></div>
+      </div>
+      <h3>Regression toward the mean</h3>
+      <p><strong>Regression toward the mean</strong> is the tendency for extreme scores to be followed by scores closer to the average as more data are collected. A player who has an amazing game is likely to have a more ordinary one next; a student who does unusually badly on one quiz will probably do better on the next, with or without any intervention.</p>
+    </section>
+    <section class="card" id="t06-inferential" data-toc="Significance and effect size">
+      <div class="sec-label">Part 4</div>
+      <h2>Is the result real, and does it matter?</h2>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Statistical significance</h4><p>Indicates that a result is <strong>unlikely to be due to chance</strong> and likely due to the variables studied. Psychologists usually require <strong>p &lt; .05</strong>: less than a 5% probability that the result happened by chance. It can be calculated for all types of research.</p><p class="analogy">"The music group scored higher, p = .01": the difference is unlikely to be a fluke.</p></div>
+        <div class="mini"><h4>Effect size</h4><p>Indicates the <strong>strength of a relationship</strong> (non-experimental) or the <strong>size of the difference</strong> between conditions (experimental).</p><p class="analogy">A tutoring program that raises scores a lot has a large effect size.</p></div>
+      </div>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t06Effect" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t06Effect">
+          <thead><tr><th>Effect size statistic</th><th>Usually interpreted as</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Effect size statistic">0.2 and below</td><td class="can-hide" data-label="Usually interpreted as">Small</td></tr>
+            <tr><td data-label="Effect size statistic">About 0.3 to 0.7</td><td class="can-hide" data-label="Usually interpreted as">Medium</td></tr>
+            <tr><td data-label="Effect size statistic">0.8 or greater</td><td class="can-hide" data-label="Usually interpreted as">Large</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout c-exam">
+        <strong class="tag">Significant is not the same as big</strong>
+        <p>With a large enough sample, even a tiny difference can be statistically significant. Always check the effect size to see whether the difference actually matters.</p>
+      </div>
+    </section>
+    <section class="card" id="t06-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 5</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Positive skew</h4>Tail right; mean above median.</div>
+        <div><h4>Negative skew</h4>Tail left; mean below median.</div>
+        <div class="pair-note">Name it after the tail.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Mean</h4>Pulled by outliers.</div>
+        <div><h4>Median</h4>Resists outliers.</div>
+        <div class="pair-note">Skewed data? Use the median.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Statistical significance</h4>Is it likely real, not chance?</div>
+        <div><h4>Effect size</h4>How big is it?</div>
+        <div class="pair-note">One asks "is it real?", the other "does it matter?"</div>
+      </div>
+      <div class="pair">
+        <div><h4>Strong negative correlation (r = -0.9)</h4>Strong, opposite directions.</div>
+        <div><h4>Weak positive correlation (r = +0.2)</h4>Weak, same direction.</div>
+        <div class="pair-note">The number shows strength; the sign shows direction.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Percentile rank</h4>Percentage of scores at or below yours.</div>
+        <div><h4>Percentage correct</h4>How many questions you got right.</div>
+        <div class="pair-note">90th percentile doesn't mean 90%.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t06-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's short review video <em>Data Interpretation</em> (14:10) covers this topic, and ends with a practice quiz.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="7o2gT8Xdcpo" data-start="0" aria-label="Play Mr. Sinn's Topic 0.6 video" style="background-image:url('https://i.ytimg.com/vi/7o2gT8Xdcpo/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 0.6 video</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=7o2gT8Xdcpo" target="_blank" rel="noopener">Open it on YouTube</a>.</p>
+    </section>
+    <section class="card" id="t06-check" data-toc="Check yourself">
+      <div class="sec-label">Part 6</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. Find the mean, median, mode and range of: 3, 5, 5, 6, 11.</summary>
+        <div class="ans"><strong>Mean 6, median 5, mode 5, range 8.</strong></div></details>
+      <details class="q"><summary>2. Monthly salaries at a small company include the owner's very high salary. Which measure of central tendency best represents a typical employee, and why?</summary>
+        <div class="ans"><strong>The median,</strong> because the owner's salary is an outlier that pulls the mean up.</div></details>
+      <details class="q"><summary>3. Most students score above 85 on an easy quiz, but a few score below 40. What kind of distribution is this?</summary>
+        <div class="ans"><strong>Negatively skewed:</strong> the tail points toward the low scores, and the mean is lower than the median.</div></details>
+      <details class="q"><summary>4. Which correlation is strongest: +0.45, -0.82 or +0.10?</summary>
+        <div class="ans"><strong>-0.82.</strong> Strength depends on the size of the number, not the sign.</div></details>
+      <details class="q"><summary>5. A study finds a statistically significant difference (p = .02) with an effect size of 0.1. What should you conclude?</summary>
+        <div class="ans"><strong>The result is unlikely to be due to chance, but the effect is small,</strong> so it may not matter much in practice.</div></details>
+      <details class="q"><summary>6. On a normal curve, about what percentage of scores fall within one standard deviation of the mean?</summary>
+        <div class="ans"><strong>About 68%.</strong></div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t06_checklist">
+          <li><label><input type="checkbox" data-key="c1"> calculate the mean, median, mode and range?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> interpret standard deviation and percentile rank?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> explain the normal curve percentages, positive and negative skew, and bimodal distributions?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> explain regression toward the mean?</label></li>
+          <li><label><input type="checkbox" data-key="c5"> read a scatterplot and interpret a correlation coefficient?</label></li>
+          <li><label><input type="checkbox" data-key="c6"> interpret statistical significance and effect size?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit0_revision_quiz.html?topic=0.6&amp;mode=practice">Practice 0.6 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+<div class="topic" id="t0-7" data-num="0.7" data-title="Ethics" data-short="Ethics" data-sub="The rules that protect the people and animals who take part in research." data-vtime="3:14">
+    <section class="card" id="t07-goals" data-toc="What you need to do">
+      <div class="sec-label">Start here</div>
+      <h2>What you need to be able to do</h2>
+      <p class="lede">Some of psychology's most famous studies would never be allowed today. Participants were deceived, frightened or harmed, sometimes with no idea what they had signed up for. Modern research ethics exist so that people (and animals) who help science aren't hurt by it.</p>
+      <p>By the end of this page, you should be able to:</p>
+      <ul>
+        <li>Explain the role of institutional review for research with humans and non-human animals.</li>
+        <li>Explain informed consent and informed assent.</li>
+        <li>Explain protection from harm, confidentiality and anonymity.</li>
+        <li>Explain when deception and confederates may be used, and the purpose of debriefing.</li>
+      </ul>
+      <div class="callout c-exam">
+        <strong class="tag">How this shows up on the exam</strong>
+        <p>You'll often be asked to evaluate whether a research scenario followed ethical procedures. Read for the details: Were participants told what to expect? Could they leave? Were minors' parents asked? Were participants debriefed? Was their data kept private?</p>
+      </div>
+    </section>
+    <section class="card" id="t07-guidelines" data-toc="Ethical guidelines">
+      <div class="sec-label">Part 1</div>
+      <h2>Ethical guidelines</h2>
+      <p>Psychologists follow ethical guidelines from organizations such as the <strong>American Psychological Association (APA)</strong>. Before a study begins, it must be approved by a review board:</p>
+      <div class="grid3 grid2">
+        <div class="mini"><h4>Institutional review board (IRB)</h4><p>Reviews research with <strong>human</strong> participants before it starts, checking that risks are minimized and justified by the benefits.</p><p class="analogy">A university IRB asks a researcher to remove a stressful task from a study with teenagers.</p></div>
+        <div class="mini"><h4>Animal care committee (IACUC)</h4><p>Reviews research with <strong>non-human animals</strong>, making sure animals are cared for humanely and suffering is minimized.</p><p class="analogy">A committee checks the housing and treatment of lab rats in a learning study.</p></div>
+      </div>
+      <div class="selftest-bar">
+        <button class="toggle-btn" type="button" data-target="t07Ethics" data-label="Test yourself: hide the answers" aria-pressed="false">Test yourself: hide the answers</button>
+        <span class="selftest-note">Tap a blurred cell to reveal it.</span>
+      </div>
+      <div class="table-wrap">
+        <table id="t07Ethics" class="stack">
+          <thead><tr><th>Guideline</th><th>What it requires</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td class="can-hide" data-label="Guideline">Informed consent</td><td data-label="What it requires">Participants are told what the study involves, including risks, and agree to take part. They know they can <strong>withdraw at any time</strong>.</td><td data-label="Example">Before a stress study, adult participants read and sign a form describing the tasks.</td></tr>
+            <tr><td class="can-hide" data-label="Guideline">Informed assent</td><td data-label="What it requires">Participants who can't give legal consent (such as children under 18) agree to take part, <strong>and</strong> a parent or guardian gives consent.</td><td data-label="Example">A 15-year-old agrees to a memory study, and her parents sign the consent form.</td></tr>
+            <tr><td class="can-hide" data-label="Guideline">Protection from harm</td><td data-label="What it requires">Researchers minimize physical and psychological risks, and stop or help if harm occurs.</td><td data-label="Example">Participants who become upset during a task are offered support and the chance to stop.</td></tr>
+            <tr><td class="can-hide" data-label="Guideline">Confidentiality</td><td data-label="What it requires">Participants' information is kept <strong>private</strong>; only the researchers can link data to names.</td><td data-label="Example">Names are stored separately and never published.</td></tr>
+            <tr><td class="can-hide" data-label="Guideline">Anonymity</td><td data-label="What it requires">No identifying information is <strong>ever collected</strong>, so data can't be linked to any person.</td><td data-label="Example">An online survey that never asks for names or emails.</td></tr>
+            <tr><td class="can-hide" data-label="Guideline">Deception</td><td data-label="What it requires">Misleading participants about the study's true purpose. Allowed only if necessary, if the risk is low, and if participants are debriefed. It may involve <strong>confederates</strong>: people working with the researcher who pretend to be participants.</td><td data-label="Example">Participants are told a study is about vision, when it's really about conformity, and a confederate gives wrong answers on purpose.</td></tr>
+            <tr><td class="can-hide" data-label="Guideline">Debriefing</td><td data-label="What it requires">After the study, participants are told its <strong>true purpose</strong>, any deception is explained, and questions are answered.</td><td data-label="Example">At the end of the conformity study, the researcher explains the confederate's role.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card" id="t07-mixups" data-toc="Common mix-ups">
+      <div class="sec-label">Part 2</div>
+      <h2>Common mix-ups</h2>
+      <div class="pair">
+        <div><h4>Confidentiality</h4>Data collected with names, kept private.</div>
+        <div><h4>Anonymity</h4>No names ever collected.</div>
+        <div class="pair-note">Can anyone link the data to a person? Confidential: only researchers. Anonymous: no one.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Informed consent</h4>Before the study.</div>
+        <div><h4>Debriefing</h4>After the study.</div>
+        <div class="pair-note">Consent opens the study; debriefing closes it.</div>
+      </div>
+      <div class="pair">
+        <div><h4>Informed assent</h4>The minor agrees.</div>
+        <div><h4>Parental consent</h4>The guardian agrees.</div>
+        <div class="pair-note">For minors, you need both.</div>
+      </div>
+      <div class="pair">
+        <div><h4>IRB</h4>Reviews human research.</div>
+        <div><h4>IACUC</h4>Reviews animal research.</div>
+        <div class="pair-note">Humans versus non-human animals.</div>
+      </div>
+    </section>
+    <section class="card video-card" id="t07-video" data-toc="Video">
+      <div class="sec-label">Watch</div>
+      <h2>Recommended video</h2>
+      <p>Mr. Sinn's <em>Research Methods and Design (Unit 0 Topic 2)</em> covers Topic 0.7 from <strong>14:33 to 17:47</strong>. The player below starts and stops at that section.</p>
+      <div class="video-wrap">
+        <button class="video-facade" type="button" data-vid="GjthAOIJuJg" data-start="873" data-end="1067" aria-label="Play Mr. Sinn's Topic 0.7 video section" style="background-image:url('https://i.ytimg.com/vi/GjthAOIJuJg/hqdefault.jpg');">
+          <span class="play"><span class="circle"></span>Play the Topic 0.7 section</span>
+        </button>
+      </div>
+      <p class="video-note">Video not loading on school Wi-Fi? <a href="https://www.youtube.com/watch?v=GjthAOIJuJg&amp;t=873s" target="_blank" rel="noopener">Open it on YouTube (starts at 14:33)</a>.</p>
+    </section>
+    <section class="card" id="t07-check" data-toc="Check yourself">
+      <div class="sec-label">Part 3</div>
+      <h2>Check yourself</h2>
+      <p>Answer each one in your head (or out loud) before you open it.</p>
+      <details class="q"><summary>1. A researcher studies 14-year-olds' social media habits. The students agree to take part, but parents aren't asked. Which guideline is missing?</summary>
+        <div class="ans"><strong>Parental consent:</strong> minors give informed assent, but a parent or guardian must also consent.</div></details>
+      <details class="q"><summary>2. Participants are told a study is about taste, but it's really about obedience. What must happen at the end?</summary>
+        <div class="ans"><strong>Debriefing:</strong> they must be told the true purpose and why deception was used.</div></details>
+      <details class="q"><summary>3. A survey collects no names, emails or student IDs. Is the data confidential or anonymous?</summary>
+        <div class="ans"><strong>Anonymous.</strong> No identifying information was ever collected.</div></details>
+      <details class="q"><summary>4. A person in a group study secretly works for the researcher and gives wrong answers on purpose. What is this person called?</summary>
+        <div class="ans"><strong>A confederate.</strong></div></details>
+      <details class="q"><summary>5. Who reviews a proposed study with human participants before it begins?</summary>
+        <div class="ans"><strong>An institutional review board (IRB).</strong></div></details>
+      <div class="checklist-card" style="margin-top:22px;">
+        <h3>Can you...</h3>
+        <ul class="checklist" data-store="appsych_t07_checklist">
+          <li><label><input type="checkbox" data-key="c1"> explain the role of the IRB and of animal care committees?</label></li>
+          <li><label><input type="checkbox" data-key="c2"> explain informed consent and informed assent?</label></li>
+          <li><label><input type="checkbox" data-key="c3"> explain protection from harm, confidentiality and anonymity?</label></li>
+          <li><label><input type="checkbox" data-key="c4"> explain when deception and confederates can be used, and why debriefing matters?</label></li>
+        </ul>
+        <p class="check-meta">Your ticks are saved on this device only, in this browser.</p>
+      </div>
+      <div class="end-cta">
+        <p>Ready to test it properly?</p>
+        <a class="btn btn-dark" href="https://psych4everybody.github.io/psych-revision/unit0_revision_quiz.html?topic=0.7&amp;mode=practice">Practice 0.7 questions</a>
+      </div>
+    </section>
+
+<div class="topic-nav"></div>
+</div>
+  </main>
+</div>
+
+<footer>
+  These notes were written for our AP Psychology class and follow the AP Psychology Course and Exam Description (2024). The recommended videos belong to Mr. Sinn and are shown from YouTube.<br>
+  AP&reg; is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this site.
+</footer>
+
+<script>
+// ================= Topic switching =================
+(function(){
+  var topics=[].slice.call(document.querySelectorAll('.topic'));
+  var tabs=[].slice.call(document.querySelectorAll('#topicTabs a'));
+  var toc=document.getElementById('tocList');
+  var current=null;
+
+  function buildNav(t,i){
+    var nav=t.querySelector('.topic-nav');
+    if(!nav)return;
+    var html='';
+    if(i>0){var p=topics[i-1];html+='<a class="prev" href="#'+p.id+'"><small>Previous</small>&larr; '+p.dataset.num+' '+p.dataset.short+'</a>';}
+    else html+='<span class="spacer"></span>';
+    if(i<topics.length-1){var n=topics[i+1];html+='<a class="next" href="#'+n.id+'"><small>Next</small>'+n.dataset.num+' '+n.dataset.short+' &rarr;</a>';}
+    else html+='<span class="spacer"></span>';
+    nav.innerHTML=html;
+  }
+  topics.forEach(buildNav);
+
+  function show(t){
+    if(current===t)return;
+    current=t;
+    topics.forEach(function(x){x.classList.toggle('shown',x===t);});
+    tabs.forEach(function(a){
+      var on=a.dataset.tab===t.id;
+      a.classList.toggle('on',on);
+      if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    document.getElementById('heroTitle').textContent=t.dataset.num+' '+t.dataset.title;
+    document.getElementById('heroSub').textContent=t.dataset.sub;
+    document.getElementById('heroVtime').textContent='('+t.dataset.vtime+')';
+    var v=t.querySelector('.video-card');
+    document.getElementById('heroVideo').setAttribute('href','#'+(v?v.id:t.id));
+    document.getElementById('heroNum').textContent=t.dataset.num;
+    document.getElementById('heroPractice').setAttribute('href',document.body.dataset.quiz+'?topic='+t.dataset.num+'&mode=practice');
+    document.title=document.body.dataset.unit+': '+t.dataset.num+' '+t.dataset.title+' | AP Psychology Revision';
+    toc.innerHTML='';
+    t.querySelectorAll('section.card[data-toc]').forEach(function(s){
+      var li=document.createElement('li');
+      li.innerHTML='<a href="#'+s.id+'">'+s.dataset.toc+'</a>';
+      toc.appendChild(li);
+    });
+    observeSections(t);
+  }
+
+  function route(){
+    var id=decodeURIComponent(location.hash.slice(1));
+    var el=id?document.getElementById(id):null;
+    var t=el?(el.classList.contains('topic')?el:el.closest('.topic')):null;
+    if(!t)t=topics[0];
+    show(t);
+    if(el&&el!==t){el.scrollIntoView();}
+    else if(el===t){window.scrollTo(0,0);}
+  }
+  window.addEventListener('hashchange',route);
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]');
+    if(!a)return;
+    var id=decodeURIComponent(a.getAttribute('href').slice(1));
+    var el=id?document.getElementById(id):null;
+    if(!el)return;
+    e.preventDefault();
+    var t=el.classList.contains('topic')?el:el.closest('.topic');
+    if(t)show(t);
+    try{history.pushState(null,'','#'+id);}catch(err){}
+    if(el===t){var top=document.querySelector('.topbar');window.scrollTo(0,top?top.offsetTop:0);}
+    else el.scrollIntoView();
+  });
+  window.addEventListener('popstate',route);
+
+  // highlight current section in the side menu
+  var obs=null;
+  function observeSections(t){
+    if(!('IntersectionObserver' in window))return;
+    if(obs)obs.disconnect();
+    var links=[].slice.call(toc.querySelectorAll('a'));
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){links.forEach(function(a){a.classList.remove('active');});var a=map[en.target.id];if(a)a.classList.add('active');}
+      });
+    },{rootMargin:'-30% 0px -60% 0px'});
+    t.querySelectorAll('section.card[data-toc]').forEach(function(s){obs.observe(s);});
+  }
+  route();
+})();
+
+// ================= 1.3 neural firing stepper =================
+(function(){
+  var root=document.getElementById('stepper');
+  if(!root)return;
+  var cards=[].slice.call(root.querySelectorAll('.step-card'));
+  var total=cards.length,cur=1;
+  var prev=document.getElementById('prevBtn'),next=document.getElementById('nextBtn');
+  var dotsWrap=document.getElementById('dots');
+  var ap=document.getElementById('apGraph'),syn=document.getElementById('synGraph');
+  var dots=[];
+  for(var i=1;i<=total;i++){
+    var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Step '+i);
+    (function(n){d.addEventListener('click',function(){go(n);});})(i);
+    dotsWrap.appendChild(d);dots.push(d);
+  }
+  function el(id){return document.getElementById(id);}
+  function setHot(ids){['seg1','seg2','seg3','seg4','seg5'].forEach(function(s){el(s).classList.toggle('hot',ids.indexOf(s)>-1);});}
+  function labels(on){['lab-rest','lab-sum','lab-thr','lab-ap','lab-refr','lab-refr2'].forEach(function(l){el(l).setAttribute('opacity',on.indexOf(l)>-1?'1':'0');});}
+  function go(n){
+    cur=Math.max(1,Math.min(total,n));
+    cards.forEach(function(c){c.classList.toggle('active',+c.dataset.step===cur);});
+    dots.forEach(function(d,i){d.classList.toggle('on',i+1===cur);});
+    prev.disabled=(cur===1);next.disabled=(cur===total);
+    next.textContent=(cur===total)?'Done':'Next step';
+    var onGraph=cur<=5;
+    ap.style.display=onGraph?'block':'none';syn.style.display=onGraph?'none':'block';
+    el('band-refr').classList.toggle('hot',cur===5);
+    el('thrDot').setAttribute('r',cur===3?'7':'0');
+    if(cur===1){setHot(['seg1']);labels(['lab-rest']);}
+    else if(cur===2){setHot(['seg2']);labels(['lab-sum']);}
+    else if(cur===3){setHot([]);labels(['lab-thr']);}
+    else if(cur===4){setHot(['seg3']);labels(['lab-ap']);}
+    else if(cur===5){setHot(['seg4']);labels(['lab-refr','lab-refr2']);}
+    el('released').classList.toggle('syn-hide',cur<6);
+    el('reup').classList.toggle('syn-hide',cur!==7);
+  }
+  prev.addEventListener('click',function(){go(cur-1);});
+  next.addEventListener('click',function(){go(cur+1);});
+  go(1);
+})();
+
+// ================= Explorers (click a part to read about it) =================
+document.querySelectorAll('.explorer').forEach(function(ex){
+  var chips=[].slice.call(ex.querySelectorAll('.ex-chips button'));
+  var nodes=[].slice.call(ex.querySelectorAll('.ex-node'));
+  var panels=[].slice.call(ex.querySelectorAll('.ex-panel'));
+  function pick(key){
+    ex.dataset.sel=key;
+    chips.forEach(function(c){c.classList.toggle('on',c.dataset.key===key);});
+    nodes.forEach(function(n){n.classList.toggle('on',n.dataset.key===key);});
+    panels.forEach(function(p){p.classList.toggle('on',p.dataset.key===key);});
+    ex.querySelectorAll('[data-hl]').forEach(function(h){h.classList.toggle('on',h.dataset.hl.split(' ').indexOf(key)>-1);});
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){pick(c.dataset.key);});});
+  nodes.forEach(function(n){
+    n.setAttribute('tabindex','0');n.setAttribute('role','button');
+    n.addEventListener('click',function(){pick(n.dataset.key);});
+    n.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(n.dataset.key);}});
+  });
+  var first=ex.dataset.start||(panels[0]&&panels[0].dataset.key);
+  if(first)pick(first);
+});
+
+// ================= Self-test blur toggles =================
+document.querySelectorAll('.toggle-btn[data-target]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var t=document.getElementById(btn.dataset.target);
+    var on=!t.classList.contains('testing');
+    t.classList.toggle('testing',on);
+    t.querySelectorAll('td.can-hide').forEach(function(td){td.classList.remove('revealed');});
+    btn.setAttribute('aria-pressed',on?'true':'false');
+    btn.textContent=on?'Show all the answers':(btn.dataset.label||'Test yourself: hide the answers');
+  });
+});
+document.querySelectorAll('td.can-hide').forEach(function(td){
+  td.addEventListener('click',function(){if(td.closest('table').classList.contains('testing'))td.classList.toggle('revealed');});
+});
+
+// ================= Video facades (YouTube loads only when clicked) =================
+document.querySelectorAll('.video-facade').forEach(function(f){
+  f.addEventListener('click',function(){
+    var src='https://www.youtube-nocookie.com/embed/'+f.dataset.vid+'?start='+f.dataset.start+(f.dataset.end?'&end='+f.dataset.end:'')+'&rel=0&autoplay=1';
+    var ifr=document.createElement('iframe');
+    ifr.src=src;ifr.title=f.getAttribute('aria-label');
+    ifr.setAttribute('allow','accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+    ifr.setAttribute('allowfullscreen','');
+    ifr.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+    f.parentNode.replaceChild(ifr,f);
+  });
+});
+
+// ================= Checklists (saved on this device only) =================
+document.querySelectorAll('ul.checklist[data-store]').forEach(function(list){
+  var KEY=list.dataset.store,saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){saved={};}
+  list.querySelectorAll('input').forEach(function(box){
+    box.checked=!!saved[box.dataset.key];
+    box.addEventListener('change',function(){
+      saved[box.dataset.key]=box.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}
+    });
+  });
+});
+
+// ================= 1.6 Weber's law widget =================
+(function(){
+  var slider=document.getElementById('weberSlider');
+  if(!slider)return;
+  var out=document.getElementById('weberOut'),val=document.getElementById('weberVal');
+  function upd(){
+    var kg=+slider.value;
+    var jnd=kg*0.02;
+    val.textContent=kg+' kg';
+    out.innerHTML='You would need to add roughly <span class="big">'+(jnd<1?Math.round(jnd*1000)+' g':jnd.toFixed(1)+' kg')+'</span> before most people notice the bag feels heavier.';
+  }
+  slider.addEventListener('input',upd);upd();
+})();
+
+// ================= 1.6 Afterimage demo =================
+(function(){
+  var stage=document.getElementById('aiStage');
+  if(!stage)return;
+  var btn=document.getElementById('aiStart'),count=document.getElementById('aiCount'),timer=null;
+  btn.addEventListener('click',function(){
+    clearInterval(timer);
+    stage.classList.remove('white');
+    var s=20;count.textContent='Keep staring at the dot: '+s;
+    btn.disabled=true;
+    timer=setInterval(function(){
+      s--;
+      if(s>0){count.textContent='Keep staring at the dot: '+s;}
+      else{
+        clearInterval(timer);stage.classList.add('white');
+        count.textContent='Now keep looking at the dot on the white space. What colors do you see?';
+        btn.disabled=false;btn.textContent='Try again';
+      }
+    },1000);
+  });
+})();
+// ================= 2.8 IQ formula widget =================
+(function(){
+  var ma=document.getElementById('iqMA'),ca=document.getElementById('iqCA'),out=document.getElementById('iqOut');
+  if(!ma||!ca||!out)return;
+  function upd(){
+    var m=parseFloat(ma.value),c=parseFloat(ca.value);
+    if(!(m>0)||!(c>0)){out.textContent='Enter two ages above zero.';return;}
+    out.innerHTML='IQ = '+m+' &divide; '+c+' &times; 100 = <span class="big">'+Math.round(m/c*100)+'</span>';
+  }
+  ma.addEventListener('input',upd);ca.addEventListener('input',upd);upd();
+})();
+</script>
+</body>
+</html>
