@@ -75,7 +75,8 @@ section.card{position:relative;border-radius:3px;padding:30px 30px 28px 78px;
 .card:has(.doodle) :is(.pair,.table-wrap,.grid3,.widget,.explorer,.stepper,.callout,details.q,.checklist,.video-wrap){clear:both;}
 .doodle{float:right;width:150px;margin:-12px -8px 8px 18px;pointer-events:none;color:var(--slate);shape-outside:margin-box;}
 .doodle svg{width:100%;height:auto;display:block;overflow:visible;}
-.doodle .ink{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;filter:url(#pencil);opacity:.8;}
+.doodle .ink{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;opacity:.8;}
+.doodle svg>g{filter:url(#pencil);} /* on the group, so perfectly straight lines are not lost */
 .doodle .ink.thin{stroke-width:1.6;}
 .doodle .ink.dash{stroke-dasharray:4 6;}
 .doodle .spot{filter:url(#wcSpot);}
