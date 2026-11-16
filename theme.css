@@ -72,6 +72,7 @@ section.card{position:relative;border-radius:3px;padding:30px 30px 28px 78px;
 .sec-label{font-family:'Jost',sans-serif;color:var(--blue);letter-spacing:3px;font-size:12px;}
 
 /* doodles in the page corner */
+.card:has(.doodle) :is(.pair,.table-wrap,.grid3,.widget,.explorer,.stepper,.callout,details.q,.checklist,.video-wrap){clear:both;}
 .doodle{float:right;width:150px;margin:-12px -8px 8px 18px;pointer-events:none;color:var(--slate);shape-outside:margin-box;}
 .doodle svg{width:100%;height:auto;display:block;overflow:visible;}
 .doodle .ink{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;filter:url(#pencil);opacity:.8;}
