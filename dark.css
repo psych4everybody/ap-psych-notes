@@ -1,0 +1,55 @@
+/* Dark theme for the AP Psych notes. Only applies when settings.js sets data-theme="dark".
+   Solid fills behind all text (no washes or textures), soft off-white text on dark slate,
+   and the same dusty blue, sand and rust accents as the light notebook theme. */
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#171d22; --page:#212a31; --bg:#171d22;
+  --ink:#e6eaec; --muted:#b5c0c6; --navy:#e6eaec;
+  --blue:#9fc4d6; --light:#2b3840; --orange:#e0a985;
+  --pblue:#44606d; --cloud:#29333a; --sand:#3c464c; --mist:#46545c;
+  --slate:#4f7a8e; --pencil:#8f9ca3; --line:#38434a;
+  --rule:rgba(160,195,210,.10); --margin:rgba(214,150,120,.30);
+  --card:#212a31;
+}
+html[data-theme="dark"] body{background-image:none;background-color:var(--paper);color:var(--ink);}
+
+/* Header: a solid dark band in place of the light watercolour wash */
+html[data-theme="dark"] header{background:#1e272d;border-bottom:2px solid var(--sand);}
+html[data-theme="dark"] header h1{text-shadow:none;}
+html[data-theme="dark"] .btn-ghost,html[data-theme="dark"] .toplinks a{background:#26313a;color:var(--ink);}
+html[data-theme="dark"] .btn-ghost:hover,html[data-theme="dark"] .toplinks a:hover{background:#2e3b44;}
+html[data-theme="dark"] .btn-primary:hover,html[data-theme="dark"] .btn-dark:hover{background:#5d8aa0;}
+
+/* Top bar and topic tabs */
+html[data-theme="dark"] .topbar{background:rgba(23,29,34,.97);border-bottom-color:var(--sand);}
+html[data-theme="dark"] .topic-tabs a:nth-child(even),html[data-theme="dark"] .chip:nth-child(even){background:#26323a;border-color:var(--mist);}
+
+/* Paper-coloured boxes become dark blue-grey and dark sand */
+html[data-theme="dark"] .toc,html[data-theme="dark"] .mini,html[data-theme="dark"] .c-hook,
+html[data-theme="dark"] .pair-note,html[data-theme="dark"] .step{background:#25313a;}
+html[data-theme="dark"] .mini:nth-child(even),html[data-theme="dark"] .c-exam,
+html[data-theme="dark"] .step:nth-child(2),html[data-theme="dark"] a.practice{background:#30302d;}
+html[data-theme="dark"] tr:nth-child(even) td,html[data-theme="dark"] .stepper-visual,
+html[data-theme="dark"] .ex-visual,html[data-theme="dark"] .arc-step,html[data-theme="dark"] .widget{background:#252e35;}
+html[data-theme="dark"] td{border-top-color:#333d44;}
+html[data-theme="dark"] .chip.done{background:#24372b;border-color:#4f7d5c;}
+
+/* Washi tape strips: muted so they don't glare */
+html[data-theme="dark"] .toc::before,html[data-theme="dark"] .mini::before,html[data-theme="dark"] .step::before{background:rgba(150,135,120,.45);}
+html[data-theme="dark"] .mini:nth-child(even)::before,html[data-theme="dark"] .c-exam::before,
+html[data-theme="dark"] .step:nth-child(2)::before{background:rgba(110,145,160,.5);}
+html[data-theme="dark"] main.wrap .section-label::after{background:#3a5664;}
+
+/* Notebook cards: dark page, faint rules, punched holes in the page colour */
+html[data-theme="dark"] section.card,html[data-theme="dark"] section.unit{
+  box-shadow:0 1px 0 rgba(0,0,0,.25),0 6px 18px rgba(0,0,0,.25);}
+
+/* Pencil doodles: flip light and dark so the lines show on the dark page, keeping their hues */
+html[data-theme="dark"] .doodle{filter:invert(.86) hue-rotate(180deg) saturate(.8);}
+
+/* Form controls, video, and anything still white from the page's own styles */
+html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#1c2429;color:var(--ink);border-color:var(--mist);}
+html[data-theme="dark"] .video-card,html[data-theme="dark"] .card-plain{background:var(--page);}
+html[data-theme="dark"] mark{background:#6b4a2e;color:#fff;}
+
+@media print{html[data-theme="dark"]{color-scheme:light}}
